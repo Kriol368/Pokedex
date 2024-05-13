@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/Main.java" afterDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="13/5/2024 08:40">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/try" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/shiny/fgdfg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +60,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715581793500</updated>
-      <workItem from="1715581794510" duration="377000" />
+      <workItem from="1715581794510" duration="687000" />
     </task>
+    <task id="LOCAL-00001" summary="13/5/2024 08:36">
+      <option name="closed" value="true" />
+      <created>1715582179019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715582179019</updated>
+    </task>
+    <task id="LOCAL-00002" summary="13/5/2024 08:37">
+      <option name="closed" value="true" />
+      <created>1715582239842</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715582239842</updated>
+    </task>
+    <task id="LOCAL-00003" summary="13/5/2024 08:40">
+      <option name="closed" value="true" />
+      <created>1715582449767</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715582449767</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,6 +95,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="13/5/2024 08:32" />
     <MESSAGE value="13/5/2024 08:35" />
-    <option name="LAST_COMMIT_MESSAGE" value="13/5/2024 08:35" />
+    <MESSAGE value="13/5/2024 08:36" />
+    <MESSAGE value="13/5/2024 08:37" />
+    <MESSAGE value="13/5/2024 08:40" />
+    <option name="LAST_COMMIT_MESSAGE" value="13/5/2024 08:40" />
   </component>
 </project>
