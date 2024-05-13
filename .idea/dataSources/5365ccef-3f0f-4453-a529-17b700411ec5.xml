@@ -499,7 +499,7 @@
     <routine id="190" parent="1" name="fts5"/>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-05-13.08:08:10</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-13.08:12:20</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1591,82 +1591,130 @@
       <Position>1</Position>
     </argument>
     <table id="555" parent="191" name="pokemon"/>
-    <table id="556" parent="191" name="sqlite_master">
+    <table id="556" parent="191" name="register"/>
+    <table id="557" parent="191" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="557" parent="191" name="sqlite_sequence">
+    <table id="558" parent="191" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <table id="558" parent="191" name="trainer"/>
-    <column id="559" parent="555" name="id">
+    <table id="559" parent="191" name="team"/>
+    <table id="560" parent="191" name="trainer"/>
+    <column id="561" parent="555" name="id">
       <DasType>integer|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="560" parent="555" name="identifier">
+    <column id="562" parent="555" name="identifier">
       <DasType>text|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="561" parent="555" name="species_id">
+    <column id="563" parent="555" name="species_id">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="562" parent="555" name="height">
+    <column id="564" parent="555" name="height">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="563" parent="555" name="weight">
+    <column id="565" parent="555" name="weight">
       <DasType>integer|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="564" parent="555" name="order">
+    <column id="566" parent="555" name="order">
       <DasType>integer|0s</DasType>
       <Position>6</Position>
     </column>
-    <key id="565" parent="555" name="pokemon_pk">
+    <key id="567" parent="555" name="pokemon_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="566" parent="556" name="type">
+    <column id="568" parent="556" name="registered">
+      <DasType>INTEGER|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="569" parent="556" name="trainer_id">
+      <DasType>integer|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="570" parent="556" name="pokemon_id">
+      <DasType>integer|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="571" parent="556" name="register_trainer_id_fk">
+      <ColNames>trainer_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>trainer</RefTableName>
+    </foreign-key>
+    <foreign-key id="572" parent="556" name="register_pokemon_id_fk">
+      <ColNames>pokemon_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>pokemon</RefTableName>
+    </foreign-key>
+    <index id="573" parent="556" name="sqlite_autoindex_register_1">
+      <ColNames>trainer_id
+pokemon_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="574" parent="556" name="register_pk">
+      <ColNames>trainer_id
+pokemon_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_register_1</UnderlyingIndexName>
+    </key>
+    <column id="575" parent="557" name="type">
       <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="567" parent="556" name="name">
+    <column id="576" parent="557" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="568" parent="556" name="tbl_name">
+    <column id="577" parent="557" name="tbl_name">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="569" parent="556" name="rootpage">
+    <column id="578" parent="557" name="rootpage">
       <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="570" parent="556" name="sql">
+    <column id="579" parent="557" name="sql">
       <DasType>TEXT|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="571" parent="557" name="name">
+    <column id="580" parent="558" name="name">
       <Position>1</Position>
     </column>
-    <column id="572" parent="557" name="seq">
+    <column id="581" parent="558" name="seq">
       <Position>2</Position>
     </column>
-    <column id="573" parent="558" name="id">
+    <column id="582" parent="559" name="id">
+      <DasType>integer|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="583" parent="559" name="name">
+      <DasType>TEXT|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <key id="584" parent="559" name="team_pk">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="585" parent="560" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="574" parent="558" name="name">
+    <column id="586" parent="560" name="name">
       <DasType>integer|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="575" parent="558" name="password">
+    <column id="587" parent="560" name="password">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <key id="576" parent="558" name="trainer_pk">
+    <key id="588" parent="560" name="trainer_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>

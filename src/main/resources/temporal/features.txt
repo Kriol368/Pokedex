@@ -3,3 +3,4 @@
 --Create team
 --Map
 --Posts
+--Type chart
