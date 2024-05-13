@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 13/05/2024 10:09">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5365ccef-3f0f-4453-a529-17b700411ec5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5365ccef-3f0f-4453-a529-17b700411ec5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 13/05/2024 10:14">
       <change beforePath="$PROJECT_DIR$/src/main/resources/temporal/features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/temporal/features.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +87,7 @@
       <updated>1715581793500</updated>
       <workItem from="1715581794510" duration="1819000" />
       <workItem from="1715583620684" duration="1645000" />
-      <workItem from="1715586537686" duration="1267000" />
+      <workItem from="1715586537686" duration="1864000" />
     </task>
     <task id="LOCAL-00001" summary="13/5/2024 08:36">
       <option name="closed" value="true" />
@@ -283,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715587766532</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="feat(master): 13/05/2024 10:14">
+      <option name="closed" value="true" />
+      <created>1715588069799</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1715588069799</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +316,7 @@
     <MESSAGE value="docs(master): 13/05/2024 09:20" />
     <MESSAGE value="docs(master): 13/05/2024 09:28" />
     <MESSAGE value="docs(master): 13/05/2024 10:09" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 13/05/2024 10:09" />
+    <MESSAGE value="feat(master): 13/05/2024 10:14" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 13/05/2024 10:14" />
   </component>
 </project>
