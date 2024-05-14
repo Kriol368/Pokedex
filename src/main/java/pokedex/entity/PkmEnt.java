@@ -1,14 +1,16 @@
 package pokedex.entity;
 
 import jakarta.persistence.Entity;
-import org.springframework.data.annotation.Id;
-
-import javax.siwng;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class PkmEnt {
+
     @Id
-    private int id;
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long id;
     private String identifier;
     private int speciesId;
     private int height;
@@ -17,11 +19,11 @@ public class PkmEnt {
 
     // Getters and setters for each field here
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -64,4 +66,5 @@ public class PkmEnt {
     public void setOrder(int order) {
         this.order = order;
     }
+
 }
