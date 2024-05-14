@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 14/05/2024 10:12">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ea4f0a-b1b2-4e51-9d8e-9ce970c6a7a9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ea4f0a-b1b2-4e51-9d8e-9ce970c6a7a9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/PkmEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/PkmEnt.java" afterDir="false" />
-    </list>
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 14/05/2024 10:12" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +37,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715674690850</updated>
-      <workItem from="1715674693443" duration="961000" />
+      <workItem from="1715674693443" duration="1305000" />
     </task>
     <task id="LOCAL-00001" summary="feat(master): 14/05/2024 10:12">
       <option name="closed" value="true" />
@@ -76,7 +71,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715674719843</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat(master): 14/05/2024 10:12">
+      <option name="closed" value="true" />
+      <created>1715675958400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715675958400</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
