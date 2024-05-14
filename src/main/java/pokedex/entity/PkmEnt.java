@@ -1,9 +1,8 @@
 package pokedex.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 public class PkmEnt {
@@ -17,6 +16,11 @@ public class PkmEnt {
     private int weight;
     private int order;
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "pokemon_team",
+            joinColumns = @JoinColumn(name = "pokemon_id"),
+            inverseJoinColumns = @JoinColumn(name = "team_id"))
+    private Set<TeamEnt> teams;
     // Getters and setters for each field here
 
     public Long getId() {
