@@ -1,4 +1,7 @@
 package pokedex.repository;
 
-public class TeamRepository {
+import org.springframework.stereotype.Component;
+
+@Component
+public interface TeamRepository {
 }
