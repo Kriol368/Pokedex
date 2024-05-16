@@ -4,25 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 14/05/2024 10:12" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 16/05/2024 8:46">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Pokemon_types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Pokemon_types.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Register.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Run.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "Spring Boot.App.executor": "Run",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Pokedex" />
@@ -39,6 +49,15 @@
     </configuration>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="feat(master): 16/05/2024 8:46">
+      <option name="closed" value="true" />
+      <created>1715842524794</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715842524794</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -51,5 +70,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(master): 16/05/2024 8:46" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 16/05/2024 8:46" />
   </component>
 </project>

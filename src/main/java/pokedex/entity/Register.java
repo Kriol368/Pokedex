@@ -9,12 +9,12 @@ public class Register {
     Register_key id;
 
     @ManyToOne
-    @MapsId("pokemonid")
+    @MapsId("pokemon_id")
     @JoinColumn(name = "pokemon_id")
     Pokemon pokemon;
 
     @ManyToOne
-    @MapsId("trainerid")
+    @MapsId("trainer_id")
     @JoinColumn(name = "trainer_id")
     Trainer trainer;
 

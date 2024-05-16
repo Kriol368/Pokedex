@@ -9,12 +9,12 @@ public class Pokemon_types {
         Pokemon_types_key id;
 
         @ManyToOne
-        @MapsId("pokemonid")
+        @MapsId("pokemon_id")
         @JoinColumn(name = "pokemon_id")
         Pokemon pokemon;
 
         @ManyToOne
-        @MapsId("typeid")
+        @MapsId("type_id")
         @JoinColumn(name = "type_id")
         Type type;
 
