@@ -4,100 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 16/05/2024 10:06">
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 16/05/2024 10:27">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/778.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/955.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/779.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/956.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/780.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/957.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/781.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/958.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/782.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/959.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/783.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/960.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/784.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/961.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/785.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/962.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/786.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/963.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/787.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/964.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/788.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/965.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/789.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/966.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/790.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/967.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/791.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/968.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/792.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/969.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/793.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/970.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/794.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/971.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/795.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/972.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/796.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/973.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/797.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/974.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/798.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/975.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/799.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/976.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/800-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/977.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/800-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/978.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/800-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/979.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/800-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/980.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/801-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/981.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/801-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/982.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/802.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/983.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/803.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/984.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/804.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/985.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/805.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/986.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/806.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/987.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/807.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/988.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/808.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/989.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/809-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/990.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/810.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/991.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/811.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/992.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/812-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/993.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/813.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/994.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/814.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/995.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/815-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/996.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/816.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/997.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/817.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/998.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/818-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/999.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/819.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/820.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/821.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1002.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/822.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1003.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/823-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1004.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/824.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1005.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/825.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1006.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/826-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1007.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/827.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1008.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/828.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1009.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/829.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1010.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/830.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1011.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/831.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1012.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/832.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1013.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/833.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1014.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/834-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1015.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/835.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1016.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/836.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1017.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/837.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1018.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/838.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1019.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/839-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1020.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/840.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1021.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/841-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1022.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/842-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1023.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/843.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1024.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/844-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1025.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/845-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1026.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/845-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1027.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/845-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1028.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/846.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1029.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/847.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1030.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/848.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1031.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/849-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1032.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/849-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1033.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/850.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1034.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/851-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1035.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/852.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1036.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/853.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1037.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/854.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1038.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/855.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1039.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/856.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1040.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/857.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1041.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/858-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1042.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/859.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1043.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/860.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1044.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/861-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1045.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/862.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/1046.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/722.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/868.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/723.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/869.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/724-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/870.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/724-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/725.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/871.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/726.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/872.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/727.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/873.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/728.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/874.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/729.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/875.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/730.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/876.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/731.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/877.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/732.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/878.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/733.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/879.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/734.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/880.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/735.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/881.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/736.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/883.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/737.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/884.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/738.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/885.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/739.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/887.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/740.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/888.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/741-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/889.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/741-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/890.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/741-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/891.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/741-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/892.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/742.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/893.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/743.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/894.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/744.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/896.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/745-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/898.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/745-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/899.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/745-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/900.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/746-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/901.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/746-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/902.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/747.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/903.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/748.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/904.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/749.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/905.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/750.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/906.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/751.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/907.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/752.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/908.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/753.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/910.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/754.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/911.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/755.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/913.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/756.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/914.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/757.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/915.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/758.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/916.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/759.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/918.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/760.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/919.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/761.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/920.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/762.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/921.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/763.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/922.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/764.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/923.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/765.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/924.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/766.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/925.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/767.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/926.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/768.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/927.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/769.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/928.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/770.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/929.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/771.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/930.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/772.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/931.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/773.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/932.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/774-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/933.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/774-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/940.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/774-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/941.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/774-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/942.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/774-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/943.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/774-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/944.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/774-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/945.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/774-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/946.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/775.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/947.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/776.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/official_artwork/normal/948.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +159,7 @@
       <workItem from="1715843391760" duration="146000" />
       <workItem from="1715843546268" duration="89000" />
       <workItem from="1715843673937" duration="91000" />
-      <workItem from="1715843779928" duration="4009000" />
+      <workItem from="1715843779928" duration="4850000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -271,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715846825341</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat(master): 16/05/2024 10:27">
+      <option name="closed" value="true" />
+      <created>1715848027599</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715848027599</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +287,7 @@
     <MESSAGE value="feat(master): 16/05/2024 09:44" />
     <MESSAGE value="feat(master): 16/05/2024 09:46" />
     <MESSAGE value="feat(master): 16/05/2024 10:06" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 16/05/2024 10:06" />
+    <MESSAGE value="feat(master): 16/05/2024 10:27" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 16/05/2024 10:27" />
   </component>
 </project>
