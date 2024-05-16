@@ -1,4 +1,4 @@
 package pokedex.repository;
 
-public class teamRepository {
+public class TypeRepository {
 }

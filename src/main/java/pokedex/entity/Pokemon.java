@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Set;
 
 @Entity
-public class PkmEnt {
+public class Pokemon {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class PkmEnt {
     @JoinTable(name = "pokemon_team",
             joinColumns = @JoinColumn(name = "pokemon_id"),
             inverseJoinColumns = @JoinColumn(name = "team_id"))
-    private Set<TeamEnt> teams;
+    private Set<Team> teams;
     // Getters and setters for each field here
 
     public Long getId() {

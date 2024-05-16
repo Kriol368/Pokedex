@@ -2,16 +2,21 @@ package pokedex.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
-@Table(name = "trainer")
-public class TrainerEnt {
+@Table(name = "team")
+public class Team {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String password;
+
+    @ManyToMany(mappedBy = "teams")
+    private Set<Pokemon> pokemons;
+
 
     // Getters and setters for each field here
+
 
     public int getId() {
         return id;
@@ -29,11 +34,4 @@ public class TrainerEnt {
         this.name = name;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
