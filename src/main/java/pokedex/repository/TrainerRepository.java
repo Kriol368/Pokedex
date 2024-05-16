@@ -1,4 +1,9 @@
 package pokedex.repository;
 
-public class TrainerRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Component;
+import pokedex.entity.Trainer;
+
+@Component
+public interface TrainerRepository extends CrudRepository<Trainer,Long> {
 }
