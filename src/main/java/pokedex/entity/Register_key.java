@@ -6,7 +6,7 @@ import jakarta.persistence.Embeddable;
 import java.io.Serializable;
 
 @Embeddable
-public class register_key implements Serializable {
+public class Register_key implements Serializable {
     @Column(name = "pokemon_id")
     Integer pokemon_id;
 

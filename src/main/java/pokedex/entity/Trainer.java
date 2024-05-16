@@ -14,7 +14,7 @@ public class Trainer {
     private String password;
 
     @OneToMany(mappedBy = "trainer")
-    Set<register> registers;
+    Set<Register> registers;
 
     // Getters and setters for each field here
 

@@ -9,7 +9,7 @@ public class Pokemon {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     private String identifier;
     private int speciesId;
     private int height;
@@ -23,18 +23,18 @@ public class Pokemon {
     private Set<Team> teams;
 
     @OneToMany(mappedBy = "pokemon")
-    Set<register> registers;
+    Set<Register> registers;
 
     @OneToMany(mappedBy = "pokemon")
     Set<Pokemon_types> types;
 
     // Getters and setters for each field here
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

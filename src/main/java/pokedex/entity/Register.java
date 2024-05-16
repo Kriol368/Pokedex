@@ -3,10 +3,10 @@ package pokedex.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class register {
+public class Register {
 
     @EmbeddedId
-    register_key id;
+    Register_key id;
 
     @ManyToOne
     @MapsId("pokemonid")
@@ -23,11 +23,11 @@ public class register {
     // standard constructors, getters, and setters
 
 
-    public register_key getId() {
+    public Register_key getId() {
         return id;
     }
 
-    public void setId(register_key id) {
+    public void setId(Register_key id) {
         this.id = id;
     }
 
