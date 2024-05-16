@@ -1,6 +1,8 @@
 package pokedex.ui;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import pokedex.repository.*;
 
 import javax.swing.*;
 @Component
@@ -23,4 +25,18 @@ public class AppUI extends JFrame{
     private JSplitPane split_team_3;
     private JSplitPane split_team_4;
 
+    @Autowired
+    public AppUI(Pokemon_typesRepository pokemonTypesRepository, PokemonRepository pokemonRepository, RegisterRepository registerRepository, TeamRepository teamRepository, TrainerRepository trainerRepository,TypeRepository typeRepository) {
+        setTitle("Pokedex");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(1920, 1080);
+        setLocationRelativeTo(null);
+        setVisible(true);
+        showMainPane();
+    }
+    public void showMainPane(){
+        setContentPane(mainPane);
+        validate();
+        repaint();
+    }
 }
