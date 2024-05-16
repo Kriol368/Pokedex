@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 16/05/2024 09:01">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 16/05/2024 09:44">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Trainer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,21 +55,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Pokedex" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Pokedex" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -99,7 +82,14 @@
       <updated>1715840477815</updated>
       <workItem from="1715840478832" duration="44000" />
       <workItem from="1715840530271" duration="1623000" />
-      <workItem from="1715842186675" duration="735000" />
+      <workItem from="1715842186675" duration="901000" />
+      <workItem from="1715843171696" duration="15000" />
+      <workItem from="1715843203829" duration="19000" />
+      <workItem from="1715843244592" duration="117000" />
+      <workItem from="1715843391760" duration="146000" />
+      <workItem from="1715843546268" duration="89000" />
+      <workItem from="1715843673937" duration="91000" />
+      <workItem from="1715843779928" duration="1716000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -133,7 +123,47 @@
       <option name="project" value="LOCAL" />
       <updated>1715842914187</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(master): 16/05/2024 09:03">
+      <option name="closed" value="true" />
+      <created>1715842993343</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715842993343</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(master): 16/05/2024 09:15">
+      <option name="closed" value="true" />
+      <created>1715843725680</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715843725680</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat(master): 16/05/2024 09:21">
+      <option name="closed" value="true" />
+      <created>1715844094298</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715844094298</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat(master): 16/05/2024 09:33">
+      <option name="closed" value="true" />
+      <created>1715844845706</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715844845706</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat(master): 16/05/2024 09:44">
+      <option name="closed" value="true" />
+      <created>1715845498509</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715845498509</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +186,11 @@
     <MESSAGE value="fix(master): 16/05/2024 08:36" />
     <MESSAGE value="fix(master): 16/05/2024 08:54" />
     <MESSAGE value="feat(master): 16/05/2024 09:01" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 16/05/2024 09:01" />
+    <MESSAGE value="feat(master): 16/05/2024 09:03" />
+    <MESSAGE value="feat(master): 16/05/2024 09:15" />
+    <MESSAGE value="feat(master): 16/05/2024 09:21" />
+    <MESSAGE value="feat(master): 16/05/2024 09:33" />
+    <MESSAGE value="feat(master): 16/05/2024 09:44" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 16/05/2024 09:44" />
   </component>
 </project>
