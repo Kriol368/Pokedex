@@ -3,6 +3,7 @@ package pokedex.entity;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "pokemon_types")
 public class Pokemon_types {
 
         @EmbeddedId
