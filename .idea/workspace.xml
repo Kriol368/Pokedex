@@ -4,37 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 14/05/2024 10:12">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/PkmEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/TeamEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/TrainerEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Trainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/TypeEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/pkmRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/PokemonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/teamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/TeamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/trainerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/TrainerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/typeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/TypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
-    </list>
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 14/05/2024 10:12" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Pokedex" />
