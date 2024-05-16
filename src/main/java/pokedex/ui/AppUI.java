@@ -14,7 +14,6 @@ public class AppUI extends JFrame{
     private JPanel map;
     private JPanel typeChart;
     private JPanel network;
-    private JPanel Trainer;
     private JSplitPane pokedex_split;
     private JList pokedex_list;
     private JList teamList;
@@ -24,6 +23,32 @@ public class AppUI extends JFrame{
     private JSplitPane split_team_2;
     private JSplitPane split_team_3;
     private JSplitPane split_team_4;
+
+    // TrainerPanel
+
+    private JPanel Trainer;
+
+    private JLabel labelUser;
+    private JLabel labelPassword;
+    private JTextField username;
+    private JPasswordField password;
+    private JProgressBar ProgressBar;
+    private JLabel labelProgressBar;
+    private JButton loginButton;
+    private JButton leftArrowButton;
+    private JButton saveButton;
+    private JButton rightArrowButton;
+    private JPanel LoginPanel;
+    private JPanel ProgressPanel;
+    private JPanel CharacterPanel;
+    private JPanel TeamPanel;
+    private JLabel characterImage;
+    private JLabel pokemon1;
+    private JLabel pokemon2;
+    private JLabel pokemon3;
+    private JLabel pokemon4;
+    private JLabel pokemon5;
+    private JLabel pokemon6;
 
     @Autowired
     public AppUI(Pokemon_typesRepository pokemonTypesRepository, PokemonRepository pokemonRepository, RegisterRepository registerRepository, TeamRepository teamRepository, TrainerRepository trainerRepository,TypeRepository typeRepository) {
@@ -39,4 +64,5 @@ public class AppUI extends JFrame{
         validate();
         repaint();
     }
+
 }
