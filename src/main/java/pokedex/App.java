@@ -14,9 +14,5 @@ import java.awt.*;
 public class App {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = new SpringApplicationBuilder(App.class).headless(false).web(WebApplicationType.NONE).run(args);
-        EventQueue.invokeLater(() ->{
-            AppUI appUI = context.getBean(AppUI.class);
-            appUI.setVisible(true);
-        } );
     }
 }
