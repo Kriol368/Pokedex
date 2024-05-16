@@ -7,6 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import pokedex.ui.AppUI;
 
+import javax.swing.*;
 import java.awt.*;
 
 @SpringBootApplication

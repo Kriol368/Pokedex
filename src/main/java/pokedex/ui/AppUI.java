@@ -1,8 +1,10 @@
 package pokedex.ui;
 
-import javax.swing.*;
+import org.springframework.stereotype.Component;
 
-public class AppUI {
+import javax.swing.*;
+@Component
+public class AppUI extends JFrame{
     private JTabbedPane mainPane;
     private JPanel panel1;
     private JPanel pokedex;
@@ -20,4 +22,5 @@ public class AppUI {
     private JSplitPane split_team_2;
     private JSplitPane split_team_3;
     private JSplitPane split_team_4;
+
 }

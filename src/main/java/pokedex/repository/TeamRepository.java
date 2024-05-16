@@ -5,5 +5,5 @@ import org.springframework.stereotype.Component;
 import pokedex.entity.Team;
 
 @Component
-public interface TeamRepository extends CrudRepository<Team,Long> {
+public interface TeamRepository extends CrudRepository<Team,Integer> {
 }

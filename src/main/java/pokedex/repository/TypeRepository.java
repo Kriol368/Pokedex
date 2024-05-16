@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component;
 import pokedex.entity.Type;
 
 @Component
-public interface TypeRepository extends CrudRepository<Type,Long> {
+public interface TypeRepository extends CrudRepository<Type,Integer> {
 }
 
