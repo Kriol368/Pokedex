@@ -14,9 +14,7 @@ public class Team {
     @ManyToMany(mappedBy = "teams")
     private Set<Pokemon> pokemons;
 
-
     // Getters and setters for each field here
-
 
     public int getId() {
         return id;

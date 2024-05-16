@@ -2,6 +2,8 @@ package pokedex.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "trainer")
 public class Trainer {
@@ -10,6 +12,9 @@ public class Trainer {
     private int id;
     private String name;
     private String password;
+
+    @OneToMany(mappedBy = "trainer")
+    Set<register> registers;
 
     // Getters and setters for each field here
 

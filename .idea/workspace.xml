@@ -5,53 +5,112 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 14/05/2024 10:12">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Pokemon_types.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Pokemon_types_key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_05_2024_10_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_05_2024_10_15__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2024_10_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2024_10_02__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/PkmEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/TeamEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/TrainerEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Trainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/TypeEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/pkmRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/PokemonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/teamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/TeamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/trainerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/TrainerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/typeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/TypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Type.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
-  }
-}]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Pokedex" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Pokedex" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Marpuchy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kriol368/Pokedex.git&quot;,
+    &quot;accountId&quot;: &quot;4651a800-ba49-4035-8a90-c385678ce21b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2gRyT44k5TdB3nnOECQVbNNE5mp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 14/05/2024 10:12" />
+      <created>1715674690850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715674690850</updated>
+      <workItem from="1715674693443" duration="1305000" />
+      <workItem from="1715678250730" duration="1627000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat(master): 14/05/2024 10:12">
+      <option name="closed" value="true" />
+      <created>1715674719843</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715674719843</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(master): 14/05/2024 10:12">
+      <option name="closed" value="true" />
+      <created>1715675958400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715675958400</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat(master): 14/05/2024 10:12">
+      <option name="closed" value="true" />
+      <created>1715678271536</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715678271536</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -63,5 +122,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(master): 14/05/2024 10:12" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 14/05/2024 10:12" />
   </component>
 </project>

@@ -21,6 +21,13 @@ public class Pokemon {
             joinColumns = @JoinColumn(name = "pokemon_id"),
             inverseJoinColumns = @JoinColumn(name = "team_id"))
     private Set<Team> teams;
+
+    @OneToMany(mappedBy = "pokemon")
+    Set<register> registers;
+
+    @OneToMany(mappedBy = "pokemon")
+    Set<Pokemon_types> types;
+
     // Getters and setters for each field here
 
     public Long getId() {
