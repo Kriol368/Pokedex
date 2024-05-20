@@ -78,7 +78,7 @@ public class AppUI extends JFrame{
         return new ImageIcon(scaledImg);
     }
     public String setPokemonImageIcon(String ordernum){
-        return "C:\\Users\\Miban\\IdeaProjects\\Pokedex\\src\\main\\resources\\official_artwork/normal/" + ordernum + ".png";
+        return "src/main/resources/official_artwork/normal/" + ordernum + ".png";
     }
     public void setpokemonTeamImages (String p1 , String p2, String p3, String p4, String p5, String p6){
         pokemon1.setIcon(getScaledImage(setPokemonImageIcon(p1), pokemon1.getWidth(), pokemon1.getHeight()));
@@ -89,7 +89,7 @@ public class AppUI extends JFrame{
         pokemon6.setIcon(getScaledImage(setPokemonImageIcon(p6), pokemon6.getWidth(), pokemon6.getHeight()));
     }
     public String setTrainerImageIcon(String ordernum){
-        return "C:\\Users\\Miban\\IdeaProjects\\Pokedex\\src\\main\\resources\\trainers/" + ordernum + ".png";
+        return "src/main/resources/trainers/" + ordernum + ".png";
     }
     public void setTrainerImage (String t1){
         characterImage.setIcon(getScaledImage(setTrainerImageIcon(t1), characterImage.getWidth(), characterImage.getHeight()));
