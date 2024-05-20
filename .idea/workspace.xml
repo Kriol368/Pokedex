@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 20/05/2024 11:58" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 20/05/2024 12:04">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +99,8 @@
       <workItem from="1715925806985" duration="105000" />
       <workItem from="1716185289620" duration="9786000" />
       <workItem from="1716199038890" duration="278000" />
+      <workItem from="1716199440909" duration="104000" />
+      <workItem from="1716199595128" duration="5000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -242,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716199135691</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="docs(master): 20/05/2024 12:04">
+      <option name="closed" value="true" />
+      <created>1716199476649</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716199476650</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +290,7 @@
     <MESSAGE value="docs(master): 20/05/2024 10:34" />
     <MESSAGE value="docs(master): 20/05/2024 10:36" />
     <MESSAGE value="docs(master): 20/05/2024 11:58" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 20/05/2024 11:58" />
+    <MESSAGE value="docs(master): 20/05/2024 12:04" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 20/05/2024 12:04" />
   </component>
 </project>
