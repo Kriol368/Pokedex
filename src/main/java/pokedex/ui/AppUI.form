@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="1778" height="1128"/>
+      <xy x="20" y="20" width="1778" height="1608"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -142,7 +142,7 @@
                   </component>
                 </children>
               </grid>
-              <grid id="9be9c" binding="TeamPanel" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="9be9c" binding="TeamPanel" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -152,55 +152,52 @@
                 <children>
                   <component id="c83c" class="javax.swing.JLabel" binding="pokemon1">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="480" height="270"/>
-                        <maximum-size width="480" height="270"/>
-                      </grid>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="official_artwork/normal/80-1.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="1466b" class="javax.swing.JLabel" binding="pokemon2">
-                    <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <icon value="official_artwork/normal/1000.png"/>
+                      <icon value="official_artwork/normal/5.png"/>
                       <text value=""/>
                     </properties>
                   </component>
                   <component id="16a32" class="javax.swing.JLabel" binding="pokemon3">
                     <constraints>
-                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="official_artwork/normal/980.png"/>
+                      <icon value="official_artwork/normal/2.png"/>
                       <text value=""/>
                     </properties>
                   </component>
                   <component id="29cbf" class="javax.swing.JLabel" binding="pokemon4">
                     <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="official_artwork/normal/738.png"/>
+                      <icon value="official_artwork/normal/5.png"/>
                       <text value=""/>
                     </properties>
                   </component>
                   <component id="1ddf1" class="javax.swing.JLabel" binding="pokemon5">
                     <constraints>
-                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="official_artwork/normal/858-D.png"/>
+                      <icon value="official_artwork/normal/5.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="1466b" class="javax.swing.JLabel" binding="pokemon2">
+                    <constraints>
+                      <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <icon value="official_artwork/normal/23-1.png"/>
                       <text value=""/>
                     </properties>
                   </component>
                   <component id="c7c24" class="javax.swing.JLabel" binding="pokemon6">
                     <constraints>
-                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <icon value="official_artwork/normal/504.png"/>
