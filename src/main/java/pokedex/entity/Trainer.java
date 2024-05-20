@@ -12,7 +12,7 @@ public class Trainer {
     private int id;
     private String name;
     private String password;
-    private int Image;
+    private int image;
 
     @OneToMany(mappedBy = "trainer")
     Set<Register> registers;
@@ -44,10 +44,10 @@ public class Trainer {
     }
 
     public int getImage() {
-        return Image;
+        return image;
     }
 
     public void setImage(int image) {
-        Image = image;
+        this.image = image;
     }
 }
