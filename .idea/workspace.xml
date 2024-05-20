@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 16/05/2024 8:14">
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="bugs fixed: 16/05/2024 8:37">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
@@ -56,8 +56,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.App.executor": "Run",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "69",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "316",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "330",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "275",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite",
@@ -68,6 +68,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -101,6 +102,8 @@
       <workItem from="1715885747052" duration="115000" />
       <workItem from="1716185053965" duration="342000" />
       <workItem from="1716185408318" duration="1607000" />
+      <workItem from="1716187041731" duration="4387000" />
+      <workItem from="1716191475394" duration="1546000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -182,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716185668098</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="bugs fixed: 16/05/2024 8:37">
+      <option name="closed" value="true" />
+      <created>1716187066625</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187066625</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +217,7 @@
     <MESSAGE value="fix(master): 16/05/2024 08:54" />
     <MESSAGE value="feat(master): 16/05/2024 09:01" />
     <MESSAGE value="feat(master): 16/05/2024 8:46" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 16/05/2024 8:46" />
+    <MESSAGE value="bugs fixed: 16/05/2024 8:37" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugs fixed: 16/05/2024 8:37" />
   </component>
 </project>
