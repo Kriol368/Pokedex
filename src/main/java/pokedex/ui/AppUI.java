@@ -18,13 +18,6 @@ public class AppUI extends JFrame{
     private JPanel network;
     private JPanel Trainer;
     private JList pokedex_list;
-    private JList teamList;
-    private JSplitPane teamSplit;
-    private JSplitPane team_slots_split;
-    private JSplitPane split_team_1;
-    private JSplitPane split_team_2;
-    private JSplitPane split_team_3;
-    private JSplitPane split_team_4;
     private JLabel labelUser;
     private JLabel labelPassword;
     private JTextField username;
@@ -50,16 +43,27 @@ public class AppUI extends JFrame{
     private JLabel pokemonImage;
     private JButton registerButton;
     private JLabel PokemonName;
-    private JLabel Typ1;
+    private JLabel Type1;
     private JLabel Type2;
     private JLabel PokedexNumber;
+    private JPanel DataPanel;
+    private JButton pokemon1Button;
+    private JButton pokemon2Button;
+    private JButton pokemon3Button;
+    private JButton pokemon4Button;
+    private JButton pokemon5Button;
+    private JButton pokemon6Button;
+    private JList list1;
+    private JPanel InteractiveTeamPanel;
+    private JPanel RegisteredPanel;
+    private JButton SaveTeamButton;
+    private JLabel SelectedPokemonName;
 
     @Autowired
     public AppUI(Pokemon_typesRepository pokemonTypesRepository, PokemonRepository pokemonRepository, RegisterRepository registerRepository, TeamRepository teamRepository, TrainerRepository trainerRepository,TypeRepository typeRepository) {
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280, 720);
-        setExtendedState(JFrame.MAXIMIZED_BOTH); // This line sets the application to fullscreen
         setLocationRelativeTo(null);
         setVisible(true);
         showMainPane();
