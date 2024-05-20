@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 20/05/2024 11:58" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="sincePokedex: 20/05/2024 10:19">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,13 +23,20 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Marpuchy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kriol368/Pokedex.git&quot;,
+    &quot;accountId&quot;: &quot;4651a800-ba49-4035-8a90-c385678ce21b&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -35,35 +46,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Run.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.App.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Run.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.App.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-bfa3237e" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
-        <option value="jdk-22-openjdk-22-4caba194b151-6fbd92ee" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -95,8 +106,9 @@
       <workItem from="1715843779928" duration="4942000" />
       <workItem from="1715850836975" duration="114000" />
       <workItem from="1715925806985" duration="105000" />
-      <workItem from="1716185289620" duration="9786000" />
-      <workItem from="1716199038890" duration="278000" />
+      <workItem from="1716185289620" duration="8525000" />
+      <workItem from="1716194201214" duration="206000" />
+      <workItem from="1716197135181" duration="398000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -210,39 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716193781446</updated>
     </task>
-    <task id="LOCAL-00016" summary="docs(master): 20/05/2024 10:34">
+    <task id="LOCAL-00016" summary="sincePokedex: 20/05/2024 10:19">
       <option name="closed" value="true" />
-      <created>1716194048855</created>
+      <created>1716194266200</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1716194048855</updated>
+      <updated>1716194266200</updated>
     </task>
-    <task id="LOCAL-00017" summary="docs(master): 20/05/2024 10:36">
-      <option name="closed" value="true" />
-      <created>1716194174903</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1716194174903</updated>
-    </task>
-    <task id="LOCAL-00018" summary="docs(master): 20/05/2024 10:36">
-      <option name="closed" value="true" />
-      <created>1716194311865</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1716194311865</updated>
-    </task>
-    <task id="LOCAL-00019" summary="docs(master): 20/05/2024 11:58">
-      <option name="closed" value="true" />
-      <created>1716199135691</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1716199135691</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,9 +263,18 @@
     <MESSAGE value="feat(master): 16/05/2024 10:27" />
     <MESSAGE value="docs(master): 16/05/2024 10:38" />
     <MESSAGE value="docs(master): 20/05/2024 10:29" />
-    <MESSAGE value="docs(master): 20/05/2024 10:34" />
-    <MESSAGE value="docs(master): 20/05/2024 10:36" />
-    <MESSAGE value="docs(master): 20/05/2024 11:58" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 20/05/2024 11:58" />
+    <MESSAGE value="sincePokedex: 20/05/2024 10:19" />
+    <option name="LAST_COMMIT_MESSAGE" value="sincePokedex: 20/05/2024 10:19" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
