@@ -134,7 +134,7 @@
                   <component id="5c08" class="javax.swing.JLabel" binding="characterImage">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="4" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="250" height="550"/>
+                        <preferred-size width="300" height="600"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -154,8 +154,8 @@
                   <component id="16a32" class="javax.swing.JLabel" binding="pokemon3">
                     <constraints>
                       <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="200" height="175"/>
-                        <maximum-size width="200" height="175"/>
+                        <preferred-size width="200" height="200"/>
+                        <maximum-size width="200" height="200"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -165,8 +165,8 @@
                   <component id="1ddf1" class="javax.swing.JLabel" binding="pokemon5">
                     <constraints>
                       <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="200" height="175"/>
-                        <maximum-size width="200" height="175"/>
+                        <preferred-size width="200" height="200"/>
+                        <maximum-size width="200" height="200"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -176,8 +176,8 @@
                   <component id="1466b" class="javax.swing.JLabel" binding="pokemon2">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="200" height="175"/>
-                        <maximum-size width="200" height="175"/>
+                        <preferred-size width="200" height="200"/>
+                        <maximum-size width="200" height="200"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -187,8 +187,8 @@
                   <component id="c7c24" class="javax.swing.JLabel" binding="pokemon6">
                     <constraints>
                       <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="200" height="175"/>
-                        <maximum-size width="200" height="175"/>
+                        <preferred-size width="200" height="200"/>
+                        <maximum-size width="200" height="200"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -198,8 +198,8 @@
                   <component id="c83c" class="javax.swing.JLabel" binding="pokemon1">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="200" height="175"/>
-                        <maximum-size width="200" height="175"/>
+                        <preferred-size width="200" height="200"/>
+                        <maximum-size width="200" height="200"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -209,8 +209,8 @@
                   <component id="29cbf" class="javax.swing.JLabel" binding="pokemon4">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="200" height="175"/>
-                        <maximum-size width="200" height="175"/>
+                        <preferred-size width="200" height="200"/>
+                        <maximum-size width="200" height="200"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -234,12 +234,16 @@
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <enabled value="true"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <component id="8857f" class="javax.swing.JLabel" binding="pokemonImage">
                     <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="400" height="400"/>
+                      </grid>
                     </constraints>
                     <properties>
                       <text value=""/>
@@ -268,18 +272,22 @@
                   </component>
                   <component id="46894" class="javax.swing.JLabel" binding="Type1">
                     <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="100" height="100"/>
+                      </grid>
                     </constraints>
                     <properties>
-                      <text value="Type1"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="71974" class="javax.swing.JLabel" binding="Type2">
                     <constraints>
-                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="100" height="100"/>
+                      </grid>
                     </constraints>
                     <properties>
-                      <text value="Type2"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="572b4" class="javax.swing.JLabel" binding="PokedexNumber">
@@ -304,7 +312,7 @@
                 <children>
                   <component id="805c7" class="javax.swing.JList" binding="pokedex_list">
                     <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
@@ -434,7 +442,7 @@
                   <component id="8ee3b" class="javax.swing.JLabel" binding="SelectedPokemonImg">
                     <constraints>
                       <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="200" height="175"/>
+                        <preferred-size width="200" height="200"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -445,14 +453,82 @@
               </grid>
             </children>
           </grid>
-          <grid id="cd744" binding="map" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="cd744" binding="map" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="Map"/>
             </constraints>
             <properties/>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="3f817" binding="mapPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="9c268" class="javax.swing.JLabel" binding="currentMap">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="819" height="537"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="a11" binding="dataMapPanel" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="7a2a5" class="javax.swing.JButton" binding="previousMapButton">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="&lt;"/>
+                    </properties>
+                  </component>
+                  <vspacer id="6018e">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                  <component id="566bb" class="javax.swing.JButton" binding="nextMapButton">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="&gt;"/>
+                    </properties>
+                  </component>
+                  <component id="957f7" class="javax.swing.JLabel" binding="cityName">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="CityName"/>
+                    </properties>
+                  </component>
+                  <component id="900d7" class="javax.swing.JLabel" binding="cityData">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="CityData"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
           </grid>
           <grid id="47be4" binding="typeChart" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>

@@ -61,6 +61,13 @@ public class AppUI extends JFrame{
     private JLabel SelectedPokemonType1;
     private JLabel SelectedPokemonType2;
     private JLabel SelectedPokemonImg;
+    private JPanel mapPanel;
+    private JLabel currentMap;
+    private JPanel dataMapPanel;
+    private JButton previousMapButton;
+    private JButton nextMapButton;
+    private JLabel cityName;
+    private JLabel cityData;
 
     @Autowired
     public AppUI(Pokemon_typesRepository pokemonTypesRepository, PokemonRepository pokemonRepository, RegisterRepository registerRepository, TeamRepository teamRepository, TrainerRepository trainerRepository,TypeRepository typeRepository) {
@@ -73,6 +80,9 @@ public class AppUI extends JFrame{
         setpokemonTeamImages("1", "1", "1", "1", "1", "1");
         setTrainerImage("1");
         setSelectedPokemonImg("1");
+        setPokemonImage("1");
+        setPokedexTypeIcons("1", "2");
+        setCurrentMapImage("0");
     }
     public void showMainPane(){
         setContentPane(mainPane);
@@ -104,6 +114,22 @@ public class AppUI extends JFrame{
     }
     public void setSelectedPokemonImg (String t1){
         SelectedPokemonImg.setIcon(getScaledImage(setPokemonImageIcon(t1), SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+    }
+    public void setPokemonImage (String t1){
+        pokemonImage.setIcon(getScaledImage(setPokemonImageIcon(t1), pokemonImage.getWidth(), pokemonImage.getHeight()));
+    }
+    public String setTypeImage(String ordernum){
+        return "src/main/resources/icons/" + ordernum + ".png";
+    }
+    public void setPokedexTypeIcons (String t1, String t2){
+        Type1.setIcon(getScaledImage(setTypeImage(t1), Type1.getWidth(), Type1.getHeight()));
+        Type2.setIcon(getScaledImage(setTypeImage(t2), Type2.getWidth(), Type2.getHeight()));
+    }
 
+    public String setCurrentMap(String ordernum){
+        return "src/main/resources/map/" + ordernum + ".jpg";
+    }
+    public void setCurrentMapImage (String t1){
+        currentMap.setIcon(getScaledImage(setCurrentMap(t1), currentMap.getWidth(), currentMap.getHeight()));
     }
 }
