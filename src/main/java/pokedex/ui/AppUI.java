@@ -69,6 +69,8 @@ public class AppUI extends JFrame{
         showMainPane();
         setpokemonTeamImages("1", "1", "1", "1", "1", "1");
         setTrainerImage("1");
+        setContentPane(new JLabel(new ImageIcon("src/main/resources/official_artwork/normal/1.png")));
+        setLayout(new BorderLayout());
     }
     public void showMainPane(){
         setContentPane(mainPane);

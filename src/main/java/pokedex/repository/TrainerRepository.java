@@ -6,4 +6,5 @@ import pokedex.entity.Trainer;
 
 @Component
 public interface TrainerRepository extends CrudRepository<Trainer,Integer> {
+    Trainer findByName(String name);
 }
