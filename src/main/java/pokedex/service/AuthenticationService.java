@@ -2,14 +2,23 @@ package pokedex.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pokedex.entity.Register;
 import pokedex.entity.Trainer;
+import pokedex.entity.Pokemon;
+import pokedex.repository.RegisterRepository;
 import pokedex.repository.TrainerRepository;
+import pokedex.repository.PokemonRepository;
 
 @Service
 public class AuthenticationService {
-
     @Autowired
     private TrainerRepository trainerRepository;
+
+    @Autowired
+    private PokemonRepository pokemonRepository;
+
+    @Autowired
+    private RegisterRepository registerRepository;
 
     public boolean authenticate(String name, String password) {
         Trainer trainer = trainerRepository.findByName(name);
@@ -22,10 +31,13 @@ public class AuthenticationService {
             return false; // User already exists
         } else {
             Trainer newTrainer = new Trainer(name, password);
-            trainerRepository.save(newTrainer);
+            Trainer savedTrainer = trainerRepository.save(newTrainer);
+            System.out.println("New trainer registered: " + savedTrainer.getName());
+            createInitialRegistersForTrainer(savedTrainer); // Pass the trainer object
             return true; // Registration successful
         }
     }
+
 
     // New combined method
     public String loginOrRegister(String name, String password) {
@@ -44,4 +56,16 @@ public class AuthenticationService {
             return "Registration successful";
         }
     }
+    private void createInitialRegistersForTrainer(Trainer trainer) {
+        System.out.println("Creating initial registers for trainer: " + trainer.getName());
+        Iterable<Pokemon> allPokemons = pokemonRepository.findAll();
+        for (Pokemon pokemon : allPokemons) {
+            Register register = new Register(pokemon, trainer, 0);
+            registerRepository.save(register);
+            System.out.println("Register created for Pokemon: " + pokemon.getId() + " and Trainer: " + trainer.getId());
+        }
+    }
+
+
+
 }

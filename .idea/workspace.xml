@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="sincePokedex: 20/05/2024 18:51">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2024_10_02_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2024_10_02__Changes_.xml" beforeDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="21/05/2024 11:46">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +116,7 @@
       <workItem from="1716215216486" duration="2000" />
       <workItem from="1716215238076" duration="1631000" />
       <workItem from="1716282938711" duration="12000" />
-      <workItem from="1716282967699" duration="1750000" />
+      <workItem from="1716282967699" duration="3336000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -266,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716216717732</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="21/05/2024 11:46">
+      <option name="closed" value="true" />
+      <created>1716284818815</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716284818815</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +307,7 @@
     <MESSAGE value="sincePokedex: 20/05/2024 18:28" />
     <MESSAGE value="sincePokedex: 20/05/2024 18:37" />
     <MESSAGE value="sincePokedex: 20/05/2024 18:51" />
-    <option name="LAST_COMMIT_MESSAGE" value="sincePokedex: 20/05/2024 18:51" />
+    <MESSAGE value="21/05/2024 11:46" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/05/2024 11:46" />
   </component>
 </project>

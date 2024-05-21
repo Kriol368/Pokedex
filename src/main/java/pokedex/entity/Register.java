@@ -21,7 +21,15 @@ public class Register {
 
     int registered;
 
-    // standard constructors, getters, and setters
+    public Register() {
+    }
+
+    public Register(Pokemon pokemon, Trainer trainer, int registered) {
+        this.pokemon = pokemon;
+        this.trainer = trainer;
+        this.registered = registered;
+    }
+// standard constructors, getters, and setters
 
 
     public Register_key getId() {
