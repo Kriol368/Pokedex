@@ -2,6 +2,7 @@ package pokedex.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pokedex.entity.Register;
 import pokedex.entity.Trainer;
 import pokedex.entity.Pokemon;
@@ -56,7 +57,8 @@ public class AuthenticationService {
             return "Registration successful";
         }
     }
-    private void createInitialRegistersForTrainer(Trainer trainer) {
+    @Transactional
+    public void createInitialRegistersForTrainer(Trainer trainer) {
         System.out.println("Creating initial registers for trainer: " + trainer.getName());
         Iterable<Pokemon> allPokemons = pokemonRepository.findAll();
         for (Pokemon pokemon : allPokemons) {
