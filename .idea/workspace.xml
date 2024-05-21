@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 20/05/2024 12:04">
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 20/05/2024 13:49">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +59,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -101,6 +104,11 @@
       <workItem from="1716199038890" duration="278000" />
       <workItem from="1716199440909" duration="104000" />
       <workItem from="1716199595128" duration="5000" />
+      <workItem from="1716205712553" duration="177000" />
+      <workItem from="1716271438913" duration="1052000" />
+      <workItem from="1716274082602" duration="24000" />
+      <workItem from="1716274113965" duration="168000" />
+      <workItem from="1716274412016" duration="1053000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -254,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716199476650</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="docs(master): 20/05/2024 13:49">
+      <option name="closed" value="true" />
+      <created>1716205792169</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1716205792169</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +307,7 @@
     <MESSAGE value="docs(master): 20/05/2024 10:36" />
     <MESSAGE value="docs(master): 20/05/2024 11:58" />
     <MESSAGE value="docs(master): 20/05/2024 12:04" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 20/05/2024 12:04" />
+    <MESSAGE value="docs(master): 20/05/2024 13:49" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 20/05/2024 13:49" />
   </component>
 </project>
