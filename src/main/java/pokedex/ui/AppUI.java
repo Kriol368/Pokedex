@@ -2,6 +2,7 @@ package pokedex.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import pokedex.repository.PokemonRepository;
 import pokedex.service.AuthenticationService;
 
 import javax.swing.*;
@@ -12,6 +13,8 @@ import java.awt.event.ActionListener;
 @Component
 public class AppUI extends JFrame {
     private AuthenticationService authenticationService;
+    private PokemonRepository pokemonRepository; // Add this line
+
     private JTabbedPane mainPane;
     private JPanel panel1;
     private JPanel pokedex;
@@ -72,9 +75,12 @@ public class AppUI extends JFrame {
     private JLabel cityName;
     private JLabel cityData;
 
+    private int currentUserImageIndex = 1;
+
     @Autowired
     public AppUI(AuthenticationService authenticationService) {
         this.authenticationService = authenticationService;
+        this.pokemonRepository = pokemonRepository; // Initialize the repository
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280, 720);
@@ -98,6 +104,31 @@ public class AppUI extends JFrame {
 
                 // Display message based on the result
                 JOptionPane.showMessageDialog(AppUI.this, resultMessage, "Authentication Result", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+
+        // Add action listeners to the arrow buttons
+        leftArrowButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Decrease the image index and update the character image
+                currentUserImageIndex--;
+                if (currentUserImageIndex < 1) {
+                    currentUserImageIndex = 21; // Return to 21 if less than 1
+                }
+                setTrainerImage(String.valueOf(currentUserImageIndex));
+            }
+        });
+
+        rightArrowButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Increase the image index and update the character image
+                currentUserImageIndex++;
+                if (currentUserImageIndex > 21) {
+                    currentUserImageIndex = 1; // Return to 1 if greater than 21
+                }
+                setTrainerImage(String.valueOf(currentUserImageIndex));
             }
         });
     }
