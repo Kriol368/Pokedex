@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 20/05/2024 13:49">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 21/05/2024 09:38">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +106,7 @@
       <workItem from="1716271438913" duration="1052000" />
       <workItem from="1716274082602" duration="24000" />
       <workItem from="1716274113965" duration="168000" />
-      <workItem from="1716274412016" duration="1053000" />
+      <workItem from="1716274412016" duration="3565000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -270,7 +268,47 @@
       <option name="project" value="LOCAL" />
       <updated>1716205792169</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="docs(master): 21/05/2024">
+      <option name="closed" value="true" />
+      <created>1716275640145</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716275640145</updated>
+    </task>
+    <task id="LOCAL-00023" summary="docs(master): 21/05/2024 09:34">
+      <option name="closed" value="true" />
+      <created>1716276852345</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1716276852345</updated>
+    </task>
+    <task id="LOCAL-00024" summary="docs(master): 21/05/2024 09:38">
+      <option name="closed" value="true" />
+      <created>1716277111823</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1716277111823</updated>
+    </task>
+    <task id="LOCAL-00025" summary="docs(master): 21/05/2024 09:38">
+      <option name="closed" value="true" />
+      <created>1716277660356</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1716277660356</updated>
+    </task>
+    <task id="LOCAL-00026" summary="docs(master): 21/05/2024 09:38">
+      <option name="closed" value="true" />
+      <created>1716277671426</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1716277671426</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +346,9 @@
     <MESSAGE value="docs(master): 20/05/2024 11:58" />
     <MESSAGE value="docs(master): 20/05/2024 12:04" />
     <MESSAGE value="docs(master): 20/05/2024 13:49" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 20/05/2024 13:49" />
+    <MESSAGE value="docs(master): 21/05/2024" />
+    <MESSAGE value="docs(master): 21/05/2024 09:34" />
+    <MESSAGE value="docs(master): 21/05/2024 09:38" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 21/05/2024 09:38" />
   </component>
 </project>
