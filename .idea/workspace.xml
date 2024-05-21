@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="commmitEnTeoriaNoRompoNada: 20/05/2024 12:08">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
-    </list>
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="mapa: 21/05/2024 10:23" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.App.executor": "Run",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "163",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "275",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "227",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -113,7 +108,7 @@
       <workItem from="1716194201214" duration="206000" />
       <workItem from="1716197135181" duration="398000" />
       <workItem from="1716199336567" duration="424000" />
-      <workItem from="1716274486260" duration="5083000" />
+      <workItem from="1716274486260" duration="5449000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -251,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716275614590</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="mapa: 21/05/2024 10:23">
+      <option name="closed" value="true" />
+      <created>1716279824541</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716279824541</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +289,7 @@
     <MESSAGE value="docs(master): 20/05/2024 10:29" />
     <MESSAGE value="sincePokedex: 20/05/2024 10:19" />
     <MESSAGE value="commmitEnTeoriaNoRompoNada: 20/05/2024 12:08" />
-    <option name="LAST_COMMIT_MESSAGE" value="commmitEnTeoriaNoRompoNada: 20/05/2024 12:08" />
+    <MESSAGE value="mapa: 21/05/2024 10:23" />
+    <option name="LAST_COMMIT_MESSAGE" value="mapa: 21/05/2024 10:23" />
   </component>
 </project>
