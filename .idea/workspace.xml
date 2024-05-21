@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="commmitEnTeoriaNoRompoNada: 20/05/2024 12:08">
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 21/05/2024 10:23">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,20 +24,16 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Marpuchy&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Kriol368/Pokedex.git&quot;,
-    &quot;accountId&quot;: &quot;4651a800-ba49-4035-8a90-c385678ce21b&quot;
-  }
-}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -47,37 +43,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Run.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.App.executor": "Run",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "163",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "275",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Run.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.App.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-bfa3237e" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
+        <option value="jdk-22-openjdk-22-4caba194b151-6fbd92ee" />
       </set>
     </attachedChunks>
   </component>
@@ -109,11 +104,15 @@
       <workItem from="1715843779928" duration="4942000" />
       <workItem from="1715850836975" duration="114000" />
       <workItem from="1715925806985" duration="105000" />
-      <workItem from="1716185289620" duration="8525000" />
-      <workItem from="1716194201214" duration="206000" />
-      <workItem from="1716197135181" duration="398000" />
-      <workItem from="1716199336567" duration="424000" />
-      <workItem from="1716274486260" duration="5083000" />
+      <workItem from="1716185289620" duration="9786000" />
+      <workItem from="1716199038890" duration="278000" />
+      <workItem from="1716199440909" duration="104000" />
+      <workItem from="1716199595128" duration="5000" />
+      <workItem from="1716205712553" duration="177000" />
+      <workItem from="1716271438913" duration="1052000" />
+      <workItem from="1716274082602" duration="24000" />
+      <workItem from="1716274113965" duration="168000" />
+      <workItem from="1716274412016" duration="6232000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -227,31 +226,119 @@
       <option name="project" value="LOCAL" />
       <updated>1716193781446</updated>
     </task>
-    <task id="LOCAL-00016" summary="sincePokedex: 20/05/2024 10:19">
+    <task id="LOCAL-00016" summary="docs(master): 20/05/2024 10:34">
       <option name="closed" value="true" />
-      <created>1716194266200</created>
+      <created>1716194048855</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1716194266200</updated>
+      <updated>1716194048855</updated>
     </task>
-    <task id="LOCAL-00017" summary="commmitEnTeoriaNoRompoNada: 20/05/2024 12:08">
+    <task id="LOCAL-00017" summary="docs(master): 20/05/2024 10:36">
       <option name="closed" value="true" />
-      <created>1716199710935</created>
+      <created>1716194174903</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1716199710935</updated>
+      <updated>1716194174903</updated>
     </task>
-    <task id="LOCAL-00018" summary="commmitEnTeoriaNoRompoNada: 20/05/2024 12:08">
+    <task id="LOCAL-00018" summary="docs(master): 20/05/2024 10:36">
       <option name="closed" value="true" />
-      <created>1716275614590</created>
+      <created>1716194311865</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1716275614590</updated>
+      <updated>1716194311865</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="docs(master): 20/05/2024 11:58">
+      <option name="closed" value="true" />
+      <created>1716199135691</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716199135691</updated>
+    </task>
+    <task id="LOCAL-00020" summary="docs(master): 20/05/2024 12:04">
+      <option name="closed" value="true" />
+      <created>1716199476649</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716199476650</updated>
+    </task>
+    <task id="LOCAL-00021" summary="docs(master): 20/05/2024 13:49">
+      <option name="closed" value="true" />
+      <created>1716205792169</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1716205792169</updated>
+    </task>
+    <task id="LOCAL-00022" summary="docs(master): 21/05/2024">
+      <option name="closed" value="true" />
+      <created>1716275640145</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716275640145</updated>
+    </task>
+    <task id="LOCAL-00023" summary="docs(master): 21/05/2024 09:34">
+      <option name="closed" value="true" />
+      <created>1716276852345</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1716276852345</updated>
+    </task>
+    <task id="LOCAL-00024" summary="docs(master): 21/05/2024 09:38">
+      <option name="closed" value="true" />
+      <created>1716277111823</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1716277111823</updated>
+    </task>
+    <task id="LOCAL-00025" summary="docs(master): 21/05/2024 09:38">
+      <option name="closed" value="true" />
+      <created>1716277660356</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1716277660356</updated>
+    </task>
+    <task id="LOCAL-00026" summary="docs(master): 21/05/2024 09:38">
+      <option name="closed" value="true" />
+      <created>1716277671426</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1716277671426</updated>
+    </task>
+    <task id="LOCAL-00027" summary="docs(master): 21/05/2024 09:54">
+      <option name="closed" value="true" />
+      <created>1716278082698</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1716278082698</updated>
+    </task>
+    <task id="LOCAL-00028" summary="docs(master): 21/05/2024 09:56">
+      <option name="closed" value="true" />
+      <created>1716278176952</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1716278176952</updated>
+    </task>
+    <task id="LOCAL-00029" summary="docs(master): 21/05/2024 10:23">
+      <option name="closed" value="true" />
+      <created>1716279806631</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1716279806631</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +356,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(master): 16/05/2024 08:18" />
     <MESSAGE value="fix(master): 16/05/2024 08:30" />
     <MESSAGE value="fix(master): 16/05/2024 08:36" />
     <MESSAGE value="fix(master): 16/05/2024 08:54" />
@@ -284,8 +370,17 @@
     <MESSAGE value="feat(master): 16/05/2024 10:27" />
     <MESSAGE value="docs(master): 16/05/2024 10:38" />
     <MESSAGE value="docs(master): 20/05/2024 10:29" />
-    <MESSAGE value="sincePokedex: 20/05/2024 10:19" />
-    <MESSAGE value="commmitEnTeoriaNoRompoNada: 20/05/2024 12:08" />
-    <option name="LAST_COMMIT_MESSAGE" value="commmitEnTeoriaNoRompoNada: 20/05/2024 12:08" />
+    <MESSAGE value="docs(master): 20/05/2024 10:34" />
+    <MESSAGE value="docs(master): 20/05/2024 10:36" />
+    <MESSAGE value="docs(master): 20/05/2024 11:58" />
+    <MESSAGE value="docs(master): 20/05/2024 12:04" />
+    <MESSAGE value="docs(master): 20/05/2024 13:49" />
+    <MESSAGE value="docs(master): 21/05/2024" />
+    <MESSAGE value="docs(master): 21/05/2024 09:34" />
+    <MESSAGE value="docs(master): 21/05/2024 09:38" />
+    <MESSAGE value="docs(master): 21/05/2024 09:54" />
+    <MESSAGE value="docs(master): 21/05/2024 09:56" />
+    <MESSAGE value="docs(master): 21/05/2024 10:23" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 21/05/2024 10:23" />
   </component>
 </project>
