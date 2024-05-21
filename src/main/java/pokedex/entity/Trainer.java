@@ -2,6 +2,7 @@ package pokedex.entity;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -17,6 +18,15 @@ public class Trainer {
     @OneToMany(mappedBy = "trainer")
     Set<Register> registers;
 
+    public Trainer() {
+    }
+
+    public Trainer(String name, String password) {
+        this.name = name;
+        this.password = password;
+        this.image = 1;
+        this.registers = new HashSet<>();
+    }
     // Getters and setters for each field here
 
     public int getId() {
