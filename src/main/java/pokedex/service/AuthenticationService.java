@@ -26,4 +26,22 @@ public class AuthenticationService {
             return true; // Registration successful
         }
     }
+
+    // New combined method
+    public String loginOrRegister(String name, String password) {
+        Trainer trainer = trainerRepository.findByName(name);
+        if (trainer != null) {
+            // Attempt login
+            if (trainer.getPassword().equals(password)) {
+                return "Login successful";
+            } else {
+                return "Invalid password";
+            }
+        } else {
+            // Register new user
+            Trainer newTrainer = new Trainer(name, password);
+            trainerRepository.save(newTrainer);
+            return "Registration successful";
+        }
+    }
 }
