@@ -53,11 +53,14 @@ public class AppUI extends JFrame{
     private JButton pokemon4Button;
     private JButton pokemon5Button;
     private JButton pokemon6Button;
-    private JList list1;
+    private JList registedList;
     private JPanel InteractiveTeamPanel;
     private JPanel RegisteredPanel;
     private JButton SaveTeamButton;
     private JLabel SelectedPokemonName;
+    private JLabel SelectedPokemonType1;
+    private JLabel SelectedPokemonType2;
+    private JLabel SelectedPokemonImg;
 
     @Autowired
     public AppUI(Pokemon_typesRepository pokemonTypesRepository, PokemonRepository pokemonRepository, RegisterRepository registerRepository, TeamRepository teamRepository, TrainerRepository trainerRepository,TypeRepository typeRepository) {
@@ -69,6 +72,7 @@ public class AppUI extends JFrame{
         showMainPane();
         setpokemonTeamImages("1", "1", "1", "1", "1", "1");
         setTrainerImage("1");
+        setSelectedPokemonImg("1");
     }
     public void showMainPane(){
         setContentPane(mainPane);
@@ -97,6 +101,9 @@ public class AppUI extends JFrame{
     }
     public void setTrainerImage (String t1){
         characterImage.setIcon(getScaledImage(setTrainerImageIcon(t1), characterImage.getWidth(), characterImage.getHeight()));
+    }
+    public void setSelectedPokemonImg (String t1){
+        SelectedPokemonImg.setIcon(getScaledImage(setPokemonImageIcon(t1), SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
 
     }
 }
