@@ -2,13 +2,14 @@ package pokedex.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import pokedex.entity.Register;
 import pokedex.entity.Trainer;
 import pokedex.entity.Pokemon;
 import pokedex.repository.RegisterRepository;
 import pokedex.repository.TrainerRepository;
 import pokedex.repository.PokemonRepository;
+
+import java.util.List;
 
 @Service
 public class AuthenticationService {
@@ -57,12 +58,13 @@ public class AuthenticationService {
             return "Registration successful";
         }
     }
-    @Transactional
+
     public void createInitialRegistersForTrainer(Trainer trainer) {
         System.out.println("Creating initial registers for trainer: " + trainer.getName());
-        Iterable<Pokemon> allPokemons = pokemonRepository.findAll();
+        List<Pokemon> allPokemons = pokemonRepository.findAll();
         for (Pokemon pokemon : allPokemons) {
             Register register = new Register(pokemon, trainer, 0);
+            System.out.println(register.getPokemon() + " " + register.getTrainer());
             registerRepository.save(register);
             System.out.println("Register created for Pokemon: " + pokemon.getId() + " and Trainer: " + trainer.getId());
         }
