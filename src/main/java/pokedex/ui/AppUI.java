@@ -75,6 +75,7 @@ public class AppUI extends JFrame {
     private JButton nextMapButton;
     private JLabel cityName;
     private JLabel cityData;
+    private JScrollPane pokedex_scroll;
 
     private int currentUserImageIndex = 1;
 
@@ -195,7 +196,7 @@ public class AppUI extends JFrame {
         currentMap.setIcon(getScaledImage(setCurrentMap(t1), currentMap.getWidth(), currentMap.getHeight()));
     }
     public void loadPokedexData() {
-        List<Pokemon> pokedexEntries = pokemonRepository.findAll();
+        List<Pokemon> pokedexEntries = pokemonRepository.findAllByOrderBySpeciesIdAscIdAsc();
         DefaultListModel<String> pokedexListModel = (DefaultListModel<String>) pokedex_list.getModel();
         pokedexListModel.clear();
         for (Pokemon pokemon : pokedexEntries) {

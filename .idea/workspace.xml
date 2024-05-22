@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="fix(master): 22/05/2024 10:13">
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="fix(master): 22/05/2024 10:38">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/PokemonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/PokemonRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +114,8 @@
       <workItem from="1716274082602" duration="24000" />
       <workItem from="1716274113965" duration="168000" />
       <workItem from="1716274412016" duration="6505000" />
-      <workItem from="1716363387930" duration="3685000" />
+      <workItem from="1716363387930" duration="3755000" />
+      <workItem from="1716369483136" duration="1209000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -364,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716365614021</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fix(master): 22/05/2024 10:38">
+      <option name="closed" value="true" />
+      <created>1716367133430</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1716367133430</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +391,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(master): 16/05/2024 09:01" />
     <MESSAGE value="feat(master): 16/05/2024 09:03" />
     <MESSAGE value="feat(master): 16/05/2024 09:15" />
     <MESSAGE value="feat(master): 16/05/2024 09:21" />
@@ -407,14 +415,15 @@
     <MESSAGE value="docs(master): 21/05/2024 10:40" />
     <MESSAGE value="fix(master): 22/05/2024 09:57" />
     <MESSAGE value="fix(master): 22/05/2024 10:13" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(master): 22/05/2024 10:13" />
+    <MESSAGE value="fix(master): 22/05/2024 10:38" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(master): 22/05/2024 10:38" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java</url>
-          <line>161</line>
+          <line>162</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

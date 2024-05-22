@@ -49,7 +49,7 @@ public class AuthenticationService {
     @Transactional
     public void createInitialRegistersForTrainer(Trainer trainer) {
         System.out.println("Creating initial registers for trainer: " + trainer.getName());
-        List<Pokemon> allPokemons = pokemonRepository.findAll();
+        List<Pokemon> allPokemons = pokemonRepository.findAllByOrderBySpeciesIdAscIdAsc();
         for (Pokemon pokemon : allPokemons) {
             Register register = new Register(pokemon, trainer, 0);
             System.out.println(register.getPokemon() + " " + register.getTrainer());
