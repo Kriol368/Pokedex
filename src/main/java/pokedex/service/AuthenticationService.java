@@ -23,30 +23,9 @@ public class AuthenticationService {
     @Autowired
     private RegisterRepository registerRepository;
 
-    public boolean authenticate(String name, String password) {
-        Trainer trainer = trainerRepository.findByName(name);
-        return trainer != null && trainer.getPassword().equals(password);
-    }
-
-    @Transactional
-    public boolean register(String name, String password) {
-        Trainer existingTrainer = trainerRepository.findByName(name);
-        if (existingTrainer != null) {
-            return false; // User already exists
-        } else {
-            Trainer newTrainer = new Trainer(name, password);
-            Trainer savedTrainer = trainerRepository.save(newTrainer);
-            System.out.println("New trainer registered: " + savedTrainer.getName());
-
-            createInitialRegistersForTrainer(savedTrainer); // Pass the trainer object
-
-            return true; // Registration successful
-        }
-    }
-
-
 
     // New combined method
+    @Transactional
     public String loginOrRegister(String name, String password) {
         Trainer trainer = trainerRepository.findByName(name);
         if (trainer != null) {
@@ -60,10 +39,12 @@ public class AuthenticationService {
             // Register new user
             Trainer newTrainer = new Trainer(name, password);
             trainerRepository.save(newTrainer);
+            createInitialRegistersForTrainer(newTrainer);
             return "Registration successful";
         }
     }
-@Transactional
+
+    @Transactional
     public void createInitialRegistersForTrainer(Trainer trainer) {
         System.out.println("Creating initial registers for trainer: " + trainer.getName());
         List<Pokemon> allPokemons = pokemonRepository.findAll();
@@ -74,7 +55,6 @@ public class AuthenticationService {
             System.out.println("Register created for Pokemon: " + pokemon.getId() + " and Trainer: " + trainer.getId());
         }
     }
-
 
 
 }
