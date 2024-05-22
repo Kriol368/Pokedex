@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="fix(master): 22/05/2024 10:38">
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 22/05/2024 11:39">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/repository/PokemonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/repository/PokemonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/service/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,7 @@
       <workItem from="1716274113965" duration="168000" />
       <workItem from="1716274412016" duration="6505000" />
       <workItem from="1716363387930" duration="3755000" />
-      <workItem from="1716369483136" duration="1209000" />
+      <workItem from="1716369483136" duration="2070000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -373,7 +370,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716367133430</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="feat(master): 22/05/2024 11:39">
+      <option name="closed" value="true" />
+      <created>1716370778276</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1716370778276</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +396,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(master): 16/05/2024 09:03" />
     <MESSAGE value="feat(master): 16/05/2024 09:15" />
     <MESSAGE value="feat(master): 16/05/2024 09:21" />
     <MESSAGE value="feat(master): 16/05/2024 09:33" />
@@ -416,7 +420,8 @@
     <MESSAGE value="fix(master): 22/05/2024 09:57" />
     <MESSAGE value="fix(master): 22/05/2024 10:13" />
     <MESSAGE value="fix(master): 22/05/2024 10:38" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(master): 22/05/2024 10:38" />
+    <MESSAGE value="feat(master): 22/05/2024 11:39" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 22/05/2024 11:39" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
