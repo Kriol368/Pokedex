@@ -1,5 +1,6 @@
 package pokedex.service;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pokedex.entity.Register;
@@ -27,6 +28,7 @@ public class AuthenticationService {
         return trainer != null && trainer.getPassword().equals(password);
     }
 
+    @Transactional
     public boolean register(String name, String password) {
         Trainer existingTrainer = trainerRepository.findByName(name);
         if (existingTrainer != null) {
@@ -35,10 +37,13 @@ public class AuthenticationService {
             Trainer newTrainer = new Trainer(name, password);
             Trainer savedTrainer = trainerRepository.save(newTrainer);
             System.out.println("New trainer registered: " + savedTrainer.getName());
+
             createInitialRegistersForTrainer(savedTrainer); // Pass the trainer object
+
             return true; // Registration successful
         }
     }
+
 
 
     // New combined method
@@ -58,7 +63,7 @@ public class AuthenticationService {
             return "Registration successful";
         }
     }
-
+@Transactional
     public void createInitialRegistersForTrainer(Trainer trainer) {
         System.out.println("Creating initial registers for trainer: " + trainer.getName());
         List<Pokemon> allPokemons = pokemonRepository.findAll();

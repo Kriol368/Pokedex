@@ -78,7 +78,7 @@ public class AppUI extends JFrame {
     private int currentUserImageIndex = 1;
 
     @Autowired
-    public AppUI(AuthenticationService authenticationService) {
+    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         setTitle("Pokedex");

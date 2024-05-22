@@ -20,7 +20,7 @@ public class LoginController {
     public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password) {
         boolean isAuthenticated = authenticationService.authenticate(username, password);
         if (isAuthenticated) {
-            // Store user information in session
+            // Store user information in session (if needed)
             return ResponseEntity.ok("Login successful");
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
@@ -36,5 +36,4 @@ public class LoginController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User already exists");
         }
     }
-
 }
