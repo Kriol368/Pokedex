@@ -1,27 +1,29 @@
 package pokedex.service;
 
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pokedex.entity.Pokemon;
 import pokedex.entity.Register;
 import pokedex.entity.Trainer;
-import pokedex.entity.Pokemon;
+import pokedex.repository.PokemonRepository;
 import pokedex.repository.RegisterRepository;
 import pokedex.repository.TrainerRepository;
-import pokedex.repository.PokemonRepository;
 
 import java.util.List;
 
 @Service
 public class AuthenticationService {
-    @Autowired
-    private TrainerRepository trainerRepository;
+    private final TrainerRepository trainerRepository;
 
-    @Autowired
-    private PokemonRepository pokemonRepository;
+    private final PokemonRepository pokemonRepository;
 
-    @Autowired
-    private RegisterRepository registerRepository;
+    private final RegisterRepository registerRepository;
+
+    public AuthenticationService(TrainerRepository trainerRepository, PokemonRepository pokemonRepository, RegisterRepository registerRepository) {
+        this.trainerRepository = trainerRepository;
+        this.pokemonRepository = pokemonRepository;
+        this.registerRepository = registerRepository;
+    }
 
 
     // New combined method

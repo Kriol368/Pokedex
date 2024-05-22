@@ -2,13 +2,14 @@ package pokedex.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import pokedex.entity.Pokemon;
 import pokedex.repository.PokemonRepository;
 import pokedex.service.AuthenticationService;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 @Component
 public class AppUI extends JFrame {
@@ -85,6 +86,8 @@ public class AppUI extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280, 720);
         setLocationRelativeTo(null);
+        pokedex_list.setModel(new DefaultListModel<>());
+        loadPokedexData();
         setVisible(true);
         showMainPane();
         setpokemonTeamImages("1", "1", "1", "1", "1", "1");
@@ -191,4 +194,13 @@ public class AppUI extends JFrame {
     public void setCurrentMapImage(String t1) {
         currentMap.setIcon(getScaledImage(setCurrentMap(t1), currentMap.getWidth(), currentMap.getHeight()));
     }
+    public void loadPokedexData() {
+        List<Pokemon> pokedexEntries = pokemonRepository.findAll();
+        DefaultListModel<String> pokedexListModel = (DefaultListModel<String>) pokedex_list.getModel();
+        pokedexListModel.clear();
+        for (Pokemon pokemon : pokedexEntries) {
+            pokedexListModel.addElement(pokemon.getSpeciesId() + " - " + pokemon.getIdentifier());
+        }
+    }
+
 }
