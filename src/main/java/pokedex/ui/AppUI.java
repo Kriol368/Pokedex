@@ -134,6 +134,8 @@ public class AppUI extends JFrame {
         setPokemonImage("1");
         setPokedexTypeIcons("1", "2");
         setCurrentMapImage("0");
+        updateCurrentMap();
+        updateMapDetails();
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -356,13 +358,13 @@ public class AppUI extends JFrame {
     private void increaseCurrentMapId() {
         currentMapId++;
         if (currentMapId > 22) {
-            currentMapId = 1; // Wrap around to 1 if exceeding 22
+            currentMapId = 0; // Wrap around to 1 if exceeding 22
         }
     }
 
     private void decreaseCurrentMapId() {
         currentMapId--;
-        if (currentMapId < 1) {
+        if (currentMapId < 0) {
             currentMapId = 22; // Wrap around to 22 if going below 1
         }
     }
@@ -376,16 +378,44 @@ public class AppUI extends JFrame {
     // Modify the updateMapDetails() method to use the currentMap object
     private void updateMapDetails() {
         if (currentMapClass != null) {
-            // Update the cityName label with the map name
+            // Actualizar la etiqueta cityName con el nombre del mapa
             cityName.setText(currentMapClass.getName());
 
-            // Update the cityData label with the map description
-            cityData.setText(currentMapClass.getDescription());
+            // Formatear el texto de la descripción con saltos de línea y etiquetas HTML
+            String formattedText = "<html>" + addLineBreaks(currentMapClass.getDescription(), 65) + "</html>";
+            cityData.setText(formattedText);
         } else {
-            // Handle the case when the current map is null
+            // Manejar el caso cuando el mapa actual es nulo
             cityName.setText("Unknown Map");
             cityData.setText("No description available");
         }
     }
+
+    private String addLineBreaks(String text, int lineLength) {
+        if (text == null || text.isEmpty()) {
+            return text;
+        }
+
+        StringBuilder result = new StringBuilder();
+        int length = text.length();
+        int start = 0;
+
+        while (start < length) {
+            int end = Math.min(start + lineLength, length);
+
+            if (end < length && text.charAt(end) != ' ') {
+                int lastSpace = text.lastIndexOf(' ', end);
+                if (lastSpace > start) {
+                    end = lastSpace;
+                }
+            }
+
+            result.append(text, start, end).append("<br>");
+            start = end + 1; // Mover el inicio a después del espacio
+        }
+
+        return result.toString().replaceAll("<br>$", ""); // Remover el último <br>
+    }
+
 
 }
