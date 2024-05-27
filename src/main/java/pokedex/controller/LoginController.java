@@ -36,4 +36,5 @@ public class LoginController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User already exists");
         }
     }
+
 }

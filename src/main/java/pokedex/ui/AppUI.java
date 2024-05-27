@@ -3,12 +3,17 @@ package pokedex.ui;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pokedex.repository.*;
+import pokedex.controller.LoginController;
+import pokedex.service.AuthenticationService;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 @Component
 public class AppUI extends JFrame{
+    private AuthenticationService authenticationService;
     private JTabbedPane mainPane;
     private JPanel panel1;
     private JPanel pokedex;
@@ -70,7 +75,8 @@ public class AppUI extends JFrame{
     private JLabel cityData;
 
     @Autowired
-    public AppUI(Pokemon_typesRepository pokemonTypesRepository, PokemonRepository pokemonRepository, RegisterRepository registerRepository, TeamRepository teamRepository, TrainerRepository trainerRepository,TypeRepository typeRepository) {
+    public AppUI(Pokemon_typesRepository pokemonTypesRepository, PokemonRepository pokemonRepository, RegisterRepository registerRepository, TeamRepository teamRepository, TrainerRepository trainerRepository,TypeRepository typeRepository, AuthenticationService authenticationService) {
+        this.authenticationService = authenticationService;
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280, 720);
@@ -84,6 +90,7 @@ public class AppUI extends JFrame{
         setPokedexTypeIcons("1", "2");
         setCurrentMapImage("0");
     }
+
     public void showMainPane(){
         setContentPane(mainPane);
         validate();
@@ -132,4 +139,6 @@ public class AppUI extends JFrame{
     public void setCurrentMapImage (String t1){
         currentMap.setIcon(getScaledImage(setCurrentMap(t1), currentMap.getWidth(), currentMap.getHeight()));
     }
+
+
 }
