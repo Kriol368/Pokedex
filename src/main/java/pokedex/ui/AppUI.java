@@ -83,6 +83,7 @@ public class AppUI extends JFrame {
 
     private int currentUserImageIndex = 1;
     private Trainer loggedInUser = null; // Track the logged-in user
+    private int currentMapId = 0;
     @Autowired
     public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository) {
         this.authenticationService = authenticationService;
@@ -162,6 +163,23 @@ public class AppUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 saveCurrentImage();
+            }
+        });
+        previousMapButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                decreaseCurrentMapId();
+                // Update the UI to display the new current map
+                setCurrentMapImage(String.valueOf(currentMapId));
+            }
+        });
+        nextMapButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Increase the current map ID
+                increaseCurrentMapId();
+                // Update the UI to display the new current map
+                setCurrentMapImage(String.valueOf(currentMapId));
             }
         });
     }
@@ -296,4 +314,19 @@ public class AppUI extends JFrame {
         }
         return str.substring(0, 1).toUpperCase() + str.substring(1);
     }
+    // Define methods to increase and decrease the current map ID
+    private void increaseCurrentMapId() {
+        currentMapId++;
+        if (currentMapId > 22) {
+            currentMapId = 1; // Wrap around to 1 if exceeding 22
+        }
+    }
+
+    private void decreaseCurrentMapId() {
+        currentMapId--;
+        if (currentMapId < 1) {
+            currentMapId = 22; // Wrap around to 22 if going below 1
+        }
+    }
+
 }
