@@ -33,7 +33,7 @@ public class AppUI extends JFrame {
     private JLabel labelPassword;
     private JTextField username;
     private JPasswordField password;
-    private JProgressBar ProgressBar;
+    private JProgressBar progressBar;
     private JLabel labelProgressBar;
     private JButton loginButton;
     private JButton leftArrowButton;
@@ -116,11 +116,11 @@ public class AppUI extends JFrame {
                     // Display message based on the result
                     JOptionPane.showMessageDialog(AppUI.this, resultMessage, "Authentication Result", JOptionPane.INFORMATION_MESSAGE);
 
-                    // If login is successful, load the trainer's image
+                    // If login is successful, load the trainer's image and update progress bar
                     if (resultMessage.equals("Login successful")) {
                         loggedInUser = trainerRepository.findByName(enteredUsername);
                         if (loggedInUser != null) {
-                            loadTrainerImage(loggedInUser.getName());
+                            loadTrainerInfo(loggedInUser.getName());
                             loginButton.setText("Logout");
                         }
                     }
@@ -257,11 +257,14 @@ public class AppUI extends JFrame {
         }
     }
 
-    private void loadTrainerImage(String name) {
+    private void loadTrainerInfo(String name) {
         Trainer trainer = trainerRepository.findByName(name);
         if (trainer != null) {
             currentUserImageIndex = trainer.getImage();
             setTrainerImage(String.valueOf(currentUserImageIndex));
+            loggedInUser = trainer; // Ensure loggedInUser is updated
+            updateProgressBar(); // Update the progress bar after loading the trainer
+
         }
     }
     private void clearUserSession() {
@@ -270,6 +273,20 @@ public class AppUI extends JFrame {
         password.setText("");
         currentUserImageIndex = 1;
         setTrainerImage("1");
+        progressBar.setValue(0);
+        progressBar.setString("0%");
+    }
+    private void updateProgressBar() {
+        if (loggedInUser != null) {
+            int trainerId = loggedInUser.getId();
+            long registeredCount = trainerRepository.countRegisteredPokemons(trainerId);
+            long totalCount = trainerRepository.countTotalPokemons(trainerId);
+
+            int progressPercentage = totalCount > 0 ? (int) ((registeredCount * 100) / totalCount) : 0;
+            progressBar.setValue(progressPercentage);
+            progressBar.setString(progressPercentage + "%");
+            progressBar.setStringPainted(true);
+        }
     }
 
 }
