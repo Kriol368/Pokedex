@@ -198,10 +198,10 @@ public class AppUI extends JFrame {
     }
 
     public void setTrainerImage(String t1) {
-        if (parseInt(t1) == 2 || parseInt(t1) == 12 || parseInt(t1) == 13 || parseInt(t1) == 16) {
-            characterImage.setSize(new Dimension(275, 600));
-        }else if (parseInt(t1) == 6 || parseInt(t1) == 7 || parseInt(t1) == 10 || parseInt(t1) == 18 ) {
+        if (parseInt(t1) == 2 || parseInt(t1) == 12 || parseInt(t1) == 13 || parseInt(t1) == 16 || parseInt(t1) == 21) {
             characterImage.setSize(new Dimension(260, 600));
+        }else if (parseInt(t1) == 6 || parseInt(t1) == 7 || parseInt(t1) == 10 || parseInt(t1) == 18 ) {
+            characterImage.setSize(new Dimension(240, 600));
         } else if (parseInt(t1) == 9) {
             characterImage.setSize(new Dimension(350, 600));
         } else if (parseInt(t1) == 14 || parseInt(t1) == 20) {
@@ -238,6 +238,8 @@ public class AppUI extends JFrame {
         currentMap.setIcon(getScaledImage(setCurrentMap(t1), currentMap.getWidth(), currentMap.getHeight()));
     }
     public void loadPokedexData() {
+        Font f = new Font("Arial", Font.PLAIN, 40);
+        pokedex_list.setFont(f);
         List<Pokemon> pokedexEntries = pokemonRepository.findAllByOrderBySpeciesIdAscIdAsc();
         DefaultListModel<String> pokedexListModel = (DefaultListModel<String>) pokedex_list.getModel();
         pokedexListModel.clear();
