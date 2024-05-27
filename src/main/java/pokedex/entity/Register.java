@@ -7,21 +7,30 @@ import jakarta.persistence.*;
 public class Register {
 
     @EmbeddedId
-    Register_key id;
+    private Register_key id;
 
     @ManyToOne
-    @MapsId("pokemon_id")
-    @JoinColumn(name = "pokemon_id")
-    Pokemon pokemon;
+    @MapsId("pokemonId") // Specify the correct field name in Register_key
+    @JoinColumn(name = "pokemon_id") // Name of the foreign key column in the Register table
+    private Pokemon pokemon;
 
     @ManyToOne
-    @MapsId("trainer_id")
-    @JoinColumn(name = "trainer_id")
-    Trainer trainer;
+    @MapsId("trainerId") // Specify the correct field name in Register_key
+    @JoinColumn(name = "trainer_id") // Name of the foreign key column in the Register table
+    private Trainer trainer;
 
-    int registered;
+    private int registered;
 
-    // standard constructors, getters, and setters
+    public Register() {
+    }
+
+    public Register(Pokemon pokemon, Trainer trainer, int registered) {
+        this.pokemon = pokemon;
+        this.trainer = trainer;
+        this.registered = registered;
+        this.id = new Register_key(pokemon.getId(), trainer.getId());
+    }
+// standard constructors, getters, and setters
 
 
     public Register_key getId() {

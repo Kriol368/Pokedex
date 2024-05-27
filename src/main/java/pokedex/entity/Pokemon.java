@@ -12,9 +12,11 @@ public class Pokemon {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
     private String identifier;
+    @Column(name = "species_id")
     private int speciesId;
     private int height;
     private int weight;
+    @Column(name = "\"order\"")
     private int order;
 
     @ManyToMany(cascade = CascadeType.ALL)
