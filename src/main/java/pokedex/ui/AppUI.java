@@ -177,6 +177,8 @@ public class AppUI extends JFrame {
                 decreaseCurrentMapId();
                 // Update the UI to display the new current map
                 setCurrentMapImage(String.valueOf(currentMapId));
+                updateCurrentMap();
+                updateMapDetails();
             }
         });
         nextMapButton.addActionListener(new ActionListener() {
@@ -186,6 +188,8 @@ public class AppUI extends JFrame {
                 increaseCurrentMapId();
                 // Update the UI to display the new current map
                 setCurrentMapImage(String.valueOf(currentMapId));
+                updateCurrentMap();
+                updateMapDetails();
             }
         });
     }
