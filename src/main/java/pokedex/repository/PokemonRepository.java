@@ -9,4 +9,6 @@ import java.util.List;
 
 @Repository // Use @Repository instead of @Component
 public interface PokemonRepository extends CrudRepository<Pokemon, Integer> {
-    List<Pokemon> findAllByOrderBySpeciesIdAscIdAsc();}
+    List<Pokemon> findAllByOrderBySpeciesIdAscIdAsc();
+    Pokemon findByIdentifier(String identifier);
+}

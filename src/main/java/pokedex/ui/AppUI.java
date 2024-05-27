@@ -9,6 +9,8 @@ import pokedex.repository.PokemonRepository;
 import pokedex.repository.TrainerRepository;
 import pokedex.service.AuthenticationService;
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -215,6 +217,29 @@ public class AppUI extends JFrame {
                 setCurrentMapImage(String.valueOf(currentMapId));
                 updateCurrentMap();
                 updateMapDetails();
+            }
+        });
+        pokedex_list.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
+                    Object selectedObject = pokedex_list.getSelectedValue(); // Get the selected object
+                    if (selectedObject != null) { // Ensure an item is selected
+                        // Get the selected Pokemon's identifier
+                        String selectedIdentifier = selectedObject.toString().split(" - ")[1];
+                        // Retrieve the selected Pokemon from the repository
+                        Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+                        if (selectedPokemon != null) {
+                            // Set the species ID to the PokedexNumber panel
+                            PokedexNumber.setText(String.valueOf(selectedPokemon.getSpeciesId()));
+                            // Set the Pokemon's identifier to the PokemonName panel
+                            PokemonName.setText(selectedPokemon.getIdentifier());
+                            // Set the image to the order number of the selected Pokemon
+                            String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
+                            pokemonImage.setIcon(getScaledImage(imagePath, pokemonImage.getWidth(), pokemonImage.getHeight()));
+                        }
+                    }
+                }
             }
         });
     }
