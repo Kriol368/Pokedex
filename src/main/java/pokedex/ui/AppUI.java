@@ -82,6 +82,31 @@ public class AppUI extends JFrame {
     private JButton nextMapButton;
     private JLabel cityName;
     private JLabel cityData;
+    private JTextField searchByNameTxt;
+    private JButton searchButton;
+    private JLabel nameLabel;
+    private JPanel selectorPanel;
+    private JPanel resultsPanel;
+    private JLabel firstType;
+    private JLabel secondType;
+    private JButton type1;
+    private JButton type2;
+    private JButton type3;
+    private JButton type4;
+    private JButton type10;
+    private JButton type13;
+    private JButton type16;
+    private JButton type5;
+    private JButton type6;
+    private JButton type7;
+    private JButton type8;
+    private JButton type9;
+    private JButton type11;
+    private JButton type12;
+    private JButton type14;
+    private JButton type15;
+    private JButton type17;
+    private JButton type18;
     private JScrollPane pokedex_scroll;
 
     private int currentUserImageIndex = 1;
@@ -256,6 +281,9 @@ public class AppUI extends JFrame {
     public void setPokedexTypeIcons(String t1, String t2) {
         Type1.setIcon(getScaledImage(setTypeImage(t1), Type1.getWidth(), Type1.getHeight()));
         Type2.setIcon(getScaledImage(setTypeImage(t2), Type2.getWidth(), Type2.getHeight()));
+    }
+    public void setTypeChartTypesIcons() {
+        type1.setIcon(getScaledImage(type1.getIcon().toString(), type1.getWidth(), type1.getHeight()));
     }
 
     public String setCurrentMap(String ordernum) {
