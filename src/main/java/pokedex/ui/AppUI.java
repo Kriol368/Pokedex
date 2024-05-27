@@ -80,7 +80,7 @@ public class AppUI extends JFrame {
     private JScrollPane pokedex_scroll;
 
     private int currentUserImageIndex = 1;
-
+    private Trainer loggedInUser = null; // Track the logged-in user
     @Autowired
     public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository) {
         this.authenticationService = authenticationService;
@@ -103,17 +103,31 @@ public class AppUI extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String enteredUsername = username.getText();
-                String enteredPassword = new String(password.getPassword());
+                if (loggedInUser == null) {
+                    // Perform login
+                    String enteredUsername = username.getText();
+                    String enteredPassword = new String(password.getPassword());
 
-                // Perform login or registration
-                String resultMessage = authenticationService.loginOrRegister(enteredUsername, enteredPassword);
+                    // Perform login or registration
+                    String resultMessage = authenticationService.loginOrRegister(enteredUsername, enteredPassword);
 
-                // Display message based on the result
-                JOptionPane.showMessageDialog(AppUI.this, resultMessage, "Authentication Result", JOptionPane.INFORMATION_MESSAGE);
-                // If login is successful, load the trainer's image
-                if (resultMessage.equals("Login successful")) {
-                    loadTrainerImage(enteredUsername);
+                    // Display message based on the result
+                    JOptionPane.showMessageDialog(AppUI.this, resultMessage, "Authentication Result", JOptionPane.INFORMATION_MESSAGE);
+
+                    // If login is successful, load the trainer's image
+                    if (resultMessage.equals("Login successful")) {
+                        loggedInUser = trainerRepository.findByName(enteredUsername);
+                        if (loggedInUser != null) {
+                            loadTrainerImage(loggedInUser.getName());
+                            loginButton.setText("Logout");
+                        }
+                    }
+                } else {
+                    // Perform logout
+                    loggedInUser = null;
+                    loginButton.setText("Login");
+                    clearUserSession();
+                    JOptionPane.showMessageDialog(AppUI.this, "Logged out successfully.", "Logout", JOptionPane.INFORMATION_MESSAGE);
                 }
             }
         });
@@ -235,6 +249,13 @@ public class AppUI extends JFrame {
             currentUserImageIndex = trainer.getImage();
             setTrainerImage(String.valueOf(currentUserImageIndex));
         }
+    }
+    private void clearUserSession() {
+        // Clear the user session details (UI elements) when logging out
+        username.setText("");
+        password.setText("");
+        currentUserImageIndex = 1;
+        setTrainerImage("1");
     }
 
 }
