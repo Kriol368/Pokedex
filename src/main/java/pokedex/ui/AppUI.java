@@ -4,18 +4,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pokedex.entity.Pokemon;
 import pokedex.repository.PokemonRepository;
+import pokedex.repository.TrainerRepository;
 import pokedex.service.AuthenticationService;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import pokedex.entity.Trainer;
 
 @Component
 public class AppUI extends JFrame {
     private AuthenticationService authenticationService;
     private PokemonRepository pokemonRepository; // Add this line
-
+    private TrainerRepository trainerRepository;
     private JTabbedPane mainPane;
     private JPanel panel1;
     private JPanel pokedex;
@@ -80,9 +82,10 @@ public class AppUI extends JFrame {
     private int currentUserImageIndex = 1;
 
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository) {
+    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
+        this.trainerRepository = trainerRepository; // Initialize the trainer repository
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280, 720);
@@ -108,6 +111,10 @@ public class AppUI extends JFrame {
 
                 // Display message based on the result
                 JOptionPane.showMessageDialog(AppUI.this, resultMessage, "Authentication Result", JOptionPane.INFORMATION_MESSAGE);
+                // If login is successful, load the trainer's image
+                if (resultMessage.equals("Login successful")) {
+                    loadTrainerImage(enteredUsername);
+                }
             }
         });
 
@@ -135,7 +142,14 @@ public class AppUI extends JFrame {
                 setTrainerImage(String.valueOf(currentUserImageIndex));
             }
         });
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                saveCurrentImage();
+            }
+        });
     }
+
 
     public void showMainPane() {
         setContentPane(mainPane);
@@ -201,6 +215,25 @@ public class AppUI extends JFrame {
         pokedexListModel.clear();
         for (Pokemon pokemon : pokedexEntries) {
             pokedexListModel.addElement(pokemon.getSpeciesId() + " - " + pokemon.getIdentifier());
+        }
+    }
+    private void saveCurrentImage() {
+        String username = this.username.getText();
+        Trainer trainer = trainerRepository.findByName(username);
+        if (trainer != null) {
+            trainer.setImage(currentUserImageIndex);
+            trainerRepository.save(trainer);
+            JOptionPane.showMessageDialog(this, "Image saved successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Error saving image.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private void loadTrainerImage(String name) {
+        Trainer trainer = trainerRepository.findByName(name);
+        if (trainer != null) {
+            currentUserImageIndex = trainer.getImage();
+            setTrainerImage(String.valueOf(currentUserImageIndex));
         }
     }
 
