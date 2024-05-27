@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 21/05/2024 10:23">
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 27/05/2024 09:30">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -397,7 +398,31 @@
       <option name="project" value="LOCAL" />
       <updated>1716792201575</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="feat(master): 27/05/2024 09:00">
+      <option name="closed" value="true" />
+      <created>1716793267924</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1716793267924</updated>
+    </task>
+    <task id="LOCAL-00037" summary="feat(master): 27/05/2024 09:15">
+      <option name="closed" value="true" />
+      <created>1716794154138</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1716794154138</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat(master): 27/05/2024 09:30">
+      <option name="closed" value="true" />
+      <created>1716795055001</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1716795055001</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,9 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(master): 16/05/2024 09:15" />
-    <MESSAGE value="feat(master): 16/05/2024 09:21" />
-    <MESSAGE value="feat(master): 16/05/2024 09:33" />
     <MESSAGE value="feat(master): 16/05/2024 09:44" />
     <MESSAGE value="feat(master): 16/05/2024 09:46" />
     <MESSAGE value="feat(master): 16/05/2024 10:06" />
@@ -440,6 +462,9 @@
     <MESSAGE value="fix(master): 22/05/2024 10:38" />
     <MESSAGE value="feat(master): 22/05/2024 11:39" />
     <MESSAGE value="docs(master): 21/05/2024 10:23" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 21/05/2024 10:23" />
+    <MESSAGE value="feat(master): 27/05/2024 09:00" />
+    <MESSAGE value="feat(master): 27/05/2024 09:15" />
+    <MESSAGE value="feat(master): 27/05/2024 09:30" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 27/05/2024 09:30" />
   </component>
 </project>

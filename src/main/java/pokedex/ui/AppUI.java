@@ -2,7 +2,9 @@ package pokedex.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import pokedex.entity.Map;
 import pokedex.entity.Pokemon;
+import pokedex.repository.MapRepository;
 import pokedex.repository.PokemonRepository;
 import pokedex.repository.TrainerRepository;
 import pokedex.service.AuthenticationService;
@@ -20,6 +22,7 @@ public class AppUI extends JFrame {
     private AuthenticationService authenticationService;
     private PokemonRepository pokemonRepository; // Add this line
     private TrainerRepository trainerRepository;
+    private MapRepository mapRepository;
     private JTabbedPane mainPane;
     private JPanel panel1;
     private JPanel pokedex;
@@ -83,11 +86,15 @@ public class AppUI extends JFrame {
 
     private int currentUserImageIndex = 1;
     private Trainer loggedInUser = null; // Track the logged-in user
+    private int currentMapId = 0;
+    private Map currentMapClass;
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository) {
+    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         this.trainerRepository = trainerRepository; // Initialize the trainer repository
+        this.mapRepository = mapRepository;
+        this.currentMapClass = null;
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280, 720);
@@ -162,6 +169,27 @@ public class AppUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 saveCurrentImage();
+            }
+        });
+        previousMapButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                decreaseCurrentMapId();
+                // Update the UI to display the new current map
+                setCurrentMapImage(String.valueOf(currentMapId));
+                updateCurrentMap();
+                updateMapDetails();
+            }
+        });
+        nextMapButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Increase the current map ID
+                increaseCurrentMapId();
+                // Update the UI to display the new current map
+                setCurrentMapImage(String.valueOf(currentMapId));
+                updateCurrentMap();
+                updateMapDetails();
             }
         });
     }
@@ -296,4 +324,40 @@ public class AppUI extends JFrame {
         }
         return str.substring(0, 1).toUpperCase() + str.substring(1);
     }
+    // Define methods to increase and decrease the current map ID
+    private void increaseCurrentMapId() {
+        currentMapId++;
+        if (currentMapId > 22) {
+            currentMapId = 1; // Wrap around to 1 if exceeding 22
+        }
+    }
+
+    private void decreaseCurrentMapId() {
+        currentMapId--;
+        if (currentMapId < 1) {
+            currentMapId = 22; // Wrap around to 22 if going below 1
+        }
+    }
+    // Method to update the current map object based on the current map ID
+    private void updateCurrentMap() {
+        // Fetch the map object from the database based on the current map ID
+        // Assuming you have a method to fetch map details by ID from the repository
+        this.currentMapClass = mapRepository.findById(currentMapId).orElse(null);
+    }
+
+    // Modify the updateMapDetails() method to use the currentMap object
+    private void updateMapDetails() {
+        if (currentMapClass != null) {
+            // Update the cityName label with the map name
+            cityName.setText(currentMapClass.getName());
+
+            // Update the cityData label with the map description
+            cityData.setText(currentMapClass.getDescription());
+        } else {
+            // Handle the case when the current map is null
+            cityName.setText("Unknown Map");
+            cityData.setText("No description available");
+        }
+    }
+
 }
