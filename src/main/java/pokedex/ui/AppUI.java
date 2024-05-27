@@ -244,7 +244,7 @@ public class AppUI extends JFrame {
         DefaultListModel<String> pokedexListModel = (DefaultListModel<String>) pokedex_list.getModel();
         pokedexListModel.clear();
         for (Pokemon pokemon : pokedexEntries) {
-            pokedexListModel.addElement(pokemon.getSpeciesId() + " - " + pokemon.getIdentifier());
+            pokedexListModel.addElement(pokemon.getSpeciesId() + " - " + capitalizeFirstLetter(pokemon.getIdentifier()));
         }
     }
     private void saveCurrentImage() {
@@ -290,5 +290,10 @@ public class AppUI extends JFrame {
             progressBar.setStringPainted(true);
         }
     }
-
+    public static String capitalizeFirstLetter(String str) {
+        if (str == null || str.isEmpty()) {
+            return str;
+        }
+        return str.substring(0, 1).toUpperCase() + str.substring(1);
+    }
 }
