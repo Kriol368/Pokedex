@@ -233,16 +233,16 @@ public class AppUI extends JFrame {
                 if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
                     Object selectedObject = pokedex_list.getSelectedValue(); // Get the selected object
                     if (selectedObject != null) { // Ensure an item is selected
-                        // Get the selected Pokemon's identifier
+                        // Get the selected Pokémon's identifier
                         String selectedIdentifier = selectedObject.toString().split(" - ")[1];
-                        // Retrieve the selected Pokemon from the repository
+                        // Retrieve the selected Pokémon from the repository
                         Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
                         if (selectedPokemon != null) {
                             // Set the species ID to the PokedexNumber panel
                             PokedexNumber.setText(String.valueOf(selectedPokemon.getSpeciesId()));
-                            // Set the Pokemon's identifier to the PokemonName panel
+                            // Set the Pokémon's identifier to the PokemonName panel
                             PokemonName.setText(selectedPokemon.getIdentifier());
-                            // Set the image to the order number of the selected Pokemon
+                            // Set the image to the order number of the selected Pokémon
                             String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
                             pokemonImage.setIcon(getScaledImage(imagePath, pokemonImage.getWidth(), pokemonImage.getHeight()));
                             List<Pokemon_types> pokemonTypes = pokemonTypesRepository.findByPokemonId(selectedPokemon.getId());
@@ -272,6 +272,22 @@ public class AppUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String searchText = searchByNameTxt.getText().trim().toLowerCase();
                 filterPokedexList(searchText);
+            }
+        });
+        registedList.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
+                    Object selectedObject = registedList.getSelectedValue(); // Get the selected object
+                    if (selectedObject != null && selectedObject instanceof Pokemon) { // Ensure an item is selected
+                        Pokemon selectedPokemon = (Pokemon) selectedObject;
+                        // Set the Pokémon's identifier to the PokemonName panel
+                        SelectedPokemonName.setText(selectedPokemon.getIdentifier());
+                        // Set the image to the order number of the selected Pokémon
+                        String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
+                        SelectedPokemonImg.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+                    }
+                }
             }
         });
     }
@@ -313,6 +329,7 @@ public class AppUI extends JFrame {
             int newStatus = currentStatus == 1 ? 0 : 1;
             register.setRegistered(newStatus);
             registerRepository.save(register);
+            loadRegisteredPokemonData(loggedInUser.getId());
             JOptionPane.showMessageDialog(this, "Registration status updated successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(this, "Registration record not found.", "Error", JOptionPane.ERROR_MESSAGE);
