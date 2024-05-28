@@ -14,6 +14,7 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.util.List;
 import pokedex.entity.Trainer;
 
@@ -109,6 +110,24 @@ public class AppUI extends JFrame {
     private JButton type15;
     private JButton type17;
     private JButton type18;
+    private JButton type2_1;
+    private JButton type2_2;
+    private JButton type2_3;
+    private JButton type2_4;
+    private JButton type2_5;
+    private JButton type2_6;
+    private JButton type2_7;
+    private JButton type2_8;
+    private JButton type2_9;
+    private JButton type2_10;
+    private JButton type2_11;
+    private JButton type2_12;
+    private JButton type2_13;
+    private JButton type2_14;
+    private JButton type2_15;
+    private JButton type2_16;
+    private JButton type2_17;
+    private JButton type2_18;
     private JScrollPane pokedex_scroll;
 
     private int currentUserImageIndex = 1;
@@ -138,6 +157,7 @@ public class AppUI extends JFrame {
         setCurrentMapImage("0");
         updateCurrentMap();
         updateMapDetails();
+        setTypeChartTypesIcons();
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -169,7 +189,6 @@ public class AppUI extends JFrame {
                 }
             }
         });
-
         // Add action listeners to the arrow buttons
         leftArrowButton.addActionListener(new ActionListener() {
             @Override
@@ -182,7 +201,6 @@ public class AppUI extends JFrame {
                 setTrainerImage(String.valueOf(currentUserImageIndex));
             }
         });
-
         rightArrowButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -259,6 +277,23 @@ public class AppUI extends JFrame {
         Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
         return new ImageIcon(scaledImg);
     }
+    private ImageIcon getScaledImageByIcon(Icon icon, int width, int height) {
+        if (icon instanceof ImageIcon) {
+            Image img = ((ImageIcon) icon).getImage();
+            Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+            return new ImageIcon(scaledImg);
+        } else {
+            // Create a BufferedImage to paint the Icon into
+            BufferedImage bufferedImage = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g2d = bufferedImage.createGraphics();
+            icon.paintIcon(null, g2d, 0, 0);
+            g2d.dispose();
+
+            // Scale the image
+            Image img = bufferedImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+            return new ImageIcon(img);
+        }
+    }
 
     public String setPokemonImageIcon(String ordernum) {
         return "src/main/resources/official_artwork/normal/" + ordernum + ".png";
@@ -310,7 +345,17 @@ public class AppUI extends JFrame {
         Type2.setIcon(getScaledImage(setTypeImage(t2), Type2.getWidth(), Type2.getHeight()));
     }
     public void setTypeChartTypesIcons() {
-        type1.setIcon(getScaledImage(type1.getIcon().toString(), type1.getWidth(), type1.getHeight()));
+        // Assuming `type1`, `type2`, ..., `type18` are already defined and initialized.
+        // Creating an array of type instances
+        JButton[] types = {
+                type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18,
+                type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18
+        };
+
+        // Loop through each type and set the icon
+        for (JButton type : types) {
+            type.setIcon(getScaledImageByIcon(type.getIcon(), type.getWidth(), type.getHeight()));
+        }
     }
 
     public String setCurrentMap(String ordernum) {
