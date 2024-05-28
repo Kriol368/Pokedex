@@ -397,7 +397,7 @@ public class AppUI extends JFrame {
         List<Pokemon> pokemons = (List<Pokemon>) pokemonRepository.findAll();
         List<Pokemon> filteredPokemons = pokemons.stream()
                 .filter(p -> p.getIdentifier().toLowerCase().startsWith(searchText))
-                .collect(Collectors.toList());
+                .toList();
         for (Pokemon pokemon : filteredPokemons) {
             model.addElement(pokemon.getSpeciesId() + " - " + capitalizeFirstLetter(pokemon.getIdentifier()));
         }
