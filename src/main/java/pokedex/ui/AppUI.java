@@ -2,11 +2,8 @@ package pokedex.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import pokedex.entity.Map;
-import pokedex.entity.Pokemon;
-import pokedex.repository.MapRepository;
-import pokedex.repository.PokemonRepository;
-import pokedex.repository.TrainerRepository;
+import pokedex.entity.*;
+import pokedex.repository.*;
 import pokedex.service.AuthenticationService;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -16,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.List;
-import pokedex.entity.Trainer;
+import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 
@@ -25,7 +22,10 @@ public class AppUI extends JFrame {
     private AuthenticationService authenticationService;
     private PokemonRepository pokemonRepository; // Add this line
     private TrainerRepository trainerRepository;
+    private TypeRepository typeRepository;
+    private Pokemon_typesRepository pokemonTypesRepository;
     private MapRepository mapRepository;
+    private RegisterRepository registerRepository;
     private JTabbedPane mainPane;
     private JPanel panel1;
     private JPanel pokedex;
@@ -156,17 +156,22 @@ public class AppUI extends JFrame {
     private int currentMapId = 0;
     private Map currentMapClass;
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository) {
+    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository,RegisterRepository registerRepository) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         this.trainerRepository = trainerRepository; // Initialize the trainer repository
         this.mapRepository = mapRepository;
+        this.typeRepository = typeRepository;
+        this.pokemonTypesRepository = pokemonTypesRepository;
+        this.registerRepository = registerRepository;
         this.currentMapClass = null;
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280, 720);
         setLocationRelativeTo(null);
         pokedex_list.setModel(new DefaultListModel<>());
+        DefaultListModel<String> listModel = new DefaultListModel<>();
+        JList<String> registedList = new JList<>(listModel);
         loadPokedexData();
         setVisible(true);
         showMainPane();
@@ -200,6 +205,7 @@ public class AppUI extends JFrame {
                         if (loggedInUser != null) {
                             loadTrainerInfo(loggedInUser.getName());
                             loginButton.setText("Logout");
+                            loadRegisteredPokemonData(loggedInUser.getId());
                         }
                     }
                 } else {
@@ -279,9 +285,33 @@ public class AppUI extends JFrame {
                             // Set the image to the order number of the selected Pokemon
                             String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
                             pokemonImage.setIcon(getScaledImage(imagePath, pokemonImage.getWidth(), pokemonImage.getHeight()));
+                            List<Pokemon_types> pokemonTypes = pokemonTypesRepository.findByPokemonId(selectedPokemon.getId());
+                            setPokedexTypeIcons(Integer.toString(pokemonTypes.getLast().getType().getId()) ,Integer.toString(pokemonTypes.getFirst().getType().getId()));
                         }
                     }
                 }
+            }
+        });
+        registerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (loggedInUser != null) {
+                    Object selectedObject = pokedex_list.getSelectedValue();
+                    if (selectedObject != null) {
+                        String selectedIdentifier = selectedObject.toString().split(" - ")[1];
+                        Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+                        if (selectedPokemon != null) {
+                            togglePokemonRegistration(loggedInUser.getId(), selectedPokemon.getId());
+                        }
+                    }
+                }
+            }
+        });
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String searchText = searchByNameTxt.getText().trim().toLowerCase();
+                filterPokedexList(searchText);
             }
         });
     }
@@ -332,6 +362,18 @@ public class AppUI extends JFrame {
 
     public String setTrainerImageIcon(String ordernum) {
         return "src/main/resources/trainers/" + ordernum + ".png";
+    }
+    private void togglePokemonRegistration(int trainerId, int pokemonId) {
+        Register register = registerRepository.findByTrainerIdAndPokemonId(trainerId, pokemonId);
+        if (register != null) {
+            int currentStatus = register.getRegistered();
+            int newStatus = currentStatus == 1 ? 0 : 1;
+            register.setRegistered(newStatus);
+            registerRepository.save(register);
+            JOptionPane.showMessageDialog(this, "Registration status updated successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Registration record not found.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     public void setTrainerImage(String t1) {
@@ -422,6 +464,32 @@ public class AppUI extends JFrame {
             JOptionPane.showMessageDialog(this, "Error saving image.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+    private void loadRegisteredPokemonData(int trainerId) {
+        ListModel<String> listModel = registedList.getModel(); // Retrieve the list model
+        if (!(listModel instanceof DefaultListModel)) {
+            // If the list model is not a DefaultListModel, create a new DefaultListModel and set it to the JList
+            DefaultListModel<String> defaultListModel = new DefaultListModel<>();
+            registedList.setModel(defaultListModel);
+            listModel = defaultListModel; // Update the reference to the new DefaultListModel
+        }
+
+        DefaultListModel<String> model = (DefaultListModel<String>) listModel;
+        model.clear();
+
+        // Proceed with your existing logic to populate the model
+        List<Register> registeredPokemon = registerRepository.findByTrainerId(trainerId);
+        for (Register register : registeredPokemon) {
+            if (register.getRegistered() == 1) {
+                Pokemon pokemon = pokemonRepository.findById(register.getPokemon().getId()).orElse(null);
+                if (pokemon != null) {
+                    String entry = String.format("%03d - %s", pokemon.getSpeciesId(), capitalizeFirstLetter(pokemon.getIdentifier()));
+                    model.addElement(entry);
+                }
+            }
+        }
+    }
+
+
 
     private void loadTrainerInfo(String name) {
         Trainer trainer = trainerRepository.findByName(name);
@@ -431,6 +499,17 @@ public class AppUI extends JFrame {
             loggedInUser = trainer; // Ensure loggedInUser is updated
             updateProgressBar(); // Update the progress bar after loading the trainer
 
+        }
+    }
+    private void filterPokedexList(String searchText) {
+        DefaultListModel<String> model = (DefaultListModel<String>) pokedex_list.getModel();
+        model.clear();
+        List<Pokemon> pokemons = (List<Pokemon>) pokemonRepository.findAll();
+        List<Pokemon> filteredPokemons = pokemons.stream()
+                .filter(p -> p.getIdentifier().toLowerCase().startsWith(searchText))
+                .toList();
+        for (Pokemon pokemon : filteredPokemons) {
+            model.addElement(pokemon.getSpeciesId() + " - " + capitalizeFirstLetter(pokemon.getIdentifier()));
         }
     }
     private void clearUserSession() {
