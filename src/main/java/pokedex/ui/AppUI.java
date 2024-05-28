@@ -130,6 +130,8 @@ public class AppUI extends JFrame {
         setSize(1280, 720);
         setLocationRelativeTo(null);
         pokedex_list.setModel(new DefaultListModel<>());
+        DefaultListModel<String> listModel = new DefaultListModel<>();
+        JList<String> registedList = new JList<>(listModel);
         loadPokedexData();
         setVisible(true);
         showMainPane();
@@ -161,6 +163,7 @@ public class AppUI extends JFrame {
                         if (loggedInUser != null) {
                             loadTrainerInfo(loggedInUser.getName());
                             loginButton.setText("Logout");
+                            loadRegisteredPokemonData(loggedInUser.getId());
                         }
                     }
                 } else {
@@ -380,6 +383,32 @@ public class AppUI extends JFrame {
             JOptionPane.showMessageDialog(this, "Error saving image.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+    private void loadRegisteredPokemonData(int trainerId) {
+        ListModel<String> listModel = registedList.getModel(); // Retrieve the list model
+        if (!(listModel instanceof DefaultListModel)) {
+            // If the list model is not a DefaultListModel, create a new DefaultListModel and set it to the JList
+            DefaultListModel<String> defaultListModel = new DefaultListModel<>();
+            registedList.setModel(defaultListModel);
+            listModel = defaultListModel; // Update the reference to the new DefaultListModel
+        }
+
+        DefaultListModel<String> model = (DefaultListModel<String>) listModel;
+        model.clear();
+
+        // Proceed with your existing logic to populate the model
+        List<Register> registeredPokemon = registerRepository.findByTrainerId(trainerId);
+        for (Register register : registeredPokemon) {
+            if (register.getRegistered() == 1) {
+                Pokemon pokemon = pokemonRepository.findById(register.getPokemon().getId()).orElse(null);
+                if (pokemon != null) {
+                    String entry = String.format("%03d - %s", pokemon.getSpeciesId(), capitalizeFirstLetter(pokemon.getIdentifier()));
+                    model.addElement(entry);
+                }
+            }
+        }
+    }
+
+
 
     private void loadTrainerInfo(String name) {
         Trainer trainer = trainerRepository.findByName(name);

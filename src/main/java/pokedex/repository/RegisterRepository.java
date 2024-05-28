@@ -1,10 +1,13 @@
 package pokedex.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import pokedex.entity.Register;
 
-@Repository // Use @Repository instead of @Component
-public interface RegisterRepository extends CrudRepository<Register, Integer> {
+import java.util.List;
+
+@Repository
+public interface RegisterRepository extends JpaRepository<Register, Integer> {
+    List<Register> findByTrainerId(int trainerId);
     Register findByTrainerIdAndPokemonId(int trainerId, int pokemonId);
 }
