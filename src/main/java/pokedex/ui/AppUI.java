@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 
@@ -263,6 +264,13 @@ public class AppUI extends JFrame {
                 }
             }
         });
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String searchText = searchByNameTxt.getText().trim().toLowerCase();
+                filterPokedexList(searchText);
+            }
+        });
     }
 
 
@@ -381,6 +389,17 @@ public class AppUI extends JFrame {
             loggedInUser = trainer; // Ensure loggedInUser is updated
             updateProgressBar(); // Update the progress bar after loading the trainer
 
+        }
+    }
+    private void filterPokedexList(String searchText) {
+        DefaultListModel<String> model = (DefaultListModel<String>) pokedex_list.getModel();
+        model.clear();
+        List<Pokemon> pokemons = (List<Pokemon>) pokemonRepository.findAll();
+        List<Pokemon> filteredPokemons = pokemons.stream()
+                .filter(p -> p.getIdentifier().toLowerCase().startsWith(searchText))
+                .collect(Collectors.toList());
+        for (Pokemon pokemon : filteredPokemons) {
+            model.addElement(pokemon.getSpeciesId() + " - " + capitalizeFirstLetter(pokemon.getIdentifier()));
         }
     }
     private void clearUserSession() {
