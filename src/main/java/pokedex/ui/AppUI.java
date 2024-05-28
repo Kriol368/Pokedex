@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pokedex.entity.Map;
 import pokedex.entity.Pokemon;
-import pokedex.repository.MapRepository;
-import pokedex.repository.PokemonRepository;
-import pokedex.repository.TrainerRepository;
+import pokedex.repository.*;
 import pokedex.service.AuthenticationService;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -24,6 +22,8 @@ public class AppUI extends JFrame {
     private AuthenticationService authenticationService;
     private PokemonRepository pokemonRepository; // Add this line
     private TrainerRepository trainerRepository;
+    private TypeRepository typeRepository;
+    private Pokemon_typesRepository pokemonTypesRepository;
     private MapRepository mapRepository;
     private JTabbedPane mainPane;
     private JPanel panel1;
@@ -116,11 +116,13 @@ public class AppUI extends JFrame {
     private int currentMapId = 0;
     private Map currentMapClass;
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository) {
+    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         this.trainerRepository = trainerRepository; // Initialize the trainer repository
         this.mapRepository = mapRepository;
+        this.typeRepository = typeRepository;
+        this.pokemonTypesRepository = pokemonTypesRepository;
         this.currentMapClass = null;
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
