@@ -6,4 +6,5 @@ import pokedex.entity.Register;
 
 @Repository // Use @Repository instead of @Component
 public interface RegisterRepository extends CrudRepository<Register, Integer> {
+    Register findByTrainerIdAndPokemonId(int trainerId, int pokemonId);
 }

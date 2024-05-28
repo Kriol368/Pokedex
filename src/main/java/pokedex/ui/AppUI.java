@@ -2,9 +2,7 @@ package pokedex.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import pokedex.entity.Map;
-import pokedex.entity.Pokemon;
-import pokedex.entity.Pokemon_types;
+import pokedex.entity.*;
 import pokedex.repository.*;
 import pokedex.service.AuthenticationService;
 import javax.swing.*;
@@ -14,7 +12,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-import pokedex.entity.Trainer;
 
 import static java.lang.Integer.parseInt;
 
@@ -26,6 +23,7 @@ public class AppUI extends JFrame {
     private TypeRepository typeRepository;
     private Pokemon_typesRepository pokemonTypesRepository;
     private MapRepository mapRepository;
+    private RegisterRepository registerRepository;
     private JTabbedPane mainPane;
     private JPanel panel1;
     private JPanel pokedex;
@@ -117,13 +115,14 @@ public class AppUI extends JFrame {
     private int currentMapId = 0;
     private Map currentMapClass;
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository) {
+    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository,RegisterRepository registerRepository) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         this.trainerRepository = trainerRepository; // Initialize the trainer repository
         this.mapRepository = mapRepository;
         this.typeRepository = typeRepository;
         this.pokemonTypesRepository = pokemonTypesRepository;
+        this.registerRepository = registerRepository;
         this.currentMapClass = null;
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -249,6 +248,21 @@ public class AppUI extends JFrame {
                 }
             }
         });
+        registerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (loggedInUser != null) {
+                    Object selectedObject = pokedex_list.getSelectedValue();
+                    if (selectedObject != null) {
+                        String selectedIdentifier = selectedObject.toString().split(" - ")[1];
+                        Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+                        if (selectedPokemon != null) {
+                            togglePokemonRegistration(loggedInUser.getId(), selectedPokemon.getId());
+                        }
+                    }
+                }
+            }
+        });
     }
 
 
@@ -280,6 +294,18 @@ public class AppUI extends JFrame {
 
     public String setTrainerImageIcon(String ordernum) {
         return "src/main/resources/trainers/" + ordernum + ".png";
+    }
+    private void togglePokemonRegistration(int trainerId, int pokemonId) {
+        Register register = registerRepository.findByTrainerIdAndPokemonId(trainerId, pokemonId);
+        if (register != null) {
+            int currentStatus = register.getRegistered();
+            int newStatus = currentStatus == 1 ? 0 : 1;
+            register.setRegistered(newStatus);
+            registerRepository.save(register);
+            JOptionPane.showMessageDialog(this, "Registration status updated successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Registration record not found.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     public void setTrainerImage(String t1) {
