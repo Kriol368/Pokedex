@@ -128,6 +128,27 @@ public class AppUI extends JFrame {
     private JButton type2_16;
     private JButton type2_17;
     private JButton type2_18;
+    private JLabel selectedType1;
+    private JPanel typesPanel;
+    private JLabel relatedType1;
+    private JLabel relatedType2;
+    private JLabel relatedType3;
+    private JLabel relatedType4;
+    private JLabel relatedType5;
+    private JLabel relatedType6;
+    private JLabel relatedType7;
+    private JLabel relatedType8;
+    private JLabel relatedType9;
+    private JLabel relatedType10;
+    private JLabel relatedType11;
+    private JLabel relatedType12;
+    private JLabel relatedType13;
+    private JLabel relatedType14;
+    private JLabel relatedType15;
+    private JLabel relatedType16;
+    private JLabel relatedType17;
+    private JLabel relatedType18;
+    private JLabel selectedType2;
     private JScrollPane pokedex_scroll;
 
     private int currentUserImageIndex = 1;
@@ -158,6 +179,7 @@ public class AppUI extends JFrame {
         updateCurrentMap();
         updateMapDetails();
         setTypeChartTypesIcons();
+        setRelatedTypechartIcons();
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -355,6 +377,20 @@ public class AppUI extends JFrame {
         // Loop through each type and set the icon
         for (JButton type : types) {
             type.setIcon(getScaledImageByIcon(type.getIcon(), type.getWidth(), type.getHeight()));
+        }
+    }
+
+    public void setRelatedTypechartIcons() {
+        // Assuming `type1`, `type2`, ..., `type18` are already defined and initialized.
+        // Creating an array of type instances
+        JLabel[] types = {
+                relatedType1, relatedType2, relatedType3, relatedType4, relatedType5, relatedType6, relatedType7, relatedType8, relatedType9, relatedType10, relatedType11, relatedType12, relatedType13, relatedType14, relatedType15, relatedType16, relatedType17, relatedType18
+        };
+        int icon = 0;
+        // Loop through each type and set the icon
+        for (JLabel type : types) {
+            icon ++;
+            type.setIcon(getScaledImage(setTypeImage(Integer.toString(icon)), type.getWidth(), type.getHeight()));
         }
     }
 

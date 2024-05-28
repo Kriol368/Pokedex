@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="docs(master): 21/05/2024 10:23">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="typechartselectoPanel: 28/05/2024 9:29">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
@@ -65,8 +64,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.App.executor": "Run",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "2",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "310",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "23",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "286",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite",
@@ -129,7 +128,7 @@
       <workItem from="1716363387930" duration="3755000" />
       <workItem from="1716369483136" duration="2070000" />
       <workItem from="1716795760365" duration="3382000" />
-      <workItem from="1716879344207" duration="1919000" />
+      <workItem from="1716879344207" duration="5393000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -467,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716798885391</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="typechartselectoPanel: 28/05/2024 9:29">
+      <option name="closed" value="true" />
+      <created>1716881405084</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1716881405084</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +492,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(master): 16/05/2024 09:44" />
     <MESSAGE value="feat(master): 16/05/2024 09:46" />
     <MESSAGE value="feat(master): 16/05/2024 10:06" />
     <MESSAGE value="feat(master): 16/05/2024 10:27" />
@@ -510,6 +516,7 @@
     <MESSAGE value="feat(master): 27/05/2024 09:15" />
     <MESSAGE value="feat(master): 27/05/2024 09:30" />
     <MESSAGE value="docs(master): 21/05/2024 10:23" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs(master): 21/05/2024 10:23" />
+    <MESSAGE value="typechartselectoPanel: 28/05/2024 9:29" />
+    <option name="LAST_COMMIT_MESSAGE" value="typechartselectoPanel: 28/05/2024 9:29" />
   </component>
 </project>
