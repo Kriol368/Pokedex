@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pokedex.entity.Map;
 import pokedex.entity.Pokemon;
+import pokedex.entity.Pokemon_types;
 import pokedex.repository.*;
 import pokedex.service.AuthenticationService;
 import javax.swing.*;
@@ -241,6 +242,8 @@ public class AppUI extends JFrame {
                             // Set the image to the order number of the selected Pokemon
                             String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
                             pokemonImage.setIcon(getScaledImage(imagePath, pokemonImage.getWidth(), pokemonImage.getHeight()));
+                            List<Pokemon_types> pokemonTypes = pokemonTypesRepository.findByPokemonId(selectedPokemon.getId());
+                            setPokedexTypeIcons(Integer.toString(pokemonTypes.getLast().getType().getId()) ,Integer.toString(pokemonTypes.getFirst().getType().getId()));
                         }
                     }
                 }
