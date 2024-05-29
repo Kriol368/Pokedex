@@ -11,6 +11,7 @@
     import java.awt.*;
     import java.awt.event.ActionEvent;
     import java.awt.event.ActionListener;
+    import java.io.IOException;
     import java.net.URL;
     import java.util.List;
 
@@ -324,14 +325,18 @@
         private void loadShowdownContent() {
             try {
                 URL url = new URL("https://play.pokemonshowdown.com/");
-                showdown = new JEditorPane(url);
+                showdown = new JEditorPane();
                 showdown.setEditable(false);
+                showdown.setContentType("text/html");  // Ensure the content type is HTML
+                showdown.setPage(url);
+
                 JScrollPane scrollPane = new JScrollPane(showdown);
                 setContentPane(scrollPane);
-            } catch (Exception e) {
+            } catch (IOException e) {
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(this, "Failed to load Showdown content.", "Error", JOptionPane.ERROR_MESSAGE);
             }
+
 
         }
 
