@@ -197,7 +197,7 @@ public class AppUI extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-              // audioPlayer.click();
+                audioPlayer.click();
                 loginButton();
             }
         });

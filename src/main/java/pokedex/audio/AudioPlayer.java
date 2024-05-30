@@ -13,10 +13,10 @@ public class AudioPlayer {
 
     public void click(){
         try {
-            File audioFile = new File("src/main/resources/audio/click.wav");
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+            File audioFile2 = new File("src/main/resources/audio/click.wav");
+            AudioInputStream audioStream2 = AudioSystem.getAudioInputStream(audioFile2);
             clip2 = AudioSystem.getClip();
-            clip2.open(audioStream);
+            clip2.open(audioStream2);
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
             e.printStackTrace();
         }
