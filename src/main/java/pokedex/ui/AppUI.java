@@ -2,6 +2,7 @@
 
     import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.stereotype.Component;
+    import pokedex.audio.AudioPlayer;
     import pokedex.entity.*;
     import pokedex.repository.*;
     import pokedex.service.AuthenticationService;
@@ -26,6 +27,7 @@
         private Pokemon_typesRepository pokemonTypesRepository;
         private MapRepository mapRepository;
         private RegisterRepository registerRepository;
+        private AudioPlayer audioPlayer;
         private JTabbedPane mainPane;
         private JPanel panel1;
         private JPanel pokedex;
@@ -118,7 +120,7 @@
         private int currentMapId = 0;
         private Map currentMapClass;
         @Autowired
-        public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository,RegisterRepository registerRepository) {
+        public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository,RegisterRepository registerRepository,AudioPlayer audioPlayer) {
             this.authenticationService = authenticationService;
             this.pokemonRepository = pokemonRepository; // Initialize the repository
             this.trainerRepository = trainerRepository; // Initialize the trainer repository
@@ -126,6 +128,7 @@
             this.typeRepository = typeRepository;
             this.pokemonTypesRepository = pokemonTypesRepository;
             this.registerRepository = registerRepository;
+            this.audioPlayer = audioPlayer;
             this.currentMapClass = null;
             setTitle("Pokedex");
             setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -168,6 +171,8 @@
                                 loadTrainerInfo(loggedInUser.getName());
                                 loginButton.setText("Logout");
                                 loadRegisteredPokemonData(loggedInUser.getId());
+                                //music
+                                playMusic(loggedInUser.getImage());
                             }
                         }
                     } else {
@@ -417,9 +422,55 @@
                 trainer.setImage(currentUserImageIndex);
                 trainerRepository.save(trainer);
                 JOptionPane.showMessageDialog(this, "Image saved successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
+                playMusic(trainer.getImage());
             } else {
                 JOptionPane.showMessageDialog(this, "Error saving image.", "Error", JOptionPane.ERROR_MESSAGE);
             }
+        }
+        private void playMusic(int image){
+            audioPlayer.stop();
+            switch (image){
+                case 1:
+                case 2:
+                    audioPlayer.play("src/main/resources/audio/1.wav");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    audioPlayer.play("src/main/resources/audio/2.wav");
+                    break;
+                case 6:
+                case 7:
+                    audioPlayer.play("src/main/resources/audio/3.wav");
+                    break;
+                case 8:
+                case 9:
+                    audioPlayer.play("src/main/resources/audio/4.wav");
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                case 13:
+                    audioPlayer.play("src/main/resources/audio/5.wav");
+                    break;
+                case 14:
+                case 15:
+                    audioPlayer.play("src/main/resources/audio/6.wav");
+                    break;
+                case 16:
+                case 17:
+                    audioPlayer.play("src/main/resources/audio/7.wav");
+                    break;
+                case 18:
+                case 19:
+                    audioPlayer.play("src/main/resources/audio/8.wav");
+                    break;
+                case 20:
+                case 21:
+                    audioPlayer.play("src/main/resources/audio/9.wav");
+                    break;
+            }
+
         }
         private void loadRegisteredPokemonData(int trainerId) {
             ListModel<String> listModel = registedList.getModel(); // Retrieve the list model
