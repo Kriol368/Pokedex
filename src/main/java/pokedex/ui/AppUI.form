@@ -1065,7 +1065,7 @@
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="selectedType1"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <vspacer id="ca567">
@@ -1090,7 +1090,6 @@
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1101,7 +1100,6 @@
                         <constraints>
                           <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1112,7 +1110,6 @@
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1123,7 +1120,6 @@
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1134,7 +1130,6 @@
                         <constraints>
                           <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1155,7 +1150,6 @@
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1166,7 +1160,6 @@
                         <constraints>
                           <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1177,7 +1170,6 @@
                         <constraints>
                           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1188,7 +1180,6 @@
                         <constraints>
                           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1199,7 +1190,6 @@
                         <constraints>
                           <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1210,7 +1200,6 @@
                         <constraints>
                           <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1221,7 +1210,6 @@
                         <constraints>
                           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1232,7 +1220,6 @@
                         <constraints>
                           <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1243,7 +1230,6 @@
                         <constraints>
                           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1254,7 +1240,6 @@
                         <constraints>
                           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1265,7 +1250,6 @@
                         <constraints>
                           <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1276,7 +1260,6 @@
                         <constraints>
                           <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="64" height="64"/>
-                            <maximum-size width="64" height="64"/>
                           </grid>
                         </constraints>
                         <properties>
@@ -1290,7 +1273,7 @@
                       <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="selectedType2"/>
+                      <text value=""/>
                     </properties>
                   </component>
                 </children>
