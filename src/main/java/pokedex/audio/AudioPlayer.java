@@ -9,7 +9,18 @@ import java.io.IOException;
 public class AudioPlayer {
 
     private Clip clip;
+    private Clip clip2;
 
+    public void click(){
+        try {
+            File audioFile = new File("src/main/resources/audio/click.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+            clip2 = AudioSystem.getClip();
+            clip2.open(audioStream);
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
     public void play(String audioFilePath) {
         try {
             File audioFile = new File(audioFilePath);
@@ -23,8 +34,7 @@ public class AudioPlayer {
     }
 
     public void stop() {
-        if (clip != null && clip.isRunning()) {
-            clip.stop();
-        }
+        System.out.println("no se me para");
+        clip.close();
     }
 }

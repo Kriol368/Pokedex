@@ -197,7 +197,8 @@ public class AppUI extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               loginButton();
+              // audioPlayer.click();
+                loginButton();
             }
         });
 
@@ -364,7 +365,7 @@ public class AppUI extends JFrame {
                     loginButton.setText("Logout");
                     loadRegisteredPokemonData(loggedInUser.getId());
                     //music
-                    playMusic(loggedInUser.getImage());
+                    playMusic(loggedInUser.getImage(),true);
                 }
             }
         } else {
@@ -373,6 +374,7 @@ public class AppUI extends JFrame {
             loginButton.setText("Login");
             clearUserSession();
             JOptionPane.showMessageDialog(AppUI.this, "Logged out successfully.", "Logout", JOptionPane.INFORMATION_MESSAGE);
+            audioPlayer.stop();
         }
 
         ActionListener type1Actionlistener = new ActionListener() {
@@ -554,14 +556,16 @@ public class AppUI extends JFrame {
             trainer.setImage(currentUserImageIndex);
             trainerRepository.save(trainer);
             JOptionPane.showMessageDialog(this, "Image saved successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
-            playMusic(trainer.getImage());
+            playMusic(trainer.getImage(),false);
         } else {
             JOptionPane.showMessageDialog(this, "Error saving image.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
-    private void playMusic(int image) {
-        audioPlayer.stop();
+    private void playMusic(int image,boolean login) {
+        if (!login){
+            audioPlayer.stop();
+        }
         switch (image) {
             case 1:
             case 2:
