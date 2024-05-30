@@ -32,7 +32,6 @@ public class AppUI extends JFrame {
     private JPanel team;
     private JPanel map;
     private JPanel typeChart;
-    private JPanel network;
     private JPanel Trainer;
     private JList pokedex_list;
     private JLabel labelUser;
@@ -314,6 +313,33 @@ public class AppUI extends JFrame {
                 filterPokedexList(searchText);
             }
         });
+        ActionListener type1Actionlistener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton sourceButton = (JButton) e.getSource();
+                selectedType1.setIcon(sourceButton.getIcon());
+                // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
+            }
+        };
+        JButton[] buttons = {type1, type2, type3, type4, type5, type6, type7, type8, type9,
+                type10, type11, type12, type13, type14, type15, type16, type17, type18};
+        for (JButton button : buttons) {
+            button.addActionListener(type1Actionlistener);
+        }
+        ActionListener type2Actionlistener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton sourceButton = (JButton) e.getSource();
+                selectedType2.setIcon(sourceButton.getIcon());
+                updaterelations();
+                // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
+            }
+        };
+        JButton[] buttons2 = {type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9,
+                type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18};
+        for (JButton button : buttons2) {
+            button.addActionListener(type2Actionlistener);
+        }
     }
 
 
@@ -600,6 +626,10 @@ public class AppUI extends JFrame {
         }
 
         return result.toString().replaceAll("<br>$", ""); // Remover el último <br>
+    }
+
+    private void updaterelations() {
+
     }
 
 
