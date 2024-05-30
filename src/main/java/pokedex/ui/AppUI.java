@@ -30,6 +30,7 @@ public class AppUI extends JFrame {
     private Pokemon_typesRepository pokemonTypesRepository;
     private MapRepository mapRepository;
     private RegisterRepository registerRepository;
+    private TypeEfficacyRepository typeEfficacyRepository;
     private AudioPlayer audioPlayer;
     private JTabbedPane mainPane;
     private JPanel panel1;
@@ -162,7 +163,7 @@ public class AppUI extends JFrame {
     private Map currentMapClass;
 
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository, MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository, RegisterRepository registerRepository, AudioPlayer audioPlayer) {
+    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository, MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository, RegisterRepository registerRepository, AudioPlayer audioPlayer, TypeEfficacyRepository typeEfficacyRepository) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         this.trainerRepository = trainerRepository; // Initialize the trainer repository
@@ -170,6 +171,7 @@ public class AppUI extends JFrame {
         this.typeRepository = typeRepository;
         this.pokemonTypesRepository = pokemonTypesRepository;
         this.registerRepository = registerRepository;
+        this.typeEfficacyRepository = typeEfficacyRepository;
         this.audioPlayer = audioPlayer;
         this.currentMapClass = null;
         setTitle("Pokedex");
