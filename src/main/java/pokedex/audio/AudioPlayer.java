@@ -1,9 +1,11 @@
 package pokedex.audio;
 
+import org.springframework.stereotype.Component;
+
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
-
+@Component
 public class AudioPlayer {
 
     private Clip clip;
