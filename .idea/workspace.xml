@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="si: 30/05/2024 9:02">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_11_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_11_15__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_5_24_12_08__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_5_24_12_08__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_5_24_8_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_5_24_8_24__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +134,7 @@
       <workItem from="1716795760365" duration="3382000" />
       <workItem from="1716879344207" duration="6263000" />
       <workItem from="1717049110932" duration="3371000" />
-      <workItem from="1717053375781" duration="325000" />
+      <workItem from="1717053375781" duration="1276000" />
     </task>
     <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
       <option name="closed" value="true" />
@@ -487,7 +488,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716885007342</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="si: 30/05/2024 9:02">
+      <option name="closed" value="true" />
+      <created>1717053766698</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1717053766698</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +514,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(master): 16/05/2024 09:46" />
     <MESSAGE value="feat(master): 16/05/2024 10:06" />
     <MESSAGE value="feat(master): 16/05/2024 10:27" />
     <MESSAGE value="docs(master): 16/05/2024 10:38" />
@@ -530,6 +538,7 @@
     <MESSAGE value="feat(master): 27/05/2024 09:30" />
     <MESSAGE value="docs(master): 21/05/2024 10:23" />
     <MESSAGE value="typechartselectoPanel: 28/05/2024 9:29" />
-    <option name="LAST_COMMIT_MESSAGE" value="typechartselectoPanel: 28/05/2024 9:29" />
+    <MESSAGE value="si: 30/05/2024 9:02" />
+    <option name="LAST_COMMIT_MESSAGE" value="si: 30/05/2024 9:02" />
   </component>
 </project>

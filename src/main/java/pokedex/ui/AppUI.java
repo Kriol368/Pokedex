@@ -13,9 +13,11 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 
@@ -35,6 +37,7 @@ public class AppUI extends JFrame {
     private JPanel team;
     private JPanel map;
     private JPanel typeChart;
+    private JPanel network;
     private JPanel Trainer;
     private JList pokedex_list;
     private JLabel labelUser;
@@ -112,6 +115,45 @@ public class AppUI extends JFrame {
     private JButton type15;
     private JButton type17;
     private JButton type18;
+    private JButton type2_1;
+    private JButton type2_2;
+    private JButton type2_3;
+    private JButton type2_4;
+    private JButton type2_5;
+    private JButton type2_6;
+    private JButton type2_7;
+    private JButton type2_8;
+    private JButton type2_9;
+    private JButton type2_10;
+    private JButton type2_11;
+    private JButton type2_12;
+    private JButton type2_13;
+    private JButton type2_14;
+    private JButton type2_15;
+    private JButton type2_16;
+    private JButton type2_17;
+    private JButton type2_18;
+    private JLabel selectedType1;
+    private JPanel typesPanel;
+    private JLabel relatedType1;
+    private JLabel relatedType2;
+    private JLabel relatedType3;
+    private JLabel relatedType4;
+    private JLabel relatedType5;
+    private JLabel relatedType6;
+    private JLabel relatedType7;
+    private JLabel relatedType8;
+    private JLabel relatedType9;
+    private JLabel relatedType10;
+    private JLabel relatedType11;
+    private JLabel relatedType12;
+    private JLabel relatedType13;
+    private JLabel relatedType14;
+    private JLabel relatedType15;
+    private JLabel relatedType16;
+    private JLabel relatedType17;
+    private JLabel relatedType18;
+    private JLabel selectedType2;
     private JScrollPane pokedex_scroll;
 
     private int currentUserImageIndex = 1;
@@ -148,11 +190,12 @@ public class AppUI extends JFrame {
         setCurrentMapImage("0");
         updateCurrentMap();
         updateMapDetails();
-
+        setTypeChartTypesIcons();
+        setRelatedTypechartIcons();
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                loginButton();
+               loginButton();
             }
         });
 
@@ -329,6 +372,35 @@ public class AppUI extends JFrame {
             clearUserSession();
             JOptionPane.showMessageDialog(AppUI.this, "Logged out successfully.", "Logout", JOptionPane.INFORMATION_MESSAGE);
         }
+
+        ActionListener type1Actionlistener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton sourceButton = (JButton) e.getSource();
+                selectedType1.setIcon(sourceButton.getIcon());
+                // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
+            }
+        };
+        JButton[] buttons = {type1, type2, type3, type4, type5, type6, type7, type8, type9,
+                type10, type11, type12, type13, type14, type15, type16, type17, type18};
+        for (JButton button : buttons) {
+            button.addActionListener(type1Actionlistener);
+        }
+
+        ActionListener type2Actionlistener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton sourceButton = (JButton) e.getSource();
+                selectedType2.setIcon(sourceButton.getIcon());
+                updaterelations();
+                // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
+            }
+        };
+        JButton[] buttons2 = {type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9,
+                type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18};
+        for (JButton button : buttons2) {
+            button.addActionListener(type2Actionlistener);
+        }
     }
 
     public void showMainPane() {
@@ -342,6 +414,23 @@ public class AppUI extends JFrame {
         Image img = icon.getImage();
         Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
         return new ImageIcon(scaledImg);
+    }
+    private ImageIcon getScaledImageByIcon(Icon icon, int width, int height) {
+        if (icon instanceof ImageIcon) {
+            Image img = ((ImageIcon) icon).getImage();
+            Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+            return new ImageIcon(scaledImg);
+        } else {
+            // Create a BufferedImage to paint the Icon into
+            BufferedImage bufferedImage = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g2d = bufferedImage.createGraphics();
+            icon.paintIcon(null, g2d, 0, 0);
+            g2d.dispose();
+
+            // Scale the image
+            Image img = bufferedImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+            return new ImageIcon(img);
+        }
     }
 
     public String setPokemonImageIcon(String ordernum) {
@@ -410,7 +499,31 @@ public class AppUI extends JFrame {
     }
 
     public void setTypeChartTypesIcons() {
-        type1.setIcon(getScaledImage(type1.getIcon().toString(), type1.getWidth(), type1.getHeight()));
+        // Assuming `type1`, `type2`, ..., `type18` are already defined and initialized.
+        // Creating an array of type instances
+        JButton[] types = {
+                type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18,
+                type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18
+        };
+
+        // Loop through each type and set the icon
+        for (JButton type : types) {
+            type.setIcon(getScaledImageByIcon(type.getIcon(), type.getWidth(), type.getHeight()));
+        }
+    }
+
+    public void setRelatedTypechartIcons() {
+        // Assuming `type1`, `type2`, ..., `type18` are already defined and initialized.
+        // Creating an array of type instances
+        JLabel[] types = {
+                relatedType1, relatedType2, relatedType3, relatedType4, relatedType5, relatedType6, relatedType7, relatedType8, relatedType9, relatedType10, relatedType11, relatedType12, relatedType13, relatedType14, relatedType15, relatedType16, relatedType17, relatedType18
+        };
+        int icon = 0;
+        // Loop through each type and set the icon
+        for (JLabel type : types) {
+            icon ++;
+            type.setIcon(getScaledImage(setTypeImage(Integer.toString(icon)), type.getWidth(), type.getHeight()));
+        }
     }
 
     public String setCurrentMap(String ordernum) {
@@ -631,4 +744,7 @@ public class AppUI extends JFrame {
         return result.toString().replaceAll("<br>$", ""); // Remover el último <br>
     }
 
+    private void updaterelations() {
+
+    }
 }
