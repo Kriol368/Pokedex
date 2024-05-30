@@ -2,17 +2,20 @@ package pokedex.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import pokedex.audio.AudioPlayer;
 import pokedex.entity.*;
 import pokedex.repository.*;
 import pokedex.service.AuthenticationService;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.URL;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 
@@ -25,13 +28,13 @@ public class AppUI extends JFrame {
     private Pokemon_typesRepository pokemonTypesRepository;
     private MapRepository mapRepository;
     private RegisterRepository registerRepository;
+    private AudioPlayer audioPlayer;
     private JTabbedPane mainPane;
     private JPanel panel1;
     private JPanel pokedex;
     private JPanel team;
     private JPanel map;
     private JPanel typeChart;
-    private JPanel network;
     private JPanel Trainer;
     private JList pokedex_list;
     private JLabel labelUser;
@@ -115,8 +118,9 @@ public class AppUI extends JFrame {
     private Trainer loggedInUser = null; // Track the logged-in user
     private int currentMapId = 0;
     private Map currentMapClass;
+
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository,MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository,RegisterRepository registerRepository) {
+    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository, MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository, RegisterRepository registerRepository, AudioPlayer audioPlayer) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         this.trainerRepository = trainerRepository; // Initialize the trainer repository
@@ -124,6 +128,7 @@ public class AppUI extends JFrame {
         this.typeRepository = typeRepository;
         this.pokemonTypesRepository = pokemonTypesRepository;
         this.registerRepository = registerRepository;
+        this.audioPlayer = audioPlayer;
         this.currentMapClass = null;
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -143,36 +148,11 @@ public class AppUI extends JFrame {
         setCurrentMapImage("0");
         updateCurrentMap();
         updateMapDetails();
+
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (loggedInUser == null) {
-                    // Perform login
-                    String enteredUsername = username.getText();
-                    String enteredPassword = new String(password.getPassword());
-
-                    // Perform login or registration
-                    String resultMessage = authenticationService.loginOrRegister(enteredUsername, enteredPassword);
-
-                    // Display message based on the result
-                    JOptionPane.showMessageDialog(AppUI.this, resultMessage, "Authentication Result", JOptionPane.INFORMATION_MESSAGE);
-
-                    // If login is successful, load the trainer's image and update progress bar
-                    if (resultMessage.equals("Login successful")) {
-                        loggedInUser = trainerRepository.findByName(enteredUsername);
-                        if (loggedInUser != null) {
-                            loadTrainerInfo(loggedInUser.getName());
-                            loginButton.setText("Logout");
-                            loadRegisteredPokemonData(loggedInUser.getId());
-                        }
-                    }
-                } else {
-                    // Perform logout
-                    loggedInUser = null;
-                    loginButton.setText("Login");
-                    clearUserSession();
-                    JOptionPane.showMessageDialog(AppUI.this, "Logged out successfully.", "Logout", JOptionPane.INFORMATION_MESSAGE);
-                }
+                loginButton();
             }
         });
 
@@ -180,24 +160,14 @@ public class AppUI extends JFrame {
         leftArrowButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Decrease the image index and update the character image
-                currentUserImageIndex--;
-                if (currentUserImageIndex < 1) {
-                    currentUserImageIndex = 21; // Return to 21 if less than 1
-                }
-                setTrainerImage(String.valueOf(currentUserImageIndex));
+                leftArrowButton();
             }
         });
 
         rightArrowButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Increase the image index and update the character image
-                currentUserImageIndex++;
-                if (currentUserImageIndex > 21) {
-                    currentUserImageIndex = 1; // Return to 1 if greater than 21
-                }
-                setTrainerImage(String.valueOf(currentUserImageIndex));
+                rightArrowButton();
             }
         });
         saveButton.addActionListener(new ActionListener() {
@@ -209,73 +179,157 @@ public class AppUI extends JFrame {
         previousMapButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                decreaseCurrentMapId();
-                // Update the UI to display the new current map
-                setCurrentMapImage(String.valueOf(currentMapId));
-                updateCurrentMap();
-                updateMapDetails();
+                previousMapButton();
             }
         });
         nextMapButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Increase the current map ID
-                increaseCurrentMapId();
-                // Update the UI to display the new current map
-                setCurrentMapImage(String.valueOf(currentMapId));
-                updateCurrentMap();
-                updateMapDetails();
+                nextMapButton();
             }
         });
         pokedex_list.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
-                    Object selectedObject = pokedex_list.getSelectedValue(); // Get the selected object
-                    if (selectedObject != null) { // Ensure an item is selected
-                        // Get the selected Pokemon's identifier
-                        String selectedIdentifier = selectedObject.toString().split(" - ")[1];
-                        // Retrieve the selected Pokemon from the repository
-                        Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
-                        if (selectedPokemon != null) {
-                            // Set the species ID to the PokedexNumber panel
-                            PokedexNumber.setText(String.valueOf(selectedPokemon.getSpeciesId()));
-                            // Set the Pokemon's identifier to the PokemonName panel
-                            PokemonName.setText(selectedPokemon.getIdentifier());
-                            // Set the image to the order number of the selected Pokemon
-                            String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
-                            pokemonImage.setIcon(getScaledImage(imagePath, pokemonImage.getWidth(), pokemonImage.getHeight()));
-                            List<Pokemon_types> pokemonTypes = pokemonTypesRepository.findByPokemonId(selectedPokemon.getId());
-                            setPokedexTypeIcons(Integer.toString(pokemonTypes.getLast().getType().getId()) ,Integer.toString(pokemonTypes.getFirst().getType().getId()));
-                        }
-                    }
-                }
+                pokedexListContent(e);
             }
         });
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (loggedInUser != null) {
-                    Object selectedObject = pokedex_list.getSelectedValue();
-                    if (selectedObject != null) {
-                        String selectedIdentifier = selectedObject.toString().split(" - ")[1];
-                        Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
-                        if (selectedPokemon != null) {
-                            togglePokemonRegistration(loggedInUser.getId(), selectedPokemon.getId());
-                        }
-                    }
-                }
+                registerButton();
             }
         });
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String searchText = searchByNameTxt.getText().trim().toLowerCase();
-                filterPokedexList(searchText);
+                filterPokedexList(searchByNameTxt.getText().trim().toLowerCase());
+            }
+        });
+        registedList.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                registeredListContent(e);
             }
         });
     }
 
+    private void registeredListContent(ListSelectionEvent e) {
+        if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
+            Object selectedObject = registedList.getSelectedValue(); // Get the selected object
+            if (selectedObject != null && selectedObject instanceof Pokemon) { // Ensure an item is selected
+                Pokemon selectedPokemon = (Pokemon) selectedObject;
+                // Set the Pokémon's identifier to the PokemonName panel
+                SelectedPokemonName.setText(selectedPokemon.getIdentifier());
+                // Set the image to the order number of the selected Pokémon
+                String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
+                SelectedPokemonImg.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            }
+        }
+    }
+
+    private void registerButton() {
+        if (loggedInUser != null) {
+            Object selectedObject = pokedex_list.getSelectedValue();
+            if (selectedObject != null) {
+                String selectedIdentifier = selectedObject.toString().split(" - ")[1];
+                Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+                if (selectedPokemon != null) {
+                    togglePokemonRegistration(loggedInUser.getId(), selectedPokemon.getId());
+                }
+            }
+        }
+    }
+
+    private void pokedexListContent(ListSelectionEvent e) {
+        if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
+            Object selectedObject = pokedex_list.getSelectedValue(); // Get the selected object
+            if (selectedObject != null) { // Ensure an item is selected
+                // Get the selected Pokémon's identifier
+                String selectedIdentifier = selectedObject.toString().split(" - ")[1];
+                // Retrieve the selected Pokémon from the repository
+                Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+                if (selectedPokemon != null) {
+                    // Set the species ID to the PokedexNumber panel
+                    PokedexNumber.setText(String.valueOf(selectedPokemon.getSpeciesId()));
+                    // Set the Pokémon's identifier to the PokemonName panel
+                    PokemonName.setText(selectedPokemon.getIdentifier());
+                    // Set the image to the order number of the selected Pokémon
+                    String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
+                    pokemonImage.setIcon(getScaledImage(imagePath, pokemonImage.getWidth(), pokemonImage.getHeight()));
+                    List<Pokemon_types> pokemonTypes = pokemonTypesRepository.findByPokemonId(selectedPokemon.getId());
+                    setPokedexTypeIcons(Integer.toString(pokemonTypes.getLast().getType().getId()), Integer.toString(pokemonTypes.getFirst().getType().getId()));
+                }
+            }
+        }
+    }
+
+    private void nextMapButton() {
+        // Increase the current map ID
+        increaseCurrentMapId();
+        // Update the UI to display the new current map
+        setCurrentMapImage(String.valueOf(currentMapId));
+        updateCurrentMap();
+        updateMapDetails();
+    }
+
+    private void previousMapButton() {
+        decreaseCurrentMapId();
+        // Update the UI to display the new current map
+        setCurrentMapImage(String.valueOf(currentMapId));
+        updateCurrentMap();
+        updateMapDetails();
+    }
+
+    private void rightArrowButton() {
+        // Increase the image index and update the character image
+        currentUserImageIndex++;
+        if (currentUserImageIndex > 21) {
+            currentUserImageIndex = 1; // Return to 1 if greater than 21
+        }
+        setTrainerImage(String.valueOf(currentUserImageIndex));
+    }
+
+    private void leftArrowButton() {
+        // Decrease the image index and update the character image
+        currentUserImageIndex--;
+        if (currentUserImageIndex < 1) {
+            currentUserImageIndex = 21; // Return to 21 if less than 1
+        }
+        setTrainerImage(String.valueOf(currentUserImageIndex));
+    }
+
+    private void loginButton() {
+        if (loggedInUser == null) {
+            // Perform login
+            String enteredUsername = username.getText();
+            String enteredPassword = new String(password.getPassword());
+
+            // Perform login or registration
+            String resultMessage = authenticationService.loginOrRegister(enteredUsername, enteredPassword);
+
+            // Display message based on the result
+            JOptionPane.showMessageDialog(AppUI.this, resultMessage, "Authentication Result", JOptionPane.INFORMATION_MESSAGE);
+
+            // If login is successful, load the trainer's image and update progress bar
+            if (resultMessage.equals("Login successful")) {
+                loggedInUser = trainerRepository.findByName(enteredUsername);
+                if (loggedInUser != null) {
+                    loadTrainerInfo(loggedInUser.getName());
+                    loginButton.setText("Logout");
+                    loadRegisteredPokemonData(loggedInUser.getId());
+                    //music
+                    playMusic(loggedInUser.getImage());
+                }
+            }
+        } else {
+            // Perform logout
+            loggedInUser = null;
+            loginButton.setText("Login");
+            clearUserSession();
+            JOptionPane.showMessageDialog(AppUI.this, "Logged out successfully.", "Logout", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
 
     public void showMainPane() {
         setContentPane(mainPane);
@@ -303,9 +357,11 @@ public class AppUI extends JFrame {
         pokemon6.setIcon(getScaledImage(setPokemonImageIcon(p6), pokemon6.getWidth(), pokemon6.getHeight()));
     }
 
+
     public String setTrainerImageIcon(String ordernum) {
         return "src/main/resources/trainers/" + ordernum + ".png";
     }
+
     private void togglePokemonRegistration(int trainerId, int pokemonId) {
         Register register = registerRepository.findByTrainerIdAndPokemonId(trainerId, pokemonId);
         if (register != null) {
@@ -313,6 +369,7 @@ public class AppUI extends JFrame {
             int newStatus = currentStatus == 1 ? 0 : 1;
             register.setRegistered(newStatus);
             registerRepository.save(register);
+            loadRegisteredPokemonData(loggedInUser.getId());
             JOptionPane.showMessageDialog(this, "Registration status updated successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(this, "Registration record not found.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -322,7 +379,7 @@ public class AppUI extends JFrame {
     public void setTrainerImage(String t1) {
         if (parseInt(t1) == 2 || parseInt(t1) == 12 || parseInt(t1) == 13 || parseInt(t1) == 16 || parseInt(t1) == 21) {
             characterImage.setSize(new Dimension(260, 600));
-        }else if (parseInt(t1) == 6 || parseInt(t1) == 7 || parseInt(t1) == 10 || parseInt(t1) == 18 ) {
+        } else if (parseInt(t1) == 6 || parseInt(t1) == 7 || parseInt(t1) == 10 || parseInt(t1) == 18) {
             characterImage.setSize(new Dimension(240, 600));
         } else if (parseInt(t1) == 9) {
             characterImage.setSize(new Dimension(350, 600));
@@ -351,6 +408,7 @@ public class AppUI extends JFrame {
         Type1.setIcon(getScaledImage(setTypeImage(t1), Type1.getWidth(), Type1.getHeight()));
         Type2.setIcon(getScaledImage(setTypeImage(t2), Type2.getWidth(), Type2.getHeight()));
     }
+
     public void setTypeChartTypesIcons() {
         type1.setIcon(getScaledImage(type1.getIcon().toString(), type1.getWidth(), type1.getHeight()));
     }
@@ -362,6 +420,7 @@ public class AppUI extends JFrame {
     public void setCurrentMapImage(String t1) {
         currentMap.setIcon(getScaledImage(setCurrentMap(t1), currentMap.getWidth(), currentMap.getHeight()));
     }
+
     public void loadPokedexData() {
         Font f = new Font("Arial", Font.PLAIN, 40);
         pokedex_list.setFont(f);
@@ -372,6 +431,7 @@ public class AppUI extends JFrame {
             pokedexListModel.addElement(pokemon.getSpeciesId() + " - " + capitalizeFirstLetter(pokemon.getIdentifier()));
         }
     }
+
     private void saveCurrentImage() {
         String username = this.username.getText();
         Trainer trainer = trainerRepository.findByName(username);
@@ -379,10 +439,58 @@ public class AppUI extends JFrame {
             trainer.setImage(currentUserImageIndex);
             trainerRepository.save(trainer);
             JOptionPane.showMessageDialog(this, "Image saved successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
+            playMusic(trainer.getImage());
         } else {
             JOptionPane.showMessageDialog(this, "Error saving image.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+
+    private void playMusic(int image) {
+        audioPlayer.stop();
+        switch (image) {
+            case 1:
+            case 2:
+                audioPlayer.play("src/main/resources/audio/1.wav");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                audioPlayer.play("src/main/resources/audio/2.wav");
+                break;
+            case 6:
+            case 7:
+                audioPlayer.play("src/main/resources/audio/3.wav");
+                break;
+            case 8:
+            case 9:
+                audioPlayer.play("src/main/resources/audio/4.wav");
+                break;
+            case 10:
+            case 11:
+            case 12:
+            case 13:
+                audioPlayer.play("src/main/resources/audio/5.wav");
+                break;
+            case 14:
+            case 15:
+                audioPlayer.play("src/main/resources/audio/6.wav");
+                break;
+            case 16:
+            case 17:
+                audioPlayer.play("src/main/resources/audio/7.wav");
+                break;
+            case 18:
+            case 19:
+                audioPlayer.play("src/main/resources/audio/8.wav");
+                break;
+            case 20:
+            case 21:
+                audioPlayer.play("src/main/resources/audio/9.wav");
+                break;
+        }
+
+    }
+
     private void loadRegisteredPokemonData(int trainerId) {
         ListModel<String> listModel = registedList.getModel(); // Retrieve the list model
         if (!(listModel instanceof DefaultListModel)) {
@@ -408,8 +516,6 @@ public class AppUI extends JFrame {
         }
     }
 
-
-
     private void loadTrainerInfo(String name) {
         Trainer trainer = trainerRepository.findByName(name);
         if (trainer != null) {
@@ -420,17 +526,17 @@ public class AppUI extends JFrame {
 
         }
     }
+
     private void filterPokedexList(String searchText) {
         DefaultListModel<String> model = (DefaultListModel<String>) pokedex_list.getModel();
         model.clear();
         List<Pokemon> pokemons = (List<Pokemon>) pokemonRepository.findAll();
-        List<Pokemon> filteredPokemons = pokemons.stream()
-                .filter(p -> p.getIdentifier().toLowerCase().startsWith(searchText))
-                .toList();
+        List<Pokemon> filteredPokemons = pokemons.stream().filter(p -> p.getIdentifier().toLowerCase().startsWith(searchText)).toList();
         for (Pokemon pokemon : filteredPokemons) {
             model.addElement(pokemon.getSpeciesId() + " - " + capitalizeFirstLetter(pokemon.getIdentifier()));
         }
     }
+
     private void clearUserSession() {
         // Clear the user session details (UI elements) when logging out
         username.setText("");
@@ -440,6 +546,7 @@ public class AppUI extends JFrame {
         progressBar.setValue(0);
         progressBar.setString("0%");
     }
+
     private void updateProgressBar() {
         if (loggedInUser != null) {
             int trainerId = loggedInUser.getId();
@@ -452,12 +559,14 @@ public class AppUI extends JFrame {
             progressBar.setStringPainted(true);
         }
     }
+
     public static String capitalizeFirstLetter(String str) {
         if (str == null || str.isEmpty()) {
             return str;
         }
         return str.substring(0, 1).toUpperCase() + str.substring(1);
     }
+
     // Define methods to increase and decrease the current map ID
     private void increaseCurrentMapId() {
         currentMapId++;
@@ -472,6 +581,7 @@ public class AppUI extends JFrame {
             currentMapId = 22; // Wrap around to 22 if going below 1
         }
     }
+
     // Method to update the current map object based on the current map ID
     private void updateCurrentMap() {
         // Fetch the map object from the database based on the current map ID
@@ -520,6 +630,5 @@ public class AppUI extends JFrame {
 
         return result.toString().replaceAll("<br>$", ""); // Remover el último <br>
     }
-
 
 }
