@@ -35,6 +35,7 @@ public class AppUI extends JFrame {
     private JPanel team;
     private JPanel map;
     private JPanel typeChart;
+    private JPanel Showdown;
     private JPanel Trainer;
     private JList pokedex_list;
     private JLabel labelUser;
@@ -149,6 +150,7 @@ public class AppUI extends JFrame {
         setCurrentMapImage("0");
         updateCurrentMap();
         updateMapDetails();
+        loadShowdownContent();
 
         loginButton.addActionListener(new ActionListener() {
             @Override
@@ -358,6 +360,23 @@ public class AppUI extends JFrame {
         pokemon6.setIcon(getScaledImage(setPokemonImageIcon(p6), pokemon6.getWidth(), pokemon6.getHeight()));
     }
 
+    private void loadShowdownContent() {
+        try {
+            URL url = new URL("https://play.pokemonshowdown.com/");
+            showdown = new JEditorPane();
+            showdown.setEditable(false);
+            showdown.setContentType("text/html");  // Ensure the content type is HTML
+            showdown.setPage(url);
+
+            JScrollPane scrollPane = new JScrollPane(showdown);
+            setContentPane(scrollPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Failed to load Showdown content.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+
+    }
 
     public String setTrainerImageIcon(String ordernum) {
         return "src/main/resources/trainers/" + ordernum + ".png";
