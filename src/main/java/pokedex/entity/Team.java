@@ -12,6 +12,9 @@ public class Team {
 
     @ManyToMany(mappedBy = "teams")
     private Set<Pokemon> pokemons;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "trainer_id", referencedColumnName = "id")
+    private Trainer trainer;
 
     // Getters and setters
     public int getId() {

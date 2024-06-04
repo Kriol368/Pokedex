@@ -17,6 +17,8 @@ public class Trainer {
 
     @OneToMany(mappedBy = "trainer")
     Set<Register> registers;
+    @OneToOne(mappedBy = "trainer")
+    private Team team;
 
     public Trainer() {
     }
