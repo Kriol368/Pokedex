@@ -296,6 +296,8 @@ public class AppUI extends JFrame {
                     // Set the image to the order number of the selected Pokémon
                     String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
                     SelectedPokemonImg.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+                    List<Pokemon_types> pokemonTypes = pokemonTypesRepository.findByPokemonId(selectedPokemon.getId());
+                    setTeamTypeIcons(Integer.toString(pokemonTypes.getLast().getType().getId()), Integer.toString(pokemonTypes.getFirst().getType().getId()));
                 }
             }
         }
@@ -502,6 +504,10 @@ public class AppUI extends JFrame {
     public void setPokedexTypeIcons(String t1, String t2) {
         Type1.setIcon(getScaledImage(setTypeImage(t1), Type1.getWidth(), Type1.getHeight()));
         Type2.setIcon(getScaledImage(setTypeImage(t2), Type2.getWidth(), Type2.getHeight()));
+    }
+    public void setTeamTypeIcons(String t1, String t2) {
+        SelectedPokemonType1.setIcon(getScaledImage(setTypeImage(t1), Type1.getWidth(), Type1.getHeight()));
+        SelectedPokemonType2.setIcon(getScaledImage(setTypeImage(t2), Type2.getWidth(), Type2.getHeight()));
     }
 
     public void setTypeChartTypesIcons() {
