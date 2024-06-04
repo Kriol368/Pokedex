@@ -2,20 +2,31 @@ package pokedex.entity;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "team")
 public class Team {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
 
     @ManyToMany(mappedBy = "teams")
     private Set<Pokemon> pokemons;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "trainer_id", referencedColumnName = "id")
+    private Trainer trainer;
 
-    // Getters and setters for each field here
+    public Team() {
+    }
 
+    public Team(Trainer trainer) {
+        this.trainer = trainer;
+        this.pokemons = new HashSet<>();
+    }
+
+    // Getters and setters
     public int getId() {
         return id;
     }
@@ -24,12 +35,11 @@ public class Team {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Set<Pokemon> getPokemons() {
+        return pokemons;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPokemons(Set<Pokemon> pokemons) {
+        this.pokemons = pokemons;
     }
-
 }
