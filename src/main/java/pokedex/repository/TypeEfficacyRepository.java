@@ -7,4 +7,5 @@ import pokedex.entity.TypeEfficacy;
 
 @Repository
 public interface TypeEfficacyRepository extends CrudRepository<TypeEfficacy, Integer> {
+     TypeEfficacy findTypeEfficacyByDamageTypeIdAndTargetTypeId(Integer damagetype, Integer targetType);
 }

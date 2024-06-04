@@ -14,10 +14,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 
@@ -262,6 +259,7 @@ public class AppUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JButton sourceButton = (JButton) e.getSource();
                 selectedType1.setIcon(sourceButton.getIcon());
+                updateEfficacy(sourceButton, selectedType1, selectedType2);
                 // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
             }
         };
@@ -276,7 +274,7 @@ public class AppUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JButton sourceButton = (JButton) e.getSource();
                 selectedType2.setIcon(sourceButton.getIcon());
-                updaterelations();
+                updateEfficacy(sourceButton, selectedType1, selectedType2);
                 // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
             }
         };
@@ -507,10 +505,12 @@ public class AppUI extends JFrame {
                 type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18,
                 type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18
         };
-
+        int contador =0;
         // Loop through each type and set the icon
         for (JButton type : types) {
-            type.setIcon(getScaledImageByIcon(type.getIcon(), type.getWidth(), type.getHeight()));
+            contador ++;
+            type.setIcon(getScaledImage(setTypeImage(Integer.toString(contador)), type.getWidth(), type.getHeight()));
+            if(contador == 18)contador=0;
         }
     }
 
@@ -746,7 +746,65 @@ public class AppUI extends JFrame {
         return result.toString().replaceAll("<br>$", ""); // Remover el último <br>
     }
 
-    private void updaterelations() {
 
+    public void updateEfficacy(JButton selectedButton, JLabel t1, JLabel t2) {
+        JButton[] types = {
+                type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18,
+                type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18
+        };
+        int contador =0;
+        boolean es2 = false;
+        // Loop through each type and set the icon
+        for (JButton type : types) {
+            contador++;
+            if(selectedButton == type) {
+                if (es2){
+                    t2.putClientProperty("contador",contador);
+                } else {
+                    t1.putClientProperty("contador",contador);
+                }
+            if (contador == 19) {
+                contador = 0;
+                es2 = true;
+            };
+            }
+        }
+        updateRelations(selectedType1, selectedType2);
+    }
+    public void updateRelations(JLabel sT1, JLabel sT2) {
+        JLabel[] types = {
+                relatedType1, relatedType2, relatedType3, relatedType4, relatedType5, relatedType6, relatedType7, relatedType8, relatedType9, relatedType10, relatedType11, relatedType12, relatedType13, relatedType14, relatedType15, relatedType16, relatedType17, relatedType18
+        };
+        int damageType1 = 0;
+        int targetType2 = 0;
+        int targetType1 = (int) sT1.getClientProperty("contador");
+        boolean esnulo2 = false;
+        if (sT2.getClientProperty("contador") == null) {
+            esnulo2 = true;
+        } else {
+            targetType2 = (int) sT2.getClientProperty("contador");
+
+        }
+        TypeEfficacy relation2 = null;
+        double relationtotal = 0;
+        for (JLabel type : types) {
+            damageType1++;
+            if (damageType1 == 19) {
+                break;
+            }
+            if (damageType1 == 0) {
+                System.out.println("nulo");
+            }
+            TypeEfficacy relation = typeEfficacyRepository.findTypeEfficacyByDamageTypeIdAndTargetTypeId(targetType1, damageType1);
+            if (!esnulo2) {
+                relation2 = typeEfficacyRepository.findTypeEfficacyByDamageTypeIdAndTargetTypeId(targetType2, damageType1);
+                relationtotal = (double) relation.getDamageFactor() / 100 * relation2.getDamageFactor() / 100;
+            } else {
+                relationtotal = (double) relation.getDamageFactor() / 100;
+            }
+            type.setText("x" + relationtotal);
+
+        }
     }
 }
+
