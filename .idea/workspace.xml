@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="este esta bien: 30/05/2024 9:02">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="tagtype1 es una merda: 30/05/2024 9:02">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -518,7 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(master): 16/05/2024 10:27" />
     <MESSAGE value="docs(master): 16/05/2024 10:38" />
     <MESSAGE value="docs(master): 20/05/2024 10:29" />
     <MESSAGE value="docs(master): 20/05/2024 10:34" />
@@ -543,6 +541,7 @@
     <MESSAGE value="typechartselectoPanel: 28/05/2024 9:29" />
     <MESSAGE value="si: 30/05/2024 9:02" />
     <MESSAGE value="este esta bien: 30/05/2024 9:02" />
-    <option name="LAST_COMMIT_MESSAGE" value="este esta bien: 30/05/2024 9:02" />
+    <MESSAGE value="tagtype1 es una merda: 30/05/2024 9:02" />
+    <option name="LAST_COMMIT_MESSAGE" value="tagtype1 es una merda: 30/05/2024 9:02" />
   </component>
 </project>
