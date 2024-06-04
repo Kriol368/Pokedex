@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat: 28/05/2024 10:40">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_8_09_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_8_09__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_9_06_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_9_06__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/audio/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/audio/AudioPlayer.java" afterDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 04/06/2024 08:59">
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,23 +123,7 @@
       <workItem from="1716879344207" duration="6263000" />
       <workItem from="1717049110932" duration="3371000" />
       <workItem from="1717058297692" duration="207000" />
-      <workItem from="1717482500261" duration="1566000" />
-    </task>
-    <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
-      <option name="closed" value="true" />
-      <created>1715841055048</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715841055048</updated>
-    </task>
-    <task id="LOCAL-00003" summary="fix(master): 16/05/2024 08:36">
-      <option name="closed" value="true" />
-      <created>1715841385014</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1715841385014</updated>
+      <workItem from="1717482500261" duration="2479000" />
     </task>
     <task id="LOCAL-00004" summary="fix(master): 16/05/2024 08:54">
       <option name="closed" value="true" />
@@ -525,7 +501,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717058461353</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="feat: 28/05/2024 10:40">
+      <option name="closed" value="true" />
+      <created>1717484170782</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1717484170783</updated>
+    </task>
+    <task id="LOCAL-00052" summary="feat(master): 04/06/2024 08:59">
+      <option name="closed" value="true" />
+      <created>1717484393387</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1717484393387</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +535,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs(master): 20/05/2024 10:29" />
     <MESSAGE value="docs(master): 20/05/2024 10:34" />
     <MESSAGE value="docs(master): 20/05/2024 10:36" />
     <MESSAGE value="docs(master): 20/05/2024 11:58" />
@@ -568,20 +559,16 @@
     <MESSAGE value="typechartselectoPanel: 28/05/2024 9:42" />
     <MESSAGE value="feat: 28/05/2024 10:30" />
     <MESSAGE value="feat: 28/05/2024 10:40" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 28/05/2024 10:40" />
+    <MESSAGE value="feat(master): 04/06/2024 08:59" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 04/06/2024 08:59" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java</url>
-          <line>555</line>
+          <line>576</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java</url>
-          <line>291</line>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

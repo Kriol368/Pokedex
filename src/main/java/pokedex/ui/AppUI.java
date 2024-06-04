@@ -282,6 +282,42 @@ public class AppUI extends JFrame {
         for (JButton button : buttons2) {
             button.addActionListener(type2Actionlistener);
         }
+        pokemon1Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon1Button);
+            }
+        });
+        pokemon2Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon2Button);
+            }
+        });
+        pokemon3Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon3Button);
+            }
+        });
+        pokemon4Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon4Button);
+            }
+        });
+        pokemon5Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon5Button);
+            }
+        });
+        pokemon6Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon6Button);
+            }
+        });
     }
 
     private void registeredListContent(ListSelectionEvent e) {
@@ -301,6 +337,17 @@ public class AppUI extends JFrame {
                 }
             }
         }
+    }
+    private void setTeamMember(JButton button){
+        String selectedIdentifier = SelectedPokemonName.getText();
+        Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+        if (selectedPokemon != null){
+            String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
+            button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            button.setText(null);
+            System.out.println(button.getIcon());
+        }
+
     }
 
 
