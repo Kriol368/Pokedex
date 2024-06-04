@@ -1,6 +1,8 @@
 package pokedex.entity;
 
 import jakarta.persistence.*;
+
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -15,6 +17,14 @@ public class Team {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "trainer_id", referencedColumnName = "id")
     private Trainer trainer;
+
+    public Team() {
+    }
+
+    public Team(Trainer trainer) {
+        this.trainer = trainer;
+        this.pokemons = new HashSet<>();
+    }
 
     // Getters and setters
     public int getId() {

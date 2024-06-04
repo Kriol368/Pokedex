@@ -14,10 +14,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 
@@ -31,6 +28,8 @@ public class AppUI extends JFrame {
     private MapRepository mapRepository;
     private RegisterRepository registerRepository;
     private TypeEfficacyRepository typeEfficacyRepository;
+    private TeamRepository teamRepository;
+    private PokemonTeamRepository pokemonTeamRepository;
     private Pokemon teamMember1 = null;
     private Pokemon teamMember2 = null;
     private Pokemon teamMember3 = null;
@@ -172,7 +171,17 @@ public class AppUI extends JFrame {
     private Map currentMapClass;
 
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository, MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository, RegisterRepository registerRepository, AudioPlayer audioPlayer, TypeEfficacyRepository typeEfficacyRepository) {
+    public AppUI(AuthenticationService authenticationService,
+                 PokemonRepository pokemonRepository,
+                 TrainerRepository trainerRepository,
+                 MapRepository mapRepository,
+                 TypeRepository typeRepository,
+                 Pokemon_typesRepository pokemonTypesRepository,
+                 RegisterRepository registerRepository ,
+                 TypeEfficacyRepository typeEfficacyRepository,
+                 PokemonTeamRepository pokemonTeamRepository,
+                 TeamRepository teamRepository,
+                 AudioPlayer audioPlayer) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         this.trainerRepository = trainerRepository; // Initialize the trainer repository
@@ -181,6 +190,8 @@ public class AppUI extends JFrame {
         this.pokemonTypesRepository = pokemonTypesRepository;
         this.registerRepository = registerRepository;
         this.typeEfficacyRepository = typeEfficacyRepository;
+        this.teamRepository = teamRepository;
+        this.pokemonTeamRepository = pokemonTeamRepository;
         this.audioPlayer = audioPlayer;
         this.currentMapClass = null;
         setTitle("Pokedex");
@@ -385,7 +396,13 @@ public class AppUI extends JFrame {
 
     }
     private void saveTeam(){
-
+        if (loggedInUser != null){
+            Team team = teamRepository.findByTrainer(loggedInUser);
+            if (team == null){
+                Team n = new Team(loggedInUser);
+                teamRepository.save(n);
+            }
+        }
     }
 
     private void pokedexListContent(ListSelectionEvent e) {
