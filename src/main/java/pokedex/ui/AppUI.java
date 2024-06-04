@@ -14,10 +14,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 
@@ -31,6 +28,17 @@ public class AppUI extends JFrame {
     private MapRepository mapRepository;
     private RegisterRepository registerRepository;
     private TypeEfficacyRepository typeEfficacyRepository;
+    private TeamRepository teamRepository;
+    private PokemonTeamRepository pokemonTeamRepository;
+    private Pokemon teamMember1 = null;
+    private Pokemon teamMember2 = null;
+    private Pokemon teamMember3 = null;
+    private Pokemon teamMember4 = null;
+    private Pokemon teamMember5 = null;
+    private Pokemon teamMember6 = null;
+
+
+
     private AudioPlayer audioPlayer;
     private JTabbedPane mainPane;
     private JPanel panel1;
@@ -163,7 +171,17 @@ public class AppUI extends JFrame {
     private Map currentMapClass;
 
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository, MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository, RegisterRepository registerRepository, AudioPlayer audioPlayer, TypeEfficacyRepository typeEfficacyRepository) {
+    public AppUI(AuthenticationService authenticationService,
+                 PokemonRepository pokemonRepository,
+                 TrainerRepository trainerRepository,
+                 MapRepository mapRepository,
+                 TypeRepository typeRepository,
+                 Pokemon_typesRepository pokemonTypesRepository,
+                 RegisterRepository registerRepository ,
+                 TypeEfficacyRepository typeEfficacyRepository,
+                 PokemonTeamRepository pokemonTeamRepository,
+                 TeamRepository teamRepository,
+                 AudioPlayer audioPlayer) {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         this.trainerRepository = trainerRepository; // Initialize the trainer repository
@@ -172,6 +190,8 @@ public class AppUI extends JFrame {
         this.pokemonTypesRepository = pokemonTypesRepository;
         this.registerRepository = registerRepository;
         this.typeEfficacyRepository = typeEfficacyRepository;
+        this.teamRepository = teamRepository;
+        this.pokemonTeamRepository = pokemonTeamRepository;
         this.audioPlayer = audioPlayer;
         this.currentMapClass = null;
         setTitle("Pokedex");
@@ -179,8 +199,7 @@ public class AppUI extends JFrame {
         setSize(1280, 720);
         setLocationRelativeTo(null);
         pokedex_list.setModel(new DefaultListModel<>());
-        DefaultListModel<String> listModel = new DefaultListModel<>();
-        JList<String> registedList = new JList<>(listModel);
+        registedList.setModel(new DefaultListModel<>());
         loadPokedexData();
         setVisible(true);
         showMainPane();
@@ -197,7 +216,7 @@ public class AppUI extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               loginButton();
+                loginButton();
             }
         });
 
@@ -262,11 +281,11 @@ public class AppUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JButton sourceButton = (JButton) e.getSource();
                 selectedType1.setIcon(sourceButton.getIcon());
+                updateEfficacy(sourceButton, selectedType1, selectedType2);
                 // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
             }
         };
-        JButton[] buttons = {type1, type2, type3, type4, type5, type6, type7, type8, type9,
-                type10, type11, type12, type13, type14, type15, type16, type17, type18};
+        JButton[] buttons = {type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18};
         for (JButton button : buttons) {
             button.addActionListener(type1Actionlistener);
         }
@@ -276,40 +295,113 @@ public class AppUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JButton sourceButton = (JButton) e.getSource();
                 selectedType2.setIcon(sourceButton.getIcon());
-                updaterelations();
+                updateEfficacy(sourceButton, selectedType1, selectedType2);
                 // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
             }
         };
-        JButton[] buttons2 = {type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9,
-                type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18};
+        JButton[] buttons2 = {type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18};
         for (JButton button : buttons2) {
             button.addActionListener(type2Actionlistener);
         }
+        pokemon1Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon1Button,1);
+            }
+        });
+        pokemon2Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon2Button,2);
+            }
+        });
+        pokemon3Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon3Button,3);
+            }
+        });
+        pokemon4Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon4Button,4);
+            }
+        });
+        pokemon5Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon5Button,5);
+            }
+        });
+        pokemon6Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTeamMember(pokemon6Button,6);
+            }
+        });
+        SaveTeamButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                saveTeam();
+            }
+        });
     }
 
     private void registeredListContent(ListSelectionEvent e) {
         if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
             Object selectedObject = registedList.getSelectedValue(); // Get the selected object
-            if (selectedObject != null && selectedObject instanceof Pokemon) { // Ensure an item is selected
-                Pokemon selectedPokemon = (Pokemon) selectedObject;
-                // Set the Pokémon's identifier to the PokemonName panel
-                SelectedPokemonName.setText(selectedPokemon.getIdentifier());
-                // Set the image to the order number of the selected Pokémon
-                String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
-                SelectedPokemonImg.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            if (selectedObject != null) { // Ensure an item is selected
+                String selectedIdentifier = selectedObject.toString().split(" - ")[1];
+                Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+                if (selectedPokemon != null){
+                    // Set the Pokémon's identifier to the PokemonName panel
+                    SelectedPokemonName.setText(selectedPokemon.getIdentifier());
+                    // Set the image to the order number of the selected Pokémon
+                    String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
+                    SelectedPokemonImg.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+                    List<Pokemon_types> pokemonTypes = pokemonTypesRepository.findByPokemonId(selectedPokemon.getId());
+                    setTeamTypeIcons(Integer.toString(pokemonTypes.getLast().getType().getId()), Integer.toString(pokemonTypes.getFirst().getType().getId()));
+                }
             }
         }
     }
+    private void setTeamMember(JButton button,int index){
+        String selectedIdentifier = SelectedPokemonName.getText();
+        Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+        if (selectedPokemon != null){
+            String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
+            button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            button.setText(null);
+            System.out.println(button.getIcon());
+            switch (index){
+                case 1:
+                    teamMember1 = selectedPokemon;
+                    break;
+                case 2:
+                    teamMember2 = selectedPokemon;
+                    break;
+                case 3:
+                    teamMember3 = selectedPokemon;
+                    break;
+                case 4:
+                    teamMember4 = selectedPokemon;
+                    break;
+                case 5:
+                    teamMember5 = selectedPokemon;
+                    break;
+                case 6:
+                    teamMember6 = selectedPokemon;
+                    break;
+            }
+        }
 
-    private void registerButton() {
-        if (loggedInUser != null) {
-            Object selectedObject = pokedex_list.getSelectedValue();
-            if (selectedObject != null) {
-                String selectedIdentifier = selectedObject.toString().split(" - ")[1];
-                Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
-                if (selectedPokemon != null) {
-                    togglePokemonRegistration(loggedInUser.getId(), selectedPokemon.getId());
-                }
+    }
+    private void saveTeam(){
+        if (loggedInUser != null){
+            Team team = teamRepository.findByTrainer(loggedInUser);
+            if (team == null){
+                Team n = new Team(loggedInUser);
+                teamRepository.save(n);
             }
         }
     }
@@ -336,6 +428,20 @@ public class AppUI extends JFrame {
             }
         }
     }
+
+    private void registerButton() {
+        if (loggedInUser != null) {
+            Object selectedObject = pokedex_list.getSelectedValue();
+            if (selectedObject != null) {
+                String selectedIdentifier = selectedObject.toString().split(" - ")[1];
+                Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+                if (selectedPokemon != null) {
+                    togglePokemonRegistration(loggedInUser.getId(), selectedPokemon.getId());
+                }
+            }
+        }
+    }
+
 
     private void nextMapButton() {
         // Increase the current map ID
@@ -393,7 +499,7 @@ public class AppUI extends JFrame {
                     loginButton.setText("Logout");
                     loadRegisteredPokemonData(loggedInUser.getId());
                     //music
-                    playMusic(loggedInUser.getImage());
+                    playMusic(loggedInUser.getImage(), true);
                 }
             }
         } else {
@@ -402,6 +508,7 @@ public class AppUI extends JFrame {
             loginButton.setText("Login");
             clearUserSession();
             JOptionPane.showMessageDialog(AppUI.this, "Logged out successfully.", "Logout", JOptionPane.INFORMATION_MESSAGE);
+            audioPlayer.stop();
         }
     }
 
@@ -417,6 +524,7 @@ public class AppUI extends JFrame {
         Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
         return new ImageIcon(scaledImg);
     }
+
     private ImageIcon getScaledImageByIcon(Icon icon, int width, int height) {
         if (icon instanceof ImageIcon) {
             Image img = ((ImageIcon) icon).getImage();
@@ -499,6 +607,10 @@ public class AppUI extends JFrame {
         Type1.setIcon(getScaledImage(setTypeImage(t1), Type1.getWidth(), Type1.getHeight()));
         Type2.setIcon(getScaledImage(setTypeImage(t2), Type2.getWidth(), Type2.getHeight()));
     }
+    public void setTeamTypeIcons(String t1, String t2) {
+        SelectedPokemonType1.setIcon(getScaledImage(setTypeImage(t1), Type1.getWidth(), Type1.getHeight()));
+        SelectedPokemonType2.setIcon(getScaledImage(setTypeImage(t2), Type2.getWidth(), Type2.getHeight()));
+    }
 
     public void setTypeChartTypesIcons() {
         // Assuming `type1`, `type2`, ..., `type18` are already defined and initialized.
@@ -507,23 +619,24 @@ public class AppUI extends JFrame {
                 type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18,
                 type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18
         };
+        int contador =0;
 
         // Loop through each type and set the icon
         for (JButton type : types) {
-            type.setIcon(getScaledImageByIcon(type.getIcon(), type.getWidth(), type.getHeight()));
+            contador ++;
+            type.setIcon(getScaledImage(setTypeImage(Integer.toString(contador)), type.getWidth(), type.getHeight()));
+            if(contador == 18)contador=0;
         }
     }
 
     public void setRelatedTypechartIcons() {
         // Assuming `type1`, `type2`, ..., `type18` are already defined and initialized.
         // Creating an array of type instances
-        JLabel[] types = {
-                relatedType1, relatedType2, relatedType3, relatedType4, relatedType5, relatedType6, relatedType7, relatedType8, relatedType9, relatedType10, relatedType11, relatedType12, relatedType13, relatedType14, relatedType15, relatedType16, relatedType17, relatedType18
-        };
+        JLabel[] types = {relatedType1, relatedType2, relatedType3, relatedType4, relatedType5, relatedType6, relatedType7, relatedType8, relatedType9, relatedType10, relatedType11, relatedType12, relatedType13, relatedType14, relatedType15, relatedType16, relatedType17, relatedType18};
         int icon = 0;
         // Loop through each type and set the icon
         for (JLabel type : types) {
-            icon ++;
+            icon++;
             type.setIcon(getScaledImage(setTypeImage(Integer.toString(icon)), type.getWidth(), type.getHeight()));
         }
     }
@@ -554,14 +667,16 @@ public class AppUI extends JFrame {
             trainer.setImage(currentUserImageIndex);
             trainerRepository.save(trainer);
             JOptionPane.showMessageDialog(this, "Image saved successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
-            playMusic(trainer.getImage());
+            playMusic(trainer.getImage(), false);
         } else {
             JOptionPane.showMessageDialog(this, "Error saving image.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
-    private void playMusic(int image) {
-        audioPlayer.stop();
+    private void playMusic(int image, boolean login) {
+        if (!login) {
+            audioPlayer.stop();
+        }
         switch (image) {
             case 1:
             case 2:
@@ -746,7 +861,65 @@ public class AppUI extends JFrame {
         return result.toString().replaceAll("<br>$", ""); // Remover el último <br>
     }
 
-    private void updaterelations() {
 
+    public void updateEfficacy(JButton selectedButton, JLabel t1, JLabel t2) {
+        JButton[] types = {
+                type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18,
+                type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18
+        };
+        int contador =0;
+        boolean es2 = false;
+        // Loop through each type and set the icon
+        for (JButton type : types) {
+            contador++;
+            if(selectedButton == type) {
+                if (es2){
+                    t2.putClientProperty("contador",contador);
+                } else {
+                    t1.putClientProperty("contador",contador);
+                }
+            if (contador == 19) {
+                contador = 0;
+                es2 = true;
+            };
+            }
+        }
+        updateRelations(selectedType1, selectedType2);
+    }
+    public void updateRelations(JLabel sT1, JLabel sT2) {
+        JLabel[] types = {
+                relatedType1, relatedType2, relatedType3, relatedType4, relatedType5, relatedType6, relatedType7, relatedType8, relatedType9, relatedType10, relatedType11, relatedType12, relatedType13, relatedType14, relatedType15, relatedType16, relatedType17, relatedType18
+        };
+        int damageType1 = 0;
+        int targetType2 = 0;
+        int targetType1 = (int) sT1.getClientProperty("contador");
+        boolean esnulo2 = false;
+        if (sT2.getClientProperty("contador") == null) {
+            esnulo2 = true;
+        } else {
+            targetType2 = (int) sT2.getClientProperty("contador");
+
+        }
+        TypeEfficacy relation2 = null;
+        double relationtotal = 0;
+        for (JLabel type : types) {
+            damageType1++;
+            if (damageType1 == 19) {
+                break;
+            }
+            if (damageType1 == 0) {
+                System.out.println("nulo");
+            }
+            TypeEfficacy relation = typeEfficacyRepository.findTypeEfficacyByDamageTypeIdAndTargetTypeId(targetType1, damageType1);
+            if (!esnulo2) {
+                relation2 = typeEfficacyRepository.findTypeEfficacyByDamageTypeIdAndTargetTypeId(targetType2, damageType1);
+                relationtotal = (double) relation.getDamageFactor() / 100 * relation2.getDamageFactor() / 100;
+            } else {
+                relationtotal = (double) relation.getDamageFactor() / 100;
+            }
+            type.setText("x" + relationtotal);
+
+        }
     }
 }
+
