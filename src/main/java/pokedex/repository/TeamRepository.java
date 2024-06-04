@@ -7,4 +7,5 @@ import pokedex.entity.Team;
 
 @Repository
 public interface TeamRepository extends CrudRepository<Team,Integer> {
+
 }
