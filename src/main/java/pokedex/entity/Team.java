@@ -1,21 +1,19 @@
 package pokedex.entity;
 
 import jakarta.persistence.*;
-
 import java.util.Set;
 
 @Entity
 @Table(name = "team")
 public class Team {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
 
     @ManyToMany(mappedBy = "teams")
     private Set<Pokemon> pokemons;
 
-    // Getters and setters for each field here
-
+    // Getters and setters
     public int getId() {
         return id;
     }
@@ -24,12 +22,11 @@ public class Team {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Set<Pokemon> getPokemons() {
+        return pokemons;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPokemons(Set<Pokemon> pokemons) {
+        this.pokemons = pokemons;
     }
-
 }

@@ -31,6 +31,15 @@ public class AppUI extends JFrame {
     private MapRepository mapRepository;
     private RegisterRepository registerRepository;
     private TypeEfficacyRepository typeEfficacyRepository;
+    private Pokemon teamMember1 = null;
+    private Pokemon teamMember2 = null;
+    private Pokemon teamMember3 = null;
+    private Pokemon teamMember4 = null;
+    private Pokemon teamMember5 = null;
+    private Pokemon teamMember6 = null;
+
+
+
     private AudioPlayer audioPlayer;
     private JTabbedPane mainPane;
     private JPanel panel1;
@@ -285,37 +294,43 @@ public class AppUI extends JFrame {
         pokemon1Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setTeamMember(pokemon1Button);
+                setTeamMember(pokemon1Button,1);
             }
         });
         pokemon2Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setTeamMember(pokemon2Button);
+                setTeamMember(pokemon2Button,2);
             }
         });
         pokemon3Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setTeamMember(pokemon3Button);
+                setTeamMember(pokemon3Button,3);
             }
         });
         pokemon4Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setTeamMember(pokemon4Button);
+                setTeamMember(pokemon4Button,4);
             }
         });
         pokemon5Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setTeamMember(pokemon5Button);
+                setTeamMember(pokemon5Button,5);
             }
         });
         pokemon6Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setTeamMember(pokemon6Button);
+                setTeamMember(pokemon6Button,6);
+            }
+        });
+        SaveTeamButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                saveTeam();
             }
         });
     }
@@ -338,7 +353,7 @@ public class AppUI extends JFrame {
             }
         }
     }
-    private void setTeamMember(JButton button){
+    private void setTeamMember(JButton button,int index){
         String selectedIdentifier = SelectedPokemonName.getText();
         Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
         if (selectedPokemon != null){
@@ -346,10 +361,32 @@ public class AppUI extends JFrame {
             button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
             button.setText(null);
             System.out.println(button.getIcon());
+            switch (index){
+                case 1:
+                    teamMember1 = selectedPokemon;
+                    break;
+                case 2:
+                    teamMember2 = selectedPokemon;
+                    break;
+                case 3:
+                    teamMember3 = selectedPokemon;
+                    break;
+                case 4:
+                    teamMember4 = selectedPokemon;
+                    break;
+                case 5:
+                    teamMember5 = selectedPokemon;
+                    break;
+                case 6:
+                    teamMember6 = selectedPokemon;
+                    break;
+            }
         }
 
     }
+    private void saveTeam(){
 
+    }
 
     private void pokedexListContent(ListSelectionEvent e) {
         if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times

@@ -499,7 +499,7 @@
     <routine id="190" parent="1" name="fts5"/>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-05-30.07:41:36</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-06-04.07:21:39</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1774,86 +1774,83 @@ pokemon_id</ColNames>
       <Position>2</Position>
     </column>
     <column id="604" parent="562" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="605" parent="562" name="name">
-      <DasType>TEXT|0s</DasType>
+    <column id="605" parent="562" name="trainer_id">
+      <DasType>integer|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="606" parent="562" name="trainer_id">
-      <DasType>integer|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <foreign-key id="607" parent="562" name="team_trainer_id_fk">
+    <foreign-key id="606" parent="562" name="team_trainer_id_fk">
       <ColNames>trainer_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>trainer</RefTableName>
     </foreign-key>
-    <key id="608" parent="562" name="team_pk">
+    <key id="607" parent="562" name="team_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="609" parent="563" name="id">
+    <column id="608" parent="563" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="610" parent="563" name="name">
+    <column id="609" parent="563" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="611" parent="563" name="password">
+    <column id="610" parent="563" name="password">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="612" parent="563" name="image">
+    <column id="611" parent="563" name="image">
       <DasType>INTEGER|0s</DasType>
       <Position>4</Position>
     </column>
-    <key id="613" parent="563" name="trainer_pk">
+    <key id="612" parent="563" name="trainer_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="614" parent="564" name="id">
+    <column id="613" parent="564" name="id">
       <DasType>integer|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="615" parent="564" name="identifier">
+    <column id="614" parent="564" name="identifier">
       <DasType>text|0s</DasType>
       <Position>2</Position>
     </column>
-    <key id="616" parent="564" name="types_pk">
+    <key id="615" parent="564" name="types_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="617" parent="565" name="damage_type_id">
+    <column id="616" parent="565" name="damage_type_id">
       <DasType>integer|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="618" parent="565" name="target_type_id">
+    <column id="617" parent="565" name="target_type_id">
       <DasType>integer|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="619" parent="565" name="damage_factor">
+    <column id="618" parent="565" name="damage_factor">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
     </column>
-    <foreign-key id="620" parent="565" name="type_efficacy_type_id_id_fk">
+    <foreign-key id="619" parent="565" name="type_efficacy_type_id_id_fk">
       <ColNames>target_type_id
 damage_type_id</ColNames>
       <RefColNames>id
 id</RefColNames>
       <RefTableName>type</RefTableName>
     </foreign-key>
-    <index id="621" parent="565" name="sqlite_autoindex_type_efficacy_1">
+    <index id="620" parent="565" name="sqlite_autoindex_type_efficacy_1">
       <ColNames>damage_type_id
 target_type_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="622" parent="565" name="type_efficacy_pk">
+    <key id="621" parent="565" name="type_efficacy_pk">
       <ColNames>damage_type_id
 target_type_id</ColNames>
       <Primary>1</Primary>
