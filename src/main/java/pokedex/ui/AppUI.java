@@ -179,8 +179,7 @@ public class AppUI extends JFrame {
         setSize(1280, 720);
         setLocationRelativeTo(null);
         pokedex_list.setModel(new DefaultListModel<>());
-        DefaultListModel<String> listModel = new DefaultListModel<>();
-        JList<String> registedList = new JList<>(listModel);
+        registedList.setModel(new DefaultListModel<>());
         loadPokedexData();
         setVisible(true);
         showMainPane();
@@ -197,7 +196,6 @@ public class AppUI extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                audioPlayer.click();
                 loginButton();
             }
         });
@@ -266,8 +264,7 @@ public class AppUI extends JFrame {
                 // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
             }
         };
-        JButton[] buttons = {type1, type2, type3, type4, type5, type6, type7, type8, type9,
-                type10, type11, type12, type13, type14, type15, type16, type17, type18};
+        JButton[] buttons = {type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18};
         for (JButton button : buttons) {
             button.addActionListener(type1Actionlistener);
         }
@@ -281,8 +278,7 @@ public class AppUI extends JFrame {
                 // Aquí puedes agregar el comportamiento específico que deseas para todos los botones
             }
         };
-        JButton[] buttons2 = {type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9,
-                type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18};
+        JButton[] buttons2 = {type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18};
         for (JButton button : buttons2) {
             button.addActionListener(type2Actionlistener);
         }
@@ -291,29 +287,20 @@ public class AppUI extends JFrame {
     private void registeredListContent(ListSelectionEvent e) {
         if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
             Object selectedObject = registedList.getSelectedValue(); // Get the selected object
-            if (selectedObject != null && selectedObject instanceof Pokemon) { // Ensure an item is selected
-                Pokemon selectedPokemon = (Pokemon) selectedObject;
-                // Set the Pokémon's identifier to the PokemonName panel
-                SelectedPokemonName.setText(selectedPokemon.getIdentifier());
-                // Set the image to the order number of the selected Pokémon
-                String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
-                SelectedPokemonImg.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-            }
-        }
-    }
-
-    private void registerButton() {
-        if (loggedInUser != null) {
-            Object selectedObject = pokedex_list.getSelectedValue();
-            if (selectedObject != null) {
+            if (selectedObject != null) { // Ensure an item is selected
                 String selectedIdentifier = selectedObject.toString().split(" - ")[1];
                 Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
-                if (selectedPokemon != null) {
-                    togglePokemonRegistration(loggedInUser.getId(), selectedPokemon.getId());
+                if (selectedPokemon != null){
+                    // Set the Pokémon's identifier to the PokemonName panel
+                    SelectedPokemonName.setText(selectedPokemon.getIdentifier());
+                    // Set the image to the order number of the selected Pokémon
+                    String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
+                    SelectedPokemonImg.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
                 }
             }
         }
     }
+
 
     private void pokedexListContent(ListSelectionEvent e) {
         if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
@@ -337,6 +324,20 @@ public class AppUI extends JFrame {
             }
         }
     }
+
+    private void registerButton() {
+        if (loggedInUser != null) {
+            Object selectedObject = pokedex_list.getSelectedValue();
+            if (selectedObject != null) {
+                String selectedIdentifier = selectedObject.toString().split(" - ")[1];
+                Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
+                if (selectedPokemon != null) {
+                    togglePokemonRegistration(loggedInUser.getId(), selectedPokemon.getId());
+                }
+            }
+        }
+    }
+
 
     private void nextMapButton() {
         // Increase the current map ID
@@ -394,7 +395,7 @@ public class AppUI extends JFrame {
                     loginButton.setText("Logout");
                     loadRegisteredPokemonData(loggedInUser.getId());
                     //music
-                    playMusic(loggedInUser.getImage(),true);
+                    playMusic(loggedInUser.getImage(), true);
                 }
             }
         } else {
@@ -419,6 +420,7 @@ public class AppUI extends JFrame {
         Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
         return new ImageIcon(scaledImg);
     }
+
     private ImageIcon getScaledImageByIcon(Icon icon, int width, int height) {
         if (icon instanceof ImageIcon) {
             Image img = ((ImageIcon) icon).getImage();
@@ -505,10 +507,7 @@ public class AppUI extends JFrame {
     public void setTypeChartTypesIcons() {
         // Assuming `type1`, `type2`, ..., `type18` are already defined and initialized.
         // Creating an array of type instances
-        JButton[] types = {
-                type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18,
-                type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18
-        };
+        JButton[] types = {type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14, type15, type16, type17, type18, type2_1, type2_2, type2_3, type2_4, type2_5, type2_6, type2_7, type2_8, type2_9, type2_10, type2_11, type2_12, type2_13, type2_14, type2_15, type2_16, type2_17, type2_18};
 
         // Loop through each type and set the icon
         for (JButton type : types) {
@@ -519,13 +518,11 @@ public class AppUI extends JFrame {
     public void setRelatedTypechartIcons() {
         // Assuming `type1`, `type2`, ..., `type18` are already defined and initialized.
         // Creating an array of type instances
-        JLabel[] types = {
-                relatedType1, relatedType2, relatedType3, relatedType4, relatedType5, relatedType6, relatedType7, relatedType8, relatedType9, relatedType10, relatedType11, relatedType12, relatedType13, relatedType14, relatedType15, relatedType16, relatedType17, relatedType18
-        };
+        JLabel[] types = {relatedType1, relatedType2, relatedType3, relatedType4, relatedType5, relatedType6, relatedType7, relatedType8, relatedType9, relatedType10, relatedType11, relatedType12, relatedType13, relatedType14, relatedType15, relatedType16, relatedType17, relatedType18};
         int icon = 0;
         // Loop through each type and set the icon
         for (JLabel type : types) {
-            icon ++;
+            icon++;
             type.setIcon(getScaledImage(setTypeImage(Integer.toString(icon)), type.getWidth(), type.getHeight()));
         }
     }
@@ -556,14 +553,14 @@ public class AppUI extends JFrame {
             trainer.setImage(currentUserImageIndex);
             trainerRepository.save(trainer);
             JOptionPane.showMessageDialog(this, "Image saved successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
-            playMusic(trainer.getImage(),false);
+            playMusic(trainer.getImage(), false);
         } else {
             JOptionPane.showMessageDialog(this, "Error saving image.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
-    private void playMusic(int image,boolean login) {
-        if (!login){
+    private void playMusic(int image, boolean login) {
+        if (!login) {
             audioPlayer.stop();
         }
         switch (image) {
