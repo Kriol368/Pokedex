@@ -401,9 +401,11 @@ public class AppUI extends JFrame {
         if (loggedInUser != null) {
             Team team = teamRepository.findByTrainer(loggedInUser);
             if (team == null) {
-                Trainer t = loggedInUser;
+                Trainer t = trainerRepository.findById(loggedInUser.getId()).orElse(null);
                 Team n = new Team(t);
                 teamRepository.save(n);
+            }else {
+
             }
         }
     }

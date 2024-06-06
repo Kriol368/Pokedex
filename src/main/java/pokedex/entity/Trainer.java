@@ -15,9 +15,9 @@ public class Trainer {
     private String password;
     private int image;
 
-    @OneToMany(mappedBy = "trainer")
+    @OneToMany(mappedBy = "trainer", fetch = FetchType.EAGER)
     Set<Register> registers;
-    @OneToOne(mappedBy = "trainer")
+    @OneToOne(mappedBy = "trainer", fetch = FetchType.EAGER)
     private Team team;
 
     public Trainer() {

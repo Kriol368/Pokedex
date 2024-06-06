@@ -19,6 +19,9 @@ public class PokemonTeam {
     @JoinColumn(name = "team_id")
     Team team;
 
+
+    private int slot;
+
     // Constructors
     public PokemonTeam() {
         // Default constructor
@@ -46,5 +49,13 @@ public class PokemonTeam {
 
     public void setTeam(Team team) {
         this.team = team;
+    }
+
+    public int getSlot() {
+        return slot;
+    }
+
+    public void setSlot(int slot) {
+        this.slot = slot;
     }
 }
