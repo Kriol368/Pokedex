@@ -204,7 +204,7 @@ public class AppUI extends JFrame {
         showMainPane();
         setpokemonTeamImages("1", "1", "1", "1", "1", "1");
         setTrainerImage("1");
-        setSelectedPokemonImg("1");
+        setSelectedPokemonImg("1093");
         setPokemonImage("1093");
         setPokedexTypeIcons("12", "4");
         setCurrentMapImage("0");
@@ -370,7 +370,7 @@ public class AppUI extends JFrame {
         Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
         if (selectedPokemon != null) {
             String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
-            button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            button.setIcon(getScaledImage(imagePath, button.getWidth(), button.getHeight()));
             button.setText(null);
             System.out.println(button.getIcon());
             switch (index) {
@@ -727,6 +727,9 @@ public class AppUI extends JFrame {
             case 20:
             case 21:
                 audioPlayer.play("src/main/resources/audio/9.wav");
+                break;
+            case 22:
+                audioPlayer.play("src/main/resources/audio/10.wav");
                 break;
         }
 
