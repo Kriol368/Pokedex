@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="commit junto todo: 30/05/2024 9:02">
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 04/06/2024 10:30">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,51 +57,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Run.executor": "Debug",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.App.executor": "Run",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "9",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "347",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Run.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.App.executor&quot;: &quot;Run&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;9&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;347&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/alu10728670/Nuevo vol 3/Programación/IdeaProjects/Pokedex/src/main/resources/pokedex.sqlite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-bfa3237e" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
+        <option value="jdk-22-openjdk-22-4caba194b151-6fbd92ee" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="fix(master): 16/05/2024 08:18">
-      <option name="closed" value="true" />
-      <created>1715840303276</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1715840303276</updated>
-    </task>
     <task active="true" id="Default" summary="Default task">
       <changelist id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="fix(master): 16/05/2024 08:18" />
       <created>1715840477815</created>
@@ -130,65 +127,11 @@
       <workItem from="1716795760365" duration="3382000" />
       <workItem from="1716879344207" duration="6263000" />
       <workItem from="1717049110932" duration="3371000" />
-      <workItem from="1717053375781" duration="1580000" />
-      <workItem from="1717498217880" duration="2420000" />
-      <workItem from="1717574994052" duration="1078000" />
-    </task>
-    <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
-      <option name="closed" value="true" />
-      <created>1715841055048</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715841055048</updated>
-    </task>
-    <task id="LOCAL-00003" summary="fix(master): 16/05/2024 08:36">
-      <option name="closed" value="true" />
-      <created>1715841385014</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1715841385014</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fix(master): 16/05/2024 08:54">
-      <option name="closed" value="true" />
-      <created>1715842452583</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1715842452583</updated>
-    </task>
-    <task id="LOCAL-00005" summary="feat(master): 16/05/2024 09:01">
-      <option name="closed" value="true" />
-      <created>1715842914187</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1715842914187</updated>
-    </task>
-    <task id="LOCAL-00006" summary="feat(master): 16/05/2024 09:03">
-      <option name="closed" value="true" />
-      <created>1715842993343</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1715842993343</updated>
-    </task>
-    <task id="LOCAL-00007" summary="feat(master): 16/05/2024 09:15">
-      <option name="closed" value="true" />
-      <created>1715843725680</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1715843725680</updated>
-    </task>
-    <task id="LOCAL-00008" summary="feat(master): 16/05/2024 09:21">
-      <option name="closed" value="true" />
-      <created>1715844094298</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1715844094298</updated>
+      <workItem from="1717058297692" duration="207000" />
+      <workItem from="1717482500261" duration="7850000" />
+      <workItem from="1717498480276" duration="88000" />
+      <workItem from="1717575141972" duration="621000" />
+      <workItem from="1717575779377" duration="194000" />
     </task>
     <task id="LOCAL-00009" summary="feat(master): 16/05/2024 09:33">
       <option name="closed" value="true" />
@@ -486,39 +429,103 @@
       <option name="project" value="LOCAL" />
       <updated>1716885007342</updated>
     </task>
-    <task id="LOCAL-00046" summary="si: 30/05/2024 9:02">
+    <task id="LOCAL-00046" summary="typechartselectoPanel: 28/05/2024 9:29">
       <option name="closed" value="true" />
-      <created>1717053766698</created>
+      <created>1717053498175</created>
       <option name="number" value="00046" />
       <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1717053766698</updated>
+      <updated>1717053498175</updated>
     </task>
-    <task id="LOCAL-00047" summary="este esta bien: 30/05/2024 9:02">
+    <task id="LOCAL-00047" summary="typechartselectoPanel: 28/05/2024 9:29">
       <option name="closed" value="true" />
-      <created>1717054846922</created>
+      <created>1717053583780</created>
       <option name="number" value="00047" />
       <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1717054846922</updated>
+      <updated>1717053583780</updated>
     </task>
-    <task id="LOCAL-00048" summary="tagtype1 es una merda: 30/05/2024 9:02">
+    <task id="LOCAL-00048" summary="typechartselectoPanel: 28/05/2024 9:42">
       <option name="closed" value="true" />
-      <created>1717498283233</created>
+      <created>1717054983216</created>
       <option name="number" value="00048" />
       <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
-      <updated>1717498283233</updated>
+      <updated>1717054983216</updated>
     </task>
-    <task id="LOCAL-00049" summary="commit junto todo: 30/05/2024 9:02">
+    <task id="LOCAL-00049" summary="feat: 28/05/2024 10:30">
       <option name="closed" value="true" />
-      <created>1717498436686</created>
+      <created>1717057859184</created>
       <option name="number" value="00049" />
       <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
-      <updated>1717498436686</updated>
+      <updated>1717057859184</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="feat: 28/05/2024 10:40">
+      <option name="closed" value="true" />
+      <created>1717058461353</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1717058461353</updated>
+    </task>
+    <task id="LOCAL-00051" summary="feat: 28/05/2024 10:40">
+      <option name="closed" value="true" />
+      <created>1717484170782</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1717484170783</updated>
+    </task>
+    <task id="LOCAL-00052" summary="feat(master): 04/06/2024 08:59">
+      <option name="closed" value="true" />
+      <created>1717484393387</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1717484393387</updated>
+    </task>
+    <task id="LOCAL-00053" summary="feat(master): 04/06/2024 09:13">
+      <option name="closed" value="true" />
+      <created>1717485243185</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1717485243185</updated>
+    </task>
+    <task id="LOCAL-00054" summary="feat(master): 04/06/2024 10:00">
+      <option name="closed" value="true" />
+      <created>1717488012925</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1717488012925</updated>
+    </task>
+    <task id="LOCAL-00055" summary="feat(master): 04/06/2024 10:03">
+      <option name="closed" value="true" />
+      <created>1717488203409</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1717488203409</updated>
+    </task>
+    <task id="LOCAL-00056" summary="feat(master): 04/06/2024 10:08">
+      <option name="closed" value="true" />
+      <created>1717488520606</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1717488520607</updated>
+    </task>
+    <task id="LOCAL-00057" summary="feat(master): 04/06/2024 10:30">
+      <option name="closed" value="true" />
+      <created>1717489832597</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1717489832597</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,12 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs(master): 20/05/2024 10:29" />
-    <MESSAGE value="docs(master): 20/05/2024 10:34" />
-    <MESSAGE value="docs(master): 20/05/2024 10:36" />
-    <MESSAGE value="docs(master): 20/05/2024 11:58" />
-    <MESSAGE value="docs(master): 20/05/2024 12:04" />
-    <MESSAGE value="docs(master): 20/05/2024 13:49" />
     <MESSAGE value="docs(master): 21/05/2024" />
     <MESSAGE value="docs(master): 21/05/2024 09:34" />
     <MESSAGE value="docs(master): 21/05/2024 09:38" />
@@ -556,22 +557,31 @@
     <MESSAGE value="feat(master): 27/05/2024 09:15" />
     <MESSAGE value="feat(master): 27/05/2024 09:30" />
     <MESSAGE value="docs(master): 21/05/2024 10:23" />
+    <MESSAGE value="feat(master): 30/05/2024 09:17" />
     <MESSAGE value="typechartselectoPanel: 28/05/2024 9:29" />
-    <MESSAGE value="si: 30/05/2024 9:02" />
-    <MESSAGE value="este esta bien: 30/05/2024 9:02" />
-    <MESSAGE value="tagtype1 es una merda: 30/05/2024 9:02" />
-    <MESSAGE value="commit junto todo: 30/05/2024 9:02" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit junto todo: 30/05/2024 9:02" />
+    <MESSAGE value="typechartselectoPanel: 28/05/2024 9:42" />
+    <MESSAGE value="feat: 28/05/2024 10:30" />
+    <MESSAGE value="feat: 28/05/2024 10:40" />
+    <MESSAGE value="feat(master): 04/06/2024 08:59" />
+    <MESSAGE value="feat(master): 04/06/2024 09:13" />
+    <MESSAGE value="feat(master): 04/06/2024 10:00" />
+    <MESSAGE value="feat(master): 04/06/2024 10:03" />
+    <MESSAGE value="feat(master): 04/06/2024 10:08" />
+    <MESSAGE value="feat(master): 04/06/2024 10:30" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 04/06/2024 10:30" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java</url>
-          <line>915</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.dao.InvalidDataAccessApiUsageException" package="org.springframework.dao" />
+          <option name="timeStamp" value="31" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

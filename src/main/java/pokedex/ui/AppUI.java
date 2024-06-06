@@ -401,7 +401,8 @@ public class AppUI extends JFrame {
         if (loggedInUser != null) {
             Team team = teamRepository.findByTrainer(loggedInUser);
             if (team == null) {
-                Team n = new Team(loggedInUser);
+                Trainer t = loggedInUser;
+                Team n = new Team(t);
                 teamRepository.save(n);
             }
         }
