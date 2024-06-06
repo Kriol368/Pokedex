@@ -205,8 +205,8 @@ public class AppUI extends JFrame {
         setpokemonTeamImages("1", "1", "1", "1", "1", "1");
         setTrainerImage("1");
         setSelectedPokemonImg("1");
-        setPokemonImage("1");
-        setPokedexTypeIcons("1", "2");
+        setPokemonImage("1093");
+        setPokedexTypeIcons("12", "4");
         setCurrentMapImage("0");
         updateCurrentMap();
         updateMapDetails();
@@ -465,7 +465,7 @@ public class AppUI extends JFrame {
     private void rightArrowButton() {
         // Increase the image index and update the character image
         currentUserImageIndex++;
-        if (currentUserImageIndex > 21) {
+        if (currentUserImageIndex > 22) {
             currentUserImageIndex = 1; // Return to 1 if greater than 21
         }
         setTrainerImage(String.valueOf(currentUserImageIndex));
@@ -475,7 +475,7 @@ public class AppUI extends JFrame {
         // Decrease the image index and update the character image
         currentUserImageIndex--;
         if (currentUserImageIndex < 1) {
-            currentUserImageIndex = 21; // Return to 21 if less than 1
+            currentUserImageIndex = 22; // Return to 21 if less than 1
         }
         setTrainerImage(String.valueOf(currentUserImageIndex));
     }
@@ -944,6 +944,9 @@ public class AppUI extends JFrame {
                 relation1 = typeEfficacyRepository.findTypeEfficacyByDamageTypeIdAndTargetTypeId(damageType,targetType1);
                 relation2 = typeEfficacyRepository.findTypeEfficacyByDamageTypeIdAndTargetTypeId(damageType,targetType2);
                 relationtotal = (double) relation1.getDamageFactor()/100 * relation2.getDamageFactor()/100;
+                if (sT1.getClientProperty("contador") == sT2.getClientProperty("contador")) {
+                    relationtotal = (double) relation1.getDamageFactor()/100;
+                }
             }
             type.setText("x" + relationtotal);
         }

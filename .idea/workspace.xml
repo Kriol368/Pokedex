@@ -9,7 +9,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Run.executor": "Debug",
+    "Application.Run.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -128,23 +131,8 @@
       <workItem from="1717053375781" duration="1580000" />
       <workItem from="1717498217880" duration="2420000" />
       <workItem from="1717574994052" duration="1601000" />
-      <workItem from="1717653814089" duration="741000" />
-    </task>
-    <task id="LOCAL-00002" summary="fix(master): 16/05/2024 08:30">
-      <option name="closed" value="true" />
-      <created>1715841055048</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715841055048</updated>
-    </task>
-    <task id="LOCAL-00003" summary="fix(master): 16/05/2024 08:36">
-      <option name="closed" value="true" />
-      <created>1715841385014</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1715841385014</updated>
+      <workItem from="1717653814089" duration="871000" />
+      <workItem from="1717654708857" duration="3950000" />
     </task>
     <task id="LOCAL-00004" summary="fix(master): 16/05/2024 08:54">
       <option name="closed" value="true" />
@@ -522,7 +510,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717576222868</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="typechart correctamente: 05/06/2024 10:30">
+      <option name="closed" value="true" />
+      <created>1717654578089</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1717654578090</updated>
+    </task>
+    <task id="LOCAL-00052" summary="typechart correctamente: 05/06/2024 10:30">
+      <option name="closed" value="true" />
+      <created>1717654656615</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1717654656615</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,11 +574,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java</url>
-          <line>915</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java</url>
           <line>400</line>
