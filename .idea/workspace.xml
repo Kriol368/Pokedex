@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="typechart correctamente: 05/06/2024 10:30">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_05_2024_9_16_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_05_2024_9_16__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_5_24_9_40_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_5_24_9_40__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
-    </list>
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="appUI.form cambiado: 06/06/2024 10:02" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,15 +125,7 @@
       <workItem from="1717653814089" duration="871000" />
       <workItem from="1717654708857" duration="4161000" />
       <workItem from="1717658894925" duration="1309000" />
-      <workItem from="1717660224980" duration="700000" />
-    </task>
-    <task id="LOCAL-00005" summary="feat(master): 16/05/2024 09:01">
-      <option name="closed" value="true" />
-      <created>1715842914187</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1715842914187</updated>
+      <workItem from="1717660224980" duration="1116000" />
     </task>
     <task id="LOCAL-00006" summary="feat(master): 16/05/2024 09:03">
       <option name="closed" value="true" />
@@ -529,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717658791675</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="appUI.form cambiado: 06/06/2024 10:02">
+      <option name="closed" value="true" />
+      <created>1717660986379</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1717660986379</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs(master): 20/05/2024 10:34" />
     <MESSAGE value="docs(master): 20/05/2024 10:36" />
     <MESSAGE value="docs(master): 20/05/2024 11:58" />
     <MESSAGE value="docs(master): 20/05/2024 12:04" />
@@ -572,6 +561,7 @@
     <MESSAGE value="tagtype1 es una merda: 30/05/2024 9:02" />
     <MESSAGE value="commit junto todo: 30/05/2024 9:02" />
     <MESSAGE value="typechart correctamente: 05/06/2024 10:30" />
-    <option name="LAST_COMMIT_MESSAGE" value="typechart correctamente: 05/06/2024 10:30" />
+    <MESSAGE value="appUI.form cambiado: 06/06/2024 10:02" />
+    <option name="LAST_COMMIT_MESSAGE" value="appUI.form cambiado: 06/06/2024 10:02" />
   </component>
 </project>
