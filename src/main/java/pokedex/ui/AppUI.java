@@ -416,7 +416,24 @@ public class AppUI extends JFrame {
         pokemon6Button.setText(null);
     }
     private void loadTrainerTeamImages(){
-
+        String imagePath = setPokemonImageIcon(String.valueOf(teamMember1.getOrder()));
+        pokemon1.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon1.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember2.getOrder()));
+        pokemon2.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon2.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember3.getOrder()));
+        pokemon3.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon3.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember4.getOrder()));
+        pokemon4.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon4.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember5.getOrder()));
+        pokemon5.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon5.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember6.getOrder()));
+        pokemon6.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon6.setText(null);
     }
     private void loadTeamMembers() {
         Team t = teamRepository.findByTrainer(loggedInUser);
@@ -467,6 +484,7 @@ public class AppUI extends JFrame {
                 pokemonTeamRepository.save(new PokemonTeam(teamMember4,team,4));
                 pokemonTeamRepository.save(new PokemonTeam(teamMember5,team,5));
                 pokemonTeamRepository.save(new PokemonTeam(teamMember6,team,6));
+                loadTrainerTeamImages();
             }
         }
     }
@@ -566,6 +584,7 @@ public class AppUI extends JFrame {
                     loadRegisteredPokemonData(loggedInUser.getId());
                     loadTeamMembers();
                     loadTeamImages();
+                    loadTrainerTeamImages();
                     //music
                     playMusic(loggedInUser.getImage(), true);
                 }
