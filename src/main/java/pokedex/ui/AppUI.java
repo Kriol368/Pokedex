@@ -401,9 +401,17 @@ public class AppUI extends JFrame {
         if (loggedInUser != null) {
             Team team = teamRepository.findByTrainer(loggedInUser);
             if (team == null) {
-                Trainer t = loggedInUser;
+                Trainer t = trainerRepository.findById(loggedInUser.getId()).orElse(null);
                 Team n = new Team(t);
                 teamRepository.save(n);
+            }else {
+                JOptionPane.showMessageDialog(AppUI.this, "Team saved successfully.", "Team Saved", JOptionPane.INFORMATION_MESSAGE);
+                pokemonTeamRepository.save(new PokemonTeam(teamMember1,team,1));
+                pokemonTeamRepository.save(new PokemonTeam(teamMember2,team,2));
+                pokemonTeamRepository.save(new PokemonTeam(teamMember3,team,3));
+                pokemonTeamRepository.save(new PokemonTeam(teamMember4,team,4));
+                pokemonTeamRepository.save(new PokemonTeam(teamMember5,team,5));
+                pokemonTeamRepository.save(new PokemonTeam(teamMember6,team,6));
             }
         }
     }

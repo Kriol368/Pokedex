@@ -15,9 +15,9 @@ public class Trainer {
     private String password;
     private int image;
 
-    @OneToMany(mappedBy = "trainer")
+    @OneToMany(mappedBy = "trainer", fetch = FetchType.EAGER)
     Set<Register> registers;
-    @OneToOne(mappedBy = "trainer")
+    @OneToOne(mappedBy = "trainer", fetch = FetchType.EAGER)
     private Team team;
 
     public Trainer() {
@@ -61,5 +61,21 @@ public class Trainer {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public Set<Register> getRegisters() {
+        return registers;
+    }
+
+    public void setRegisters(Set<Register> registers) {
+        this.registers = registers;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }

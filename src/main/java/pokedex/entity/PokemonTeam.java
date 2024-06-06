@@ -10,18 +10,26 @@ public class PokemonTeam {
     private PokemonTeamKey id;
 
     @ManyToOne
-    @MapsId("pokemonId")
-    @JoinColumn(name = "pokemon_id")
-    Pokemon pokemon;
+    @JoinColumn(name = "pokemon_id", nullable = false)
+    private Pokemon pokemon;
 
     @ManyToOne
     @MapsId("teamId")
-    @JoinColumn(name = "team_id")
-    Team team;
+    @JoinColumn(name = "team_id", insertable = false, updatable = false)
+    private Team team;
+
+    // No need to declare slot separately as it's part of the composite key
+    // private int slot;
 
     // Constructors
     public PokemonTeam() {
         // Default constructor
+    }
+
+    public PokemonTeam(Pokemon pokemon, Team team, int slot) {
+        this.pokemon = pokemon;
+        this.team = team;
+        this.id = new PokemonTeamKey(team.getId(), slot);
     }
 
     public PokemonTeamKey getId() {
@@ -46,5 +54,20 @@ public class PokemonTeam {
 
     public void setTeam(Team team) {
         this.team = team;
+        if (this.id == null) {
+            this.id = new PokemonTeamKey();
+        }
+        this.id.setTeamId(team.getId());
+    }
+
+    public int getSlot() {
+        return id.getSlot();
+    }
+
+    public void setSlot(int slot) {
+        if (this.id == null) {
+            this.id = new PokemonTeamKey();
+        }
+        this.id.setSlot(slot);
     }
 }
