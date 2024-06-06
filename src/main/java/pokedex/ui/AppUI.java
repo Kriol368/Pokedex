@@ -372,7 +372,6 @@ public class AppUI extends JFrame {
             String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
             button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
             button.setText(null);
-            System.out.println(button.getIcon());
             switch (index) {
                 case 1:
                     teamMember1 = selectedPokemon;
@@ -396,6 +395,62 @@ public class AppUI extends JFrame {
         }
 
     }
+    private void loadTeamImages(){
+        String imagePath = setPokemonImageIcon(String.valueOf(teamMember1.getOrder()));
+        pokemon1Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon1Button.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember2.getOrder()));
+        pokemon2Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon2Button.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember3.getOrder()));
+        pokemon3Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon3Button.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember4.getOrder()));
+        pokemon4Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon4Button.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember5.getOrder()));
+        pokemon5Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon5Button.setText(null);
+        imagePath = setPokemonImageIcon(String.valueOf(teamMember6.getOrder()));
+        pokemon6Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+        pokemon6Button.setText(null);
+    }
+    private void loadTrainerTeamImages(){
+
+    }
+    private void loadTeamMembers() {
+        Team t = teamRepository.findByTrainer(loggedInUser);
+        List<PokemonTeam> pt = pokemonTeamRepository.findAllByTeam(t);
+
+        for (PokemonTeam pokemonTeam : pt) {
+            int slot = pokemonTeam.getSlot();
+            Pokemon pokemon = pokemonTeam.getPokemon();
+            switch (slot) {
+                case 1:
+                    teamMember1 = pokemon;
+                    break;
+                case 2:
+                    teamMember2 = pokemon;
+                    break;
+                case 3:
+                    teamMember3 = pokemon;
+                    break;
+                case 4:
+                    teamMember4 = pokemon;
+                    break;
+                case 5:
+                    teamMember5 = pokemon;
+                    break;
+                case 6:
+                    teamMember6 = pokemon;
+                    break;
+                default:
+                    // Handle invalid slot numbers
+                    break;
+            }
+        }
+    }
+
 
     private void saveTeam() {
         if (loggedInUser != null) {
@@ -415,6 +470,7 @@ public class AppUI extends JFrame {
             }
         }
     }
+
 
     private void pokedexListContent(ListSelectionEvent e) {
         if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
@@ -508,6 +564,8 @@ public class AppUI extends JFrame {
                     loadTrainerInfo(loggedInUser.getName());
                     loginButton.setText("Logout");
                     loadRegisteredPokemonData(loggedInUser.getId());
+                    loadTeamMembers();
+                    loadTeamImages();
                     //music
                     playMusic(loggedInUser.getImage(), true);
                 }
