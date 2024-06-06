@@ -62,4 +62,20 @@ public class Trainer {
     public void setImage(int image) {
         this.image = image;
     }
+
+    public Set<Register> getRegisters() {
+        return registers;
+    }
+
+    public void setRegisters(Set<Register> registers) {
+        this.registers = registers;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
+    }
 }
