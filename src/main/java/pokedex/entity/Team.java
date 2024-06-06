@@ -14,7 +14,7 @@ public class Team {
 
     @ManyToMany(mappedBy = "teams", fetch = FetchType.EAGER)
     private Set<Pokemon> pokemons;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinColumn(name = "trainer_id", referencedColumnName = "id")
     private Trainer trainer;
 

@@ -396,44 +396,45 @@ public class AppUI extends JFrame {
 
     }
     private void loadTeamImages(){
-        String imagePath = setPokemonImageIcon(String.valueOf(teamMember1.getOrder()));
-        pokemon1Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon1Button.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember2.getOrder()));
-        pokemon2Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon2Button.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember3.getOrder()));
-        pokemon3Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon3Button.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember4.getOrder()));
-        pokemon4Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon4Button.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember5.getOrder()));
-        pokemon5Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon5Button.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember6.getOrder()));
-        pokemon6Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon6Button.setText(null);
+            String imagePath = setPokemonImageIcon(String.valueOf(teamMember1.getOrder()));
+            pokemon1Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon1Button.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember2.getOrder()));
+            pokemon2Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon2Button.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember3.getOrder()));
+            pokemon3Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon3Button.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember4.getOrder()));
+            pokemon4Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon4Button.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember5.getOrder()));
+            pokemon5Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon5Button.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember6.getOrder()));
+            pokemon6Button.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon6Button.setText(null);
+
     }
     private void loadTrainerTeamImages(){
-        String imagePath = setPokemonImageIcon(String.valueOf(teamMember1.getOrder()));
-        pokemon1.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon1.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember2.getOrder()));
-        pokemon2.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon2.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember3.getOrder()));
-        pokemon3.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon3.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember4.getOrder()));
-        pokemon4.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon4.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember5.getOrder()));
-        pokemon5.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon5.setText(null);
-        imagePath = setPokemonImageIcon(String.valueOf(teamMember6.getOrder()));
-        pokemon6.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
-        pokemon6.setText(null);
+            String imagePath = setPokemonImageIcon(String.valueOf(teamMember1.getOrder()));
+            pokemon1.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon1.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember2.getOrder()));
+            pokemon2.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon2.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember3.getOrder()));
+            pokemon3.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon3.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember4.getOrder()));
+            pokemon4.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon4.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember5.getOrder()));
+            pokemon5.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon5.setText(null);
+            imagePath = setPokemonImageIcon(String.valueOf(teamMember6.getOrder()));
+            pokemon6.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
+            pokemon6.setText(null);
     }
     private void loadTeamMembers() {
         Team t = teamRepository.findByTrainer(loggedInUser);
@@ -641,6 +642,12 @@ public class AppUI extends JFrame {
         pokemon4.setIcon(getScaledImage(setPokemonImageIcon(p4), pokemon4.getWidth(), pokemon4.getHeight()));
         pokemon5.setIcon(getScaledImage(setPokemonImageIcon(p5), pokemon5.getWidth(), pokemon5.getHeight()));
         pokemon6.setIcon(getScaledImage(setPokemonImageIcon(p6), pokemon6.getWidth(), pokemon6.getHeight()));
+        pokemon1Button.setIcon(getScaledImage(setPokemonImageIcon(p1), pokemon1Button.getWidth(), pokemon1Button.getHeight()));
+        pokemon2Button.setIcon(getScaledImage(setPokemonImageIcon(p2), pokemon2Button.getWidth(), pokemon2Button.getHeight()));
+        pokemon3Button.setIcon(getScaledImage(setPokemonImageIcon(p3), pokemon3Button.getWidth(), pokemon3Button.getHeight()));
+        pokemon4Button.setIcon(getScaledImage(setPokemonImageIcon(p4), pokemon4Button.getWidth(), pokemon4Button.getHeight()));
+        pokemon5Button.setIcon(getScaledImage(setPokemonImageIcon(p5), pokemon5Button.getWidth(), pokemon5Button.getHeight()));
+        pokemon6Button.setIcon(getScaledImage(setPokemonImageIcon(p6), pokemon6Button.getWidth(), pokemon6Button.getHeight()));
     }
 
 
@@ -866,6 +873,14 @@ public class AppUI extends JFrame {
         setTrainerImage("1");
         progressBar.setValue(0);
         progressBar.setString("0%");
+        setpokemonTeamImages("1", "1", "1", "1", "1", "1");
+        teamMember1 = null;
+        teamMember2 = null;
+        teamMember3 = null;
+        teamMember4 = null;
+        teamMember5 = null;
+        teamMember6 = null;
+
     }
 
     private void updateProgressBar() {
