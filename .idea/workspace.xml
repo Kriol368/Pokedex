@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 06/06/2024 08:21">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_5_24_8_24_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_5_24_8_24__Changes_.xml" beforeDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 06/06/2024 08:58">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/Trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/PokemonTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/PokemonTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/entity/PokemonTeamKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/entity/PokemonTeamKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,15 +133,7 @@
       <workItem from="1717575141972" duration="621000" />
       <workItem from="1717575779377" duration="194000" />
       <workItem from="1717653779238" duration="2451000" />
-      <workItem from="1717656255233" duration="631000" />
-    </task>
-    <task id="LOCAL-00011" summary="feat(master): 16/05/2024 09:46">
-      <option name="closed" value="true" />
-      <created>1715845614439</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1715845614439</updated>
+      <workItem from="1717656255233" duration="2294000" />
     </task>
     <task id="LOCAL-00012" summary="feat(master): 16/05/2024 10:06">
       <option name="closed" value="true" />
@@ -527,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717654882024</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="feat(master): 06/06/2024 08:58">
+      <option name="closed" value="true" />
+      <created>1717657133498</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1717657133499</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs(master): 21/05/2024 09:38" />
     <MESSAGE value="docs(master): 21/05/2024 09:54" />
     <MESSAGE value="docs(master): 21/05/2024 09:56" />
     <MESSAGE value="docs(master): 21/05/2024 10:40" />
@@ -570,7 +569,8 @@
     <MESSAGE value="feat(master): 04/06/2024 10:30" />
     <MESSAGE value="feat(master): 04/06/2024 08:15" />
     <MESSAGE value="feat(master): 06/06/2024 08:21" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 06/06/2024 08:21" />
+    <MESSAGE value="feat(master): 06/06/2024 08:58" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 06/06/2024 08:58" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
