@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="appUI.form cambiado: 06/06/2024 10:02">
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 06/06/2024 10:35">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/audio/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/audio/AudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/.fuse_hidden0000155600000001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/.fuse_hidden0000216e00000003" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +90,9 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-bfa3237e" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
+        <option value="jdk-22-openjdk-22-4caba194b151-6fbd92ee" />
       </set>
     </attachedChunks>
   </component>
@@ -131,22 +137,7 @@
       <workItem from="1717654708857" duration="4161000" />
       <workItem from="1717658894925" duration="1309000" />
       <workItem from="1717660224980" duration="1177000" />
-    </task>
-    <task id="LOCAL-00007" summary="feat(master): 16/05/2024 09:15">
-      <option name="closed" value="true" />
-      <created>1715843725680</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1715843725680</updated>
-    </task>
-    <task id="LOCAL-00008" summary="feat(master): 16/05/2024 09:21">
-      <option name="closed" value="true" />
-      <created>1715844094298</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1715844094298</updated>
+      <workItem from="1717999371538" duration="1050000" />
     </task>
     <task id="LOCAL-00009" summary="feat(master): 16/05/2024 09:33">
       <option name="closed" value="true" />
@@ -524,7 +515,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717661750567</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="feat(master): 06/06/2024 10:31">
+      <option name="closed" value="true" />
+      <created>1717662723663</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1717662723663</updated>
+    </task>
+    <task id="LOCAL-00057" summary="feat(master): 06/06/2024 10:35">
+      <option name="closed" value="true" />
+      <created>1717662926004</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1717662926004</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,8 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs(master): 20/05/2024 10:36" />
-    <MESSAGE value="docs(master): 20/05/2024 11:58" />
     <MESSAGE value="docs(master): 20/05/2024 12:04" />
     <MESSAGE value="docs(master): 20/05/2024 13:49" />
     <MESSAGE value="docs(master): 21/05/2024" />
@@ -567,6 +572,8 @@
     <MESSAGE value="commit junto todo: 30/05/2024 9:02" />
     <MESSAGE value="typechart correctamente: 05/06/2024 10:30" />
     <MESSAGE value="appUI.form cambiado: 06/06/2024 10:02" />
-    <option name="LAST_COMMIT_MESSAGE" value="appUI.form cambiado: 06/06/2024 10:02" />
+    <MESSAGE value="feat(master): 06/06/2024 10:31" />
+    <MESSAGE value="feat(master): 06/06/2024 10:35" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 06/06/2024 10:35" />
   </component>
 </project>

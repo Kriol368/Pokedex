@@ -23,7 +23,6 @@ public class AudioPlayer {
     }
 
     public void stop() {
-        System.out.println("no se me para");
         clip.close();
     }
 }
