@@ -507,7 +507,7 @@ public class AppUI extends JFrame {
                 Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
                 if (selectedPokemon != null) {
                     // Set the species ID to the PokedexNumber panel
-                    PokedexNumber.setText(String.valueOf(selectedPokemon.getSpeciesId()));
+                    PokedexNumber.setText(String.format("%03d", selectedPokemon.getSpeciesId()));
                     // Set the Pokémon's identifier to the PokemonName panel
                     PokemonName.setText(selectedPokemon.getIdentifier());
                     // Set the image to the order number of the selected Pokémon
@@ -515,9 +515,29 @@ public class AppUI extends JFrame {
                     pokemonImage.setIcon(getScaledImage(imagePath, pokemonImage.getWidth(), pokemonImage.getHeight()));
                     List<Pokemon_types> pokemonTypes = pokemonTypesRepository.findByPokemonId(selectedPokemon.getId());
                     setPokedexTypeIcons(Integer.toString(pokemonTypes.getLast().getType().getId()), Integer.toString(pokemonTypes.getFirst().getType().getId()));
+
+                    // Check if the Pokemon is registered
+                    boolean isRegistered = isPokemonRegistered(selectedPokemon.getId());
+                    if (isRegistered) {
+                        registerButton.setText("Unregister");
+                    } else {
+                        registerButton.setText("Register");
+                    }
+
                 }
             }
         }
+    }
+
+    // Method to check if the Pokemon is registered
+    private boolean isPokemonRegistered(int pokemonId) {
+        // Implement logic to check if the Pokemon is registered
+        // You can use your existing repository method or any other approach
+        Register register = registerRepository.findByTrainerIdAndPokemonId(loggedInUser.getId(), pokemonId);
+        if (register.getRegistered() == 0){
+            return false;
+        }
+        return true;
     }
 
     private void registerButton() {
@@ -671,11 +691,16 @@ public class AppUI extends JFrame {
             register.setRegistered(newStatus);
             registerRepository.save(register);
             loadRegisteredPokemonData(loggedInUser.getId());
-            JOptionPane.showMessageDialog(this, "Registration status updated successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+            // Display success message based on the new registration status
+            String successMessage = newStatus == 1 ? "Registered successfully!" : "Unregistered successfully!";
+            JOptionPane.showMessageDialog(this, successMessage, "Success", JOptionPane.INFORMATION_MESSAGE);
+            updateProgressBar();
         } else {
             JOptionPane.showMessageDialog(this, "Registration record not found.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+
 
     public void setTrainerImage(String t1) {
         if (parseInt(t1) == 2 || parseInt(t1) == 12 || parseInt(t1) == 13 || parseInt(t1) == 16 || parseInt(t1) == 21) {
