@@ -344,7 +344,7 @@ public class AppUI extends JFrame {
                 Pokemon selectedPokemon = pokemonRepository.findByIdentifier(selectedIdentifier.toLowerCase());
                 if (selectedPokemon != null) {
                     // Set the Pokémon's identifier to the PokemonName panel
-                    SelectedPokemonName.setText(selectedPokemon.getIdentifier());
+                    SelectedPokemonName.setText(capitalizeFirstLetter(selectedPokemon.getIdentifier()));
                     // Set the image to the order number of the selected Pokémon
                     String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
                     SelectedPokemonImg.setIcon(getScaledImage(imagePath, SelectedPokemonImg.getWidth(), SelectedPokemonImg.getHeight()));
@@ -509,7 +509,7 @@ public class AppUI extends JFrame {
                     // Set the species ID to the PokedexNumber panel
                     PokedexNumber.setText(String.format("%03d", selectedPokemon.getSpeciesId()));
                     // Set the Pokémon's identifier to the PokemonName panel
-                    PokemonName.setText(selectedPokemon.getIdentifier());
+                    PokemonName.setText(capitalizeFirstLetter(selectedPokemon.getIdentifier()));
                     // Set the image to the order number of the selected Pokémon
                     String imagePath = setPokemonImageIcon(String.valueOf(selectedPokemon.getOrder()));
                     pokemonImage.setIcon(getScaledImage(imagePath, pokemonImage.getWidth(), pokemonImage.getHeight()));
