@@ -186,7 +186,6 @@ public class AppUI extends JFrame {
         this.pokemonTeamRepository = pokemonTeamRepository;
         this.audioPlayer = audioPlayer;
         this.currentMapClass = null;
-        BufferedImage mapImage = ImageIO.read(new File("src/main/resources/backgrounds/map.jpeg"));
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280, 720);
@@ -206,7 +205,6 @@ public class AppUI extends JFrame {
         updateMapDetails();
         setTypeChartTypesIcons();
         setRelatedTypechartIcons();
-        loadImages();
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -502,10 +500,7 @@ public class AppUI extends JFrame {
             }
         }
     }
-    private void loadImages(){
-        map.revalidate();
-        map.repaint();
-    }
+
 
 
     private void pokedexListContent(ListSelectionEvent e) {

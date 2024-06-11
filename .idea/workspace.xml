@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 10/06/2024 09:05">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d73068e-f963-4318-adf1-8639d3490fe0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 11/06/2024 09:22">
       <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,22 +130,6 @@
       <workItem from="1717658894925" duration="1309000" />
       <workItem from="1717660224980" duration="1177000" />
       <workItem from="1717999371538" duration="4527000" />
-    </task>
-    <task id="LOCAL-00012" summary="feat(master): 16/05/2024 10:06">
-      <option name="closed" value="true" />
-      <created>1715846825341</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1715846825341</updated>
-    </task>
-    <task id="LOCAL-00013" summary="feat(master): 16/05/2024 10:27">
-      <option name="closed" value="true" />
-      <created>1715848027599</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1715848027599</updated>
     </task>
     <task id="LOCAL-00014" summary="docs(master): 16/05/2024 10:38">
       <option name="closed" value="true" />
@@ -527,7 +507,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718003122896</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="feat(master): 11/06/2024 09:22">
+      <option name="closed" value="true" />
+      <created>1718090566186</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1718090566187</updated>
+    </task>
+    <task id="LOCAL-00062" summary="feat(master): 11/06/2024 09:22">
+      <option name="closed" value="true" />
+      <created>1718090576489</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1718090576490</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs(master): 21/05/2024 09:34" />
     <MESSAGE value="docs(master): 21/05/2024 09:38" />
     <MESSAGE value="docs(master): 21/05/2024 09:54" />
     <MESSAGE value="docs(master): 21/05/2024 09:56" />
@@ -570,6 +565,7 @@
     <MESSAGE value="feat(master): 10/06/2024 08:20" />
     <MESSAGE value="feat(master): 10/06/2024 09:00" />
     <MESSAGE value="feat(master): 10/06/2024 09:05" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 10/06/2024 09:05" />
+    <MESSAGE value="feat(master): 11/06/2024 09:22" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 11/06/2024 09:22" />
   </component>
 </project>
