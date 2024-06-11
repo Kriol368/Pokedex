@@ -153,7 +153,7 @@
                 <children>
                   <component id="16a32" class="javax.swing.JLabel" binding="pokemon3">
                     <constraints>
-                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="200" height="200"/>
                         <maximum-size width="200" height="200"/>
                       </grid>
@@ -164,7 +164,7 @@
                   </component>
                   <component id="1ddf1" class="javax.swing.JLabel" binding="pokemon5">
                     <constraints>
-                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="200" height="200"/>
                         <maximum-size width="200" height="200"/>
                       </grid>
@@ -175,7 +175,7 @@
                   </component>
                   <component id="1466b" class="javax.swing.JLabel" binding="pokemon2">
                     <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="200" height="200"/>
                         <maximum-size width="200" height="200"/>
                       </grid>
@@ -186,7 +186,7 @@
                   </component>
                   <component id="c7c24" class="javax.swing.JLabel" binding="pokemon6">
                     <constraints>
-                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="200" height="200"/>
                         <maximum-size width="200" height="200"/>
                       </grid>
@@ -197,7 +197,7 @@
                   </component>
                   <component id="c83c" class="javax.swing.JLabel" binding="pokemon1">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="200" height="200"/>
                         <maximum-size width="200" height="200"/>
                       </grid>
@@ -208,7 +208,7 @@
                   </component>
                   <component id="29cbf" class="javax.swing.JLabel" binding="pokemon4">
                     <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="200" height="200"/>
                         <maximum-size width="200" height="200"/>
                       </grid>
