@@ -7,6 +7,7 @@ import pokedex.entity.*;
 import pokedex.repository.*;
 import pokedex.service.AuthenticationService;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -14,6 +15,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import static java.lang.Integer.parseInt;
@@ -170,7 +173,7 @@ public class AppUI extends JFrame {
     private Map currentMapClass;
 
     @Autowired
-    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository, MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository, RegisterRepository registerRepository, TypeEfficacyRepository typeEfficacyRepository, PokemonTeamRepository pokemonTeamRepository, TeamRepository teamRepository, AudioPlayer audioPlayer) {
+    public AppUI(AuthenticationService authenticationService, PokemonRepository pokemonRepository, TrainerRepository trainerRepository, MapRepository mapRepository, TypeRepository typeRepository, Pokemon_typesRepository pokemonTypesRepository, RegisterRepository registerRepository, TypeEfficacyRepository typeEfficacyRepository, PokemonTeamRepository pokemonTeamRepository, TeamRepository teamRepository, AudioPlayer audioPlayer) throws IOException {
         this.authenticationService = authenticationService;
         this.pokemonRepository = pokemonRepository; // Initialize the repository
         this.trainerRepository = trainerRepository; // Initialize the trainer repository
@@ -183,6 +186,7 @@ public class AppUI extends JFrame {
         this.pokemonTeamRepository = pokemonTeamRepository;
         this.audioPlayer = audioPlayer;
         this.currentMapClass = null;
+        BufferedImage mapImage = ImageIO.read(new File("src/main/resources/backgrounds/map.jpeg"));
         setTitle("Pokedex");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280, 720);
@@ -202,6 +206,7 @@ public class AppUI extends JFrame {
         updateMapDetails();
         setTypeChartTypesIcons();
         setRelatedTypechartIcons();
+        loadImages();
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -334,6 +339,8 @@ public class AppUI extends JFrame {
                 saveTeam();
             }
         });
+
+
     }
 
     private void registeredListContent(ListSelectionEvent e) {
@@ -494,6 +501,10 @@ public class AppUI extends JFrame {
                 loadTrainerTeamImages();
             }
         }
+    }
+    private void loadImages(){
+        map.revalidate();
+        map.repaint();
     }
 
 
