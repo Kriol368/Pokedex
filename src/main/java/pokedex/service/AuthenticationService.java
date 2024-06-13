@@ -2,12 +2,8 @@ package pokedex.service;
 
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import pokedex.entity.Pokemon;
-import pokedex.entity.Register;
-import pokedex.entity.Trainer;
-import pokedex.repository.PokemonRepository;
-import pokedex.repository.RegisterRepository;
-import pokedex.repository.TrainerRepository;
+import pokedex.entity.*;
+import pokedex.repository.*;
 
 import java.util.List;
 
@@ -28,7 +24,7 @@ public class AuthenticationService {
 
     // New combined method
     @Transactional
-    public String loginOrRegister(String name, String password) {
+    public String loginOrRegister(String name, String password,TeamRepository teamRepository,PokemonTeamRepository pokemonTeamRepository, PokemonRepository pokemonRepository) {
         Trainer trainer = trainerRepository.findByName(name);
         if (trainer != null) {
             // Attempt login
@@ -41,13 +37,13 @@ public class AuthenticationService {
             // Register new user
             Trainer newTrainer = new Trainer(name, password);
             trainerRepository.save(newTrainer);
-            createInitialRegistersForTrainer(newTrainer);
+            createInitialRegistersForTrainer(newTrainer, teamRepository, pokemonTeamRepository,pokemonRepository);
             return "Registration successful";
         }
     }
 
     @Transactional
-    public void createInitialRegistersForTrainer(Trainer trainer) {
+    public void createInitialRegistersForTrainer(Trainer trainer, TeamRepository teamRepository, PokemonTeamRepository pokemonTeamRepository, PokemonRepository pokemonRepository) {
         System.out.println("Creating initial registers for trainer: " + trainer.getName());
         List<Pokemon> allPokemons = pokemonRepository.findAllByOrderBySpeciesIdAscIdAsc();
         for (Pokemon pokemon : allPokemons) {
@@ -56,6 +52,22 @@ public class AuthenticationService {
             registerRepository.save(register);
             System.out.println("Register created for Pokemon: " + pokemon.getId() + " and Trainer: " + trainer.getId());
         }
+        Team t = new Team(trainer);
+        teamRepository.save(t);
+        Pokemon p = pokemonRepository.findByIdentifier("ditto");
+
+        PokemonTeam pt1 = new PokemonTeam(p,t,1);
+        PokemonTeam pt2 = new PokemonTeam(p,t,2);
+        PokemonTeam pt3 = new PokemonTeam(p,t,3);
+        PokemonTeam pt4 = new PokemonTeam(p,t,4);
+        PokemonTeam pt5 = new PokemonTeam(p,t,5);
+        PokemonTeam pt6 = new PokemonTeam(p,t,6);
+        pokemonTeamRepository.save(pt1);
+        pokemonTeamRepository.save(pt2);
+        pokemonTeamRepository.save(pt3);
+        pokemonTeamRepository.save(pt4);
+        pokemonTeamRepository.save(pt5);
+        pokemonTeamRepository.save(pt6);
     }
 
 

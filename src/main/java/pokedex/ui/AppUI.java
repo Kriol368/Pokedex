@@ -603,7 +603,7 @@ public class AppUI extends JFrame {
             String enteredPassword = new String(password.getPassword());
 
             // Perform login or registration
-            String resultMessage = authenticationService.loginOrRegister(enteredUsername, enteredPassword);
+            String resultMessage = authenticationService.loginOrRegister(enteredUsername, enteredPassword, teamRepository,pokemonTeamRepository,pokemonRepository);
 
             // Display message based on the result
             JOptionPane.showMessageDialog(AppUI.this, resultMessage, "Authentication Result", JOptionPane.INFORMATION_MESSAGE);
