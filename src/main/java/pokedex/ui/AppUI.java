@@ -783,7 +783,7 @@ public class AppUI extends JFrame {
     public void loadPokedexData() {
         Font f = new Font("Arial", Font.PLAIN, 40);
         pokedex_list.setFont(f);
-        List<Pokemon> pokedexEntries = pokemonRepository.findAllByOrderBySpeciesIdAscIdAsc();
+        List<Pokemon> pokedexEntries = pokemonRepository.findAllByOrderByOrderAsc();
         DefaultListModel<String> pokedexListModel = (DefaultListModel<String>) pokedex_list.getModel();
         pokedexListModel.clear();
         for (Pokemon pokemon : pokedexEntries) {

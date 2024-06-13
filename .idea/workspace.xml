@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="feat(master): 13/06/2024 08:06">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokedex/ui/AppUI.java" afterDir="false" />
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="fix(master): 13/06/2024 08:23">
       <change beforePath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pokedex.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +54,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Run.executor": "Debug",
+    "Application.Run.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -135,15 +132,7 @@
       <workItem from="1717660224980" duration="1177000" />
       <workItem from="1717999371538" duration="4527000" />
       <workItem from="1718091316500" duration="3866000" />
-      <workItem from="1718258657764" duration="989000" />
-    </task>
-    <task id="LOCAL-00016" summary="docs(master): 20/05/2024 10:34">
-      <option name="closed" value="true" />
-      <created>1716194048855</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1716194048855</updated>
+      <workItem from="1718258657764" duration="1407000" />
     </task>
     <task id="LOCAL-00017" summary="docs(master): 20/05/2024 10:36">
       <option name="closed" value="true" />
@@ -529,7 +518,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718258802171</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="fix(master): 13/06/2024 08:23">
+      <option name="closed" value="true" />
+      <created>1718259816507</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1718259816507</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs(master): 21/05/2024 09:56" />
     <MESSAGE value="docs(master): 21/05/2024 10:40" />
     <MESSAGE value="fix(master): 22/05/2024 09:57" />
     <MESSAGE value="fix(master): 22/05/2024 10:13" />
@@ -572,6 +568,7 @@
     <MESSAGE value="feat(master): 11/06/2024 09:22" />
     <MESSAGE value="feat(master): 11/06/2024 09:32" />
     <MESSAGE value="feat(master): 13/06/2024 08:06" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(master): 13/06/2024 08:06" />
+    <MESSAGE value="fix(master): 13/06/2024 08:23" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(master): 13/06/2024 08:23" />
   </component>
 </project>
