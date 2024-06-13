@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="fix(master): 13/06/2024 08:32">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f55e2a1b-cfba-48da-844d-ecfb477b373b" name="Changes" comment="fix(master): 13/06/2024 08:32" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,10 +72,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -133,23 +131,7 @@
       <workItem from="1717660224980" duration="1177000" />
       <workItem from="1717999371538" duration="4527000" />
       <workItem from="1718091316500" duration="3866000" />
-      <workItem from="1718258657764" duration="4057000" />
-    </task>
-    <task id="LOCAL-00020" summary="docs(master): 20/05/2024 12:04">
-      <option name="closed" value="true" />
-      <created>1716199476649</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1716199476650</updated>
-    </task>
-    <task id="LOCAL-00021" summary="docs(master): 20/05/2024 13:49">
-      <option name="closed" value="true" />
-      <created>1716205792169</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1716205792169</updated>
+      <workItem from="1718258657764" duration="4585000" />
     </task>
     <task id="LOCAL-00022" summary="docs(master): 21/05/2024">
       <option name="closed" value="true" />
@@ -527,7 +509,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718264868345</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="fix(master): 13/06/2024 08:32">
+      <option name="closed" value="true" />
+      <created>1718266324214</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1718266324214</updated>
+    </task>
+    <task id="LOCAL-00070" summary="fix(master): 13/06/2024 08:32">
+      <option name="closed" value="true" />
+      <created>1718266329716</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1718266329716</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
