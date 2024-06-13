@@ -909,7 +909,7 @@ public class AppUI extends JFrame {
         username.setText("");
         password.setText("");
         currentUserImageIndex = 1;
-        setTrainerImage("1");
+        setTrainerImage("22");
         progressBar.setValue(0);
         progressBar.setString("0%");
         loadTeamImages();
