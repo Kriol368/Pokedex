@@ -1,9 +1,0 @@
-<changelist name="Uncommitted_changes_before_Update_at_4_6_24_12_54_[Changes]" date="1717498504421" recycled="true" deleted="true">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_6_24_12_54_[Changes]/shelved.patch" />
-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 4/6/24 12:54 [Changes]" />
-  <binary>
-    <option name="BEFORE_PATH" value="src/main/resources/pokedex.sqlite" />
-    <option name="AFTER_PATH" value="src/main/resources/pokedex.sqlite" />
-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_6_24_12_54_[Changes]/pokedex.sqlite" />
-  </binary>
-</changelist>
