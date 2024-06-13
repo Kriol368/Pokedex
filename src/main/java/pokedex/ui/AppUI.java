@@ -40,7 +40,7 @@ public class AppUI extends JFrame {
     private Pokemon teamMember5 = null;
     private Pokemon teamMember6 = null;
 
-
+    private JLabel trainerpanelImage;
     private AudioPlayer audioPlayer;
     private JTabbedPane mainPane;
     private JPanel panel1;
@@ -49,7 +49,7 @@ public class AppUI extends JFrame {
     private JPanel map;
     private JPanel typeChart;
     private JPanel network;
-    private JPanel Trainer;
+    private JPanel TrainerPanel;
     private JList pokedex_list;
     private JLabel labelUser;
     private JLabel labelPassword;
@@ -165,6 +165,9 @@ public class AppUI extends JFrame {
     private JLabel relatedType17;
     private JLabel relatedType18;
     private JLabel selectedType2;
+    private JButton boton;
+    private JPanel layered;
+    private JLabel label;
     private JScrollPane pokedex_scroll;
 
     private int currentUserImageIndex = 1;
@@ -195,11 +198,11 @@ public class AppUI extends JFrame {
         loadPokedexData();
         setVisible(true);
         showMainPane();
-        setpokemonTeamImages("1", "1", "1", "1", "1", "1");
-        setTrainerImage("1");
+        setpokemonTeamImages("1093", "1093", "1093", "1093", "1093", "1093");
+        setTrainerImage("22");
         setSelectedPokemonImg("1093");
         setPokemonImage("1093");
-        setPokedexTypeIcons("12", "4");
+        setPokedexTypeIcons("19", "20");
         setCurrentMapImage("0");
         updateCurrentMap();
         updateMapDetails();
@@ -418,7 +421,7 @@ public class AppUI extends JFrame {
             pokemon6Button.setIcon(getScaledImage(imagePath, pokemon1Button.getWidth(), pokemon1Button.getHeight()));
             pokemon6Button.setText(null);
         } else {
-            setpokemonTeamImages("1", "1", "1", "1", "1", "1");
+            setpokemonTeamImages("1093", "1093", "1093", "1093", "1093", "1093");
         }
     }
 
@@ -443,7 +446,7 @@ public class AppUI extends JFrame {
             pokemon6.setIcon(getScaledImage(imagePath, pokemon1Button.getWidth(), pokemon1Button.getHeight()));
             pokemon6.setText(null);
         } else {
-            setTeamImages("1", "1", "1", "1", "1", "1");
+            setTeamImages("1093", "1093", "1093", "1093", "1093", "1093");
         }
     }
 
@@ -1086,7 +1089,6 @@ public class AppUI extends JFrame {
         }
 
     }
-
 }
 
 
